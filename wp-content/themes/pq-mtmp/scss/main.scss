@@ -12,7 +12,7 @@
         // "imports/layout/footer/variables",
         // "imports/layout/internalbanner/variables",
         // "imports/layout/locations/variables",
-        // "imports/layout/navigation/variables",
+        "imports/layout/navigation/variables",
         // "imports/layout/sidebar/variables",
         // "imports/templates/404/variables",
         // "imports/templates/about/variables",
@@ -46,12 +46,12 @@
 
 // third party files
 
-// @import "imports/vendors/slick",
-//         "imports/vendors/lity";
+@import "imports/vendors/slick",
+         "imports/vendors/lity";
 
 // reset
 
-// @import "imports/base/reset";
+@import "imports/base/reset";
 
 // global
 
@@ -66,8 +66,8 @@
 
 // layout
 
-@import "imports/layout/header/header";
-        // "imports/layout/navigation/navigation",
+@import "imports/layout/header/header",
+        "imports/layout/navigation/navigation";
         // "imports/layout/internalbanner/internal-banner",
         // "imports/layout/sidebar/sidebar",
         // "imports/layout/locations/locations",

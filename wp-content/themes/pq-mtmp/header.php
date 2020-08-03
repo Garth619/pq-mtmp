@@ -112,7 +112,15 @@
 	
 	</div><!-- cta_phone_wrapper -->	
 
-	<nav><?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+	<nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+
+	<div id='menu_wrapper'>
+	
+		<span class='menu_bars'></span><!-- menu_bars -->
+		<span class='menu_bars'></span><!-- menu_bars -->
+		<span class='menu_bars'></span><!-- menu_bars -->
+	
+	</div><!-- menu_wrapper -->
 
 	</div><!-- header_right -->
 

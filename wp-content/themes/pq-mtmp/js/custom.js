@@ -414,9 +414,7 @@ jQuery(document).ready(function ($) {
   }
 
   function tabletClick() {
-    //$(this).next('ul.sub-menu').slideToggle(350);
-
-    $(this).next("ul.sub-menu").toggleClass("active");
+    $(this).next("ul.sub-menu").slideToggle(350);
 
     $(this).parent().toggleClass("active");
 
