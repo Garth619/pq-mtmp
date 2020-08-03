@@ -88,13 +88,38 @@
 
 <header>
 
+<div id='header_inner'>
+
+	<div id='header_left'>
+	
+		<a id='logo' href='<?php bloginfo('url');?>'>
+		
+				<img src='<?php bloginfo('template_directory');?>/images/eb-logo.svg' /><!-- name -->
+		
+		</a><!-- phone -->
+	
+	</div><!-- header_left -->
+
+	<div id='header_right'>
+	
+	<div id='cta_phone_wrapper'>
+	
+		<span id='cta_title'>Call 24/7 for a free consultation</span>
+		
+		<a id='phone' href='tel:+18885433210'>(888) 543-3210</a><!-- phone -->
+		
+		</span><!-- cta_title -->
+	
+	</div><!-- cta_phone_wrapper -->	
+
+	<nav><?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+
+	</div><!-- header_right -->
+
+</div><!-- header_inner -->
 	
 
-			<nav><?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
 			
-		
-
-
 </header>
 	
 

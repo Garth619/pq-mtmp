@@ -3,3 +3,8 @@
 ////////////////////////////////////////////////////////////////////
 
 $primaryfont: "Barlow", sans-serif;
+
+span {
+  font-family: $primaryfont;
+  font-weight: 400;
+}
