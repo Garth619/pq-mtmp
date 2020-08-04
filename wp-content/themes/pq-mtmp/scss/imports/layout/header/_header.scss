@@ -1,28 +1,106 @@
 header {
+  width: 100%;
   @include fixed(0, null, null, 0, 10);
 }
 
 #header_inner {
   background: $color_dark_one;
+  @include mq(small_tablet) {
+    @include flex(space-between);
+  }
 }
 
 #header_left {
   padding: 20px 15px;
+  @include mq(small_tablet) {
+    padding-left: 45px;
+  }
   a {
     img {
+      margin: 0 auto;
       @include image();
+      max-width: 340px;
+      @include mq(small_tablet) {
+        margin-top: 23px;
+      }
     }
   }
 }
 
 #header_right {
   @include flex();
+  @include mq(small_tablet) {
+    flex-basis: 310px;
+    flex-shrink: 0;
+  }
+  @include mq(small_laptop) {
+    flex-basis: auto;
+    flex-direction: column;
+  }
+  &.open {
+    #menu_wrapper {
+      span {
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+          top: -4px;
+          left: 6px;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+          top: 3px;
+          left: 5px;
+        }
+      }
+    }
+  }
+  #menu_wrapper {
+    background: $color_bright_one;
+    position: relative;
+    z-index: 2;
+    @include flex(center, center, column);
+    @include box(68px);
+    @include mq(small_tablet) {
+      flex-shrink: 0;
+      @include box(57px, 122px);
+    }
+    @include mq(small_laptop) {
+      display: none;
+    }
+    span.menu_bars {
+      display: block;
+      background: $color_light_one;
+      margin-bottom: 4px;
+      position: relative;
+      transform-origin: left center;
+      transition: all 350ms ease-in-out;
+      @include box(30px, 3px);
+    }
+  }
 }
 
 #cta_phone_wrapper {
   text-align: center;
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  background: $color_dark_one;
   @include flex(center, center, column);
+  @include mq(mobile) {
+    margin-right: -70px;
+  }
+  @include mq(small_tablet) {
+    margin-right: 25px;
+    text-align: right;
+    align-items: flex-end;
+  }
+  @include mq(small_laptop) {
+    flex-direction: row;
+    margin-right: 20px;
+  }
   span {
     display: block;
   }
@@ -38,6 +116,9 @@ header {
         transform: uppercase,
       )
     );
+    @include mq(small_tablet) {
+      @include quick_type(16px, 20px, null);
+    }
   }
   a#phone {
     @include type(
@@ -50,17 +131,8 @@ header {
         weight: 700,
       )
     );
-  }
-}
-
-#menu_wrapper {
-  background: $color_bright_one;
-  @include flex(center, center, column);
-  @include box(68px);
-  span.menu_bars {
-    display: block;
-    background: $color_light_one;
-    margin-bottom: 4px;
-    @include box(30px, 3px);
+    @include mq(small_laptop) {
+      margin-left: 10px;
+    }
   }
 }

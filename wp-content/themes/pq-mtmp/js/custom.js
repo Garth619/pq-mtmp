@@ -393,8 +393,9 @@ jQuery(document).ready(function ($) {
 
   $("#menu_wrapper").on("click", function (e) {
     $("#header_right").toggleClass("open");
+    $("nav").toggleClass("open");
 
-    $("nav").slideToggle(400);
+    //$("nav").slideToggle(400);
   });
 
   function navDesktop() {
@@ -419,6 +420,8 @@ jQuery(document).ready(function ($) {
     $(this).parent().toggleClass("active");
 
     $(this).toggleClass("active");
+
+    $(this).next("ul.sub-menu").toggleClass("active");
   }
 
   // nav
