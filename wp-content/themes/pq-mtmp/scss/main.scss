@@ -5,7 +5,7 @@
         "imports/global/mediaqueries/variables",
         // "imports/global/misc/variables",
         // "imports/global/content/variables",
-        // "imports/components/buttons/variables",
+        "imports/components/buttons/variables",
         // "imports/components/internal_forms/variables",
         // "imports/components/logo_slider/variables",
          "imports/layout/header/variables",
@@ -20,7 +20,7 @@
         // "imports/templates/blog/variables",
         // "imports/templates/caseresults/variables",
         // "imports/templates/contactpage/variables",
-        // "imports/templates/homepage/sectionone/variables",
+        "imports/templates/homepage/sectionone/variables",
         // "imports/templates/homepage/sectiontwo/variables",
         // "imports/templates/homepage/sectionthree/variables",
         // "imports/templates/homepage/sectionfour/variables",
@@ -60,7 +60,7 @@
 
 // components
 
-// @import "imports/components/buttons/buttons",
+ @import "imports/components/buttons/buttons";
 //         "imports/components/logo_slider/_logo_slider",
 //         "imports/components/internal_forms/internal_content_forms";
 
@@ -75,7 +75,7 @@
 
 // page templates
 
-// @import "imports/templates/homepage/sectionone/section_one",
+@import "imports/templates/homepage/sectionone/section_one";
 //         "imports/templates/homepage/sectiontwo/section_two",
 //         "imports/templates/homepage/sectionthree/section_three",
 //         "imports/templates/homepage/sectionfour/section_four",

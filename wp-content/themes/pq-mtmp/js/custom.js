@@ -122,11 +122,13 @@ jQuery(document).ready(function ($) {
 
   $("#sec_one_slider").slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 2,
     mobileFirst: true,
     arrows: false,
     dots: false,
+    //autoplay: true,
+    //autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 767,
