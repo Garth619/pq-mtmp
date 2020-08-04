@@ -1,5 +1,6 @@
 header {
   width: 100%;
+  background: $color_dark_one;
   @include fixed(0, null, null, 0, 10);
   @include mq(small_laptop) {
     position: static;
@@ -7,7 +8,8 @@ header {
 }
 
 #header_inner {
-  background: $color_dark_one;
+  max-width: 1920px;
+  @include margin_lr;
   @include mq(small_tablet) {
     @include flex(space-between);
   }
@@ -21,6 +23,12 @@ header {
   @include mq(small_tablet) {
     padding-left: 45px;
   }
+  @include mq(large_laptop) {
+    padding-left: 20px;
+  }
+  @include mq(small_monitor) {
+    padding-left: 40px;
+  }
   a {
     img {
       margin: 0 auto;
@@ -28,6 +36,9 @@ header {
       max-width: 340px;
       @include mq(small_tablet) {
         margin-top: 23px;
+      }
+      @include mq(large_laptop) {
+        max-width: 370px;
       }
     }
   }
@@ -42,9 +53,12 @@ header {
   @include mq(small_laptop) {
     flex-basis: auto;
     margin-right: 20px;
-    margin-top: 23px;
+    margin-top: 26px;
     flex-direction: column;
     display: block;
+  }
+  @include mq(small_monitor) {
+    margin-right: 40px;
   }
   &.open {
     #menu_wrapper {
@@ -131,6 +145,9 @@ header {
     @include mq(small_tablet) {
       @include quick_type(16px, 20px, null);
     }
+    @include mq(large_laptop) {
+      @include quick_type(18px, 20px, null);
+    }
   }
   a#phone {
     @include type(
@@ -145,6 +162,9 @@ header {
     );
     @include mq(small_laptop) {
       margin-left: 10px;
+    }
+    @include mq(large_laptop) {
+      font-size: 30px;
     }
   }
 }

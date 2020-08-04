@@ -426,11 +426,11 @@ jQuery(document).ready(function ($) {
 
   // nav
 
-  if ($(window).width() >= 1066) {
+  if ($(window).width() >= 1170) {
     navDesktop();
   }
 
-  if ($(window).width() < 1066) {
+  if ($(window).width() < 1170) {
     navTablet();
 
     $("header nav li.menu-item-has-children > a")
@@ -442,7 +442,7 @@ jQuery(document).ready(function ($) {
 
   $(window).resize(
     _.debounce(function () {
-      if ($(window).width() >= 1066) {
+      if ($(window).width() >= 1170) {
         navDesktop();
 
         // off
@@ -450,7 +450,7 @@ jQuery(document).ready(function ($) {
         $("header nav li.menu-item-has-children > a").off("click", tabletClick);
       }
 
-      if ($(window).width() < 1066) {
+      if ($(window).width() < 1170) {
         navTablet();
 
         // off
