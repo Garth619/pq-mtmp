@@ -22,6 +22,14 @@ nav {
   @include mq(small_laptop) {
     position: static;
     transform: translate(0);
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+    overflow-y: initial;
+    -webkit-overflow-scrolling: none;
+    @include box(auto);
+    @include abs(64px, 20px, null, null);
   }
   &.open {
     opacity: 1;
@@ -40,6 +48,9 @@ nav {
           color: $color_light_one,
         )
       );
+      @include mq(small_laptop) {
+        @include quick_type(14px, 17px, null);
+      }
       a {
         color: $color_light_one;
         display: block;
@@ -47,15 +58,29 @@ nav {
         text-decoration: none;
         transition: all 200ms ease-in-out;
         border-bottom: 1px solid $color_dark_two;
+        @include mq(small_laptop) {
+          padding: 0px;
+          border-bottom: none;
+        }
       }
     }
   }
 }
 
 nav {
+  @include mq(small_laptop) {
+    max-width: 100%;
+  }
   ul.menu {
     padding-bottom: 200px;
+    @include mq(small_laptop) {
+      padding: 0;
+      @include flex(flex-end);
+    }
     > li {
+      @include mq(small_laptop) {
+        margin-left: 23px;
+      }
       &:last-of-type {
         > a {
           border-bottom: none;
@@ -63,6 +88,9 @@ nav {
       }
     }
     li.menu-item-has-children {
+      @include mq(small_laptop) {
+        position: relative;
+      }
       > a {
         position: relative;
         &:after {
@@ -72,6 +100,10 @@ nav {
           right: -10px;
           @include contentdisplay(inline-block);
           @include tri(down, 4px, 4px, $color_light_one);
+          @include mq(small_laptop) {
+            right: -5px;
+            margin: 8px 0 0 0px;
+          }
         }
       }
     }
@@ -90,8 +122,30 @@ nav {
   ul.sub-menu {
     display: none;
     background: $color_dark_three;
+    @include mq(small_laptop) {
+      display: block;
+      border: 1px solid $color_dark_two;
+      @include abs(32px, null, null, 0);
+    }
+    li {
+      &:last-of-type {
+        a {
+          border: none;
+        }
+      }
+    }
     li.current-menu-item {
       > a {
+        color: $color_bright_one;
+      }
+    }
+    a {
+      @include mq(small_laptop) {
+        padding: 20px 20px;
+        width: 270px;
+        border-bottom: 1px solid $color_dark_two;
+      }
+      &:hover {
         color: $color_bright_one;
       }
     }
@@ -110,15 +164,6 @@ nav.nav_tablet {
               @include tri(down, 4px, 4px, $color_bright_one);
             }
           }
-        }
-      }
-    }
-  }
-  ul.sub-menu {
-    li {
-      a {
-        &:hover {
-          color: $color_bright_one;
         }
       }
     }
