@@ -1,6 +1,9 @@
 #section_one {
   margin-top: 142px;
   position: relative;
+  @include mq(small_tablet) {
+    margin-top: 122px;
+  }
 }
 
 #sec_one_inner {
@@ -8,11 +11,17 @@
   z-index: 1;
   text-align: center;
   padding: 37px 20px 52px;
+  @include mq(small_tablet) {
+    padding: 54px 20px 52px;
+  }
 }
 
 #sec_one_top {
-  max-width: 327px;
+  max-width: 290px;
   @include margin_lr;
+  @include mq(small_tablet) {
+    max-width:685px;
+  }
 }
 
 span#sec_one_title {
@@ -27,11 +36,19 @@ span#sec_one_title {
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    max-width:593px;
+    @include margin_lr;
+    @include quick_type(56px,60px,null);
+  }
   &:after {
     margin: 33px 0 12px;
     background: $color_bright_two;
     @include box(100%, 1px);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      margin: 33px 0 23px;
+    }
   }
 }
 
@@ -46,6 +63,11 @@ span#sec_one_title {
       color: $color_light_one,
     )
   );
+  @include mq(small_tablet) {
+    max-width:547px;
+    @include margin_lr;
+    @include quick_type(18px,25px,null);
+  }
   p {
     margin-bottom: 15px;
   }
@@ -53,11 +75,19 @@ span#sec_one_title {
 
 a.free_consult_button {
   max-width:287px;
+  display: inline-block;
   @include margin_lr;
+  @include mq(small_tablet) {
+    max-width:100%;
+    width:auto;
+  }
 }
 
 #sec_one_bottom {
   margin-top:28px;
+  @include mq(small_tablet) {
+    @include flex();
+  }
 }
 
 span#sec_one_logo_title {
@@ -78,7 +108,11 @@ span#sec_one_logo_title {
 }
 
 #sec_one_slider {
-  margin-top:35px;
+  margin:35px auto 0;
+  max-width:475px;
+  @include mq(small_tablet) {
+    max-width:100%;
+  }
 }
 
 .sec_one_slide {

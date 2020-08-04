@@ -39,6 +39,10 @@
         weight: 700
       )
     );
+    @include mq(small_tablet) {
+      padding: 24px 34px;
+      @include quick_type(22px,null,null);
+    }
   }
 }
 

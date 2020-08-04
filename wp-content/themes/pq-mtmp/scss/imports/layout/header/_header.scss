@@ -114,7 +114,7 @@ header {
   background: $color_dark_one;
   @include flex(center, center, column);
   @include mq(mobile) {
-    margin-right: -70px;
+    margin-right: -80px;
   }
   @include mq(small_tablet) {
     margin-right: 25px;

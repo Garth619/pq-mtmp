@@ -17,8 +17,12 @@
     </div><!-- sec_one_top -->
 
     <div id='sec_one_bottom'>
-    
+
+    <div>
+
       <span id='sec_one_logo_title'>Featured On</span><!-- sec_one_logo_title -->
+  
+</div>
 
       <div id='sec_one_slider'>
       
