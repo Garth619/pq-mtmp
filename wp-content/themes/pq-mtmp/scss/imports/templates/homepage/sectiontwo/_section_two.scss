@@ -10,6 +10,8 @@
 }
 
 #sec_two_left_slider {
+  max-width: 375px;
+  @include margin_lr;
 }
 
 .sec_two_slide {
@@ -54,7 +56,6 @@
   padding-top: 17px;
   span {
     display: block;
-    max-width: 265px;
     @include type(
       (
         size: 20px,
@@ -79,4 +80,30 @@ span.sec_two_slide_type {
       transform: uppercase,
     )
   );
+}
+
+#sec_two_bottom {
+  text-align: center;
+  background: $color_light_two;
+  padding: 36px 25px;
+}
+
+span#sec_two_featured_title {
+  @include type(
+    (
+      size: 15px,
+      height: 17px,
+      spacing: 3px,
+      family: $primaryfont,
+      color: $color_dark_three,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}
+
+.sec_two_featured_slide {
+  a {
+    text-decoration: none;
+  }
 }

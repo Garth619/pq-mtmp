@@ -136,8 +136,17 @@ jQuery(document).ready(function ($) {
           slidesToShow: 4,
           slidesToScroll: 4,
         },
-      }
+      },
     ],
+  });
+
+  $("#sec_two_left_slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    dots: false,
   });
 
   // $("#sec_two_slider").slick({

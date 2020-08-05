@@ -29,20 +29,33 @@
     display: block;
     z-index: 1;
     text-align: center;
-    padding:20px 15px;
-    @include type (
+    padding: 20px 15px;
+    @include type(
       (
         size: 18px,
         spacing: 0,
         family: $primaryfont,
         color: $color_light_one,
-        weight: 700
+        weight: 700,
       )
     );
     @include mq(small_tablet) {
       padding: 24px 34px;
-      @include quick_type(22px,null,null);
+      @include quick_type(22px, null, null);
     }
   }
 }
 
+.button_two {
+  @include type(
+    (
+      size: 13px,
+      height: 15px,
+      spacing: 0.65px,
+      family: $primaryfont,
+      color: $color_bright_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+}
