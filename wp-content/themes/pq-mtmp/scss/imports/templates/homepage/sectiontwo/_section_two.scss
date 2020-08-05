@@ -20,7 +20,7 @@
 
 .sec_two_slide_profile_wrapper {
   padding-bottom: 23px;
-  border-bottom: 1px solid $color_bright_three;
+  border-bottom: 1px solid $color_light_three;
   @include flex();
 }
 
@@ -85,7 +85,7 @@ span.sec_two_slide_type {
 #sec_two_bottom {
   text-align: center;
   background: $color_light_two;
-  padding: 36px 25px;
+  padding: 36px 25px 42px;
 }
 
 span#sec_two_featured_title {
@@ -102,8 +102,94 @@ span#sec_two_featured_title {
   );
 }
 
+#sec_two_featured_slider_wrapper {
+  @include flex(null, null, null, wrap);
+}
+
+#sec_two_featured_slider {
+  margin-top: 30px;
+  width: 100%;
+  order: 1;
+}
+
 .sec_two_featured_slide {
   a {
     text-decoration: none;
+  }
+}
+
+.sec_two_featured_image {
+  position: relative;
+  height: 118px;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    @include abs(0, null, null, 0);
+    @include image();
+    @include box(100%);
+  }
+}
+
+.sec_two_featured_slide_content {
+  background: $color_light_one;
+  padding: 16px 20px 22px;
+}
+
+span.sec_two_featured_slide_title {
+  display: block;
+  margin-bottom: 20px;
+  @include type(
+    (
+      size: 25px,
+      height: 27px,
+      spacing: 0,
+      family: $primaryfont,
+      color: $color_dark_three,
+      weight: 700,
+    )
+  );
+}
+
+.sec_two_featured_slide_descrip {
+  display: block;
+  @include type(
+    (
+      size: 15px,
+      height: 20px,
+      spacing: 0,
+      family: $primaryfont,
+      color: $color_light_four,
+    )
+  );
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.sec_two_featured_arrow {
+  background: $color_dark_three;
+  flex-basis: 50%;
+  margin-top: 13px;
+  @include box(100%, 34px);
+  @include flex(center, center);
+  display: flex !important;
+  &:after {
+    @include contentdisplay();
+    @include tri(left, 6px, 6px, $color_light_one);
+  }
+  &:hover {
+    background: $color_dark_two;
+  }
+}
+
+.sec_two_featured_arrow_left {
+  order: 2;
+}
+
+.sec_two_featured_arrow_right {
+  order: 3;
+  &:after {
+    transform: rotate(-180deg);
   }
 }

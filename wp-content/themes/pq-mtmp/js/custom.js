@@ -149,6 +149,29 @@ jQuery(document).ready(function ($) {
     dots: false,
   });
 
+  $("#sec_two_featured_slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    dots: false,
+    fade: true,
+    prevArrow: ".sec_two_featured_arrow_left",
+    nextArrow: ".sec_two_featured_arrow_right",
+    //autoplay: true,
+    //autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+    ],
+  });
+
   // $("#sec_two_slider").slick({
   //   infinite: true,
   //   slidesToShow: 1,

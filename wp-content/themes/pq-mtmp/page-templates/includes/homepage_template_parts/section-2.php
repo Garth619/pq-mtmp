@@ -122,7 +122,7 @@
 
 			<div id='sec_two_featured_slider_wrapper'>
 
-				<div class='sec_two_featured_arrow_left sec_two_featured__arrow'>
+				<div class='sec_two_featured_arrow_left sec_two_featured_arrow'>
 				
 					
 				
@@ -140,15 +140,125 @@
   						
   						</div><!-- sec_two_featured_image -->
   
-  						<div id='sec_two_featured_slide_content'>
+  						<div class='sec_two_featured_slide_content'>
   						
   							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
   
   							<div class='sec_two_featured_slide_descrip'>
   							
-									<p>Zantac The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
-									
-									<p>Zantac The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+  							
+								</div><!-- sec_two_featured_slide_descrip -->
+								
+								<span class='button_two'>Learn More</span><!-- button_two -->
+
+  						</div><!-- sec_two_featured_slide_content -->
+
+					 </a>
+					
+					</div><!-- sec_two_featured_slide -->
+
+					<div class='sec_two_featured_slide'>
+
+						<a href="">
+					
+  						<div class='sec_two_featured_image'>
+  						
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  						
+  						</div><!-- sec_two_featured_image -->
+  
+  						<div class='sec_two_featured_slide_content'>
+  						
+  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  
+  							<div class='sec_two_featured_slide_descrip'>
+  							
+									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+  							
+								</div><!-- sec_two_featured_slide_descrip -->
+								
+								<span class='button_two'>Learn More</span><!-- button_two -->
+
+  						</div><!-- sec_two_featured_slide_content -->
+
+					 </a>
+					
+					</div><!-- sec_two_featured_slide -->
+
+					<div class='sec_two_featured_slide'>
+
+						<a href="">
+					
+  						<div class='sec_two_featured_image'>
+  						
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  						
+  						</div><!-- sec_two_featured_image -->
+  
+  						<div class='sec_two_featured_slide_content'>
+  						
+  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  
+  							<div class='sec_two_featured_slide_descrip'>
+  							
+									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+  							
+								</div><!-- sec_two_featured_slide_descrip -->
+								
+								<span class='button_two'>Learn More</span><!-- button_two -->
+
+  						</div><!-- sec_two_featured_slide_content -->
+
+					 </a>
+					
+					</div><!-- sec_two_featured_slide -->
+
+					<div class='sec_two_featured_slide'>
+
+						<a href="">
+					
+  						<div class='sec_two_featured_image'>
+  						
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  						
+  						</div><!-- sec_two_featured_image -->
+  
+  						<div class='sec_two_featured_slide_content'>
+  						
+  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  
+  							<div class='sec_two_featured_slide_descrip'>
+  							
+									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+  							
+								</div><!-- sec_two_featured_slide_descrip -->
+								
+								<span class='button_two'>Learn More</span><!-- button_two -->
+
+  						</div><!-- sec_two_featured_slide_content -->
+
+					 </a>
+					
+					</div><!-- sec_two_featured_slide -->
+
+					<div class='sec_two_featured_slide'>
+
+						<a href="">
+					
+  						<div class='sec_two_featured_image'>
+  						
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  						
+  						</div><!-- sec_two_featured_image -->
+  
+  						<div class='sec_two_featured_slide_content'>
+  						
+  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  
+  							<div class='sec_two_featured_slide_descrip'>
+  							
+									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
@@ -162,7 +272,7 @@
 				
 				</div><!-- sec_two_featured_slider -->
 				
-				<div class='sec_two_featured_arrow_right sec_two_featured__arrow'>
+				<div class='sec_two_featured_arrow_right sec_two_featured_arrow'>
 				
 					
 				

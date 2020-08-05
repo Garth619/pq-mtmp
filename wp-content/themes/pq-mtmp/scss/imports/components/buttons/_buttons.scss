@@ -47,15 +47,24 @@
 }
 
 .button_two {
+  border: 2px solid $color_bright_two;
+  border-radius: 45px;
+  display: inline-block;
+  padding: 5px 25px;
+  transition: all 200ms ease-in-out;
   @include type(
     (
       size: 13px,
       height: 15px,
       spacing: 0.65px,
       family: $primaryfont,
-      color: $color_bright_one,
+      color: $color_bright_two,
       weight: 700,
       transform: lowercase,
     )
   );
+  &:hover {
+    border: 2px solid $color_bright_one;
+    color: $color_bright_one;
+  }
 }
