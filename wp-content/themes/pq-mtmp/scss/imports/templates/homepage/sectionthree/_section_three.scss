@@ -7,6 +7,14 @@
     @include flex();
     padding: 115px 65px 115px 97px;
   }
+  @include mq(large_laptop) {
+    padding: 131px 65px 130px 178px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1275px;
+    padding: 131px 0px 80px;
+    @include margin_lr;
+  }
 }
 
 #sec_three_left {
@@ -35,15 +43,24 @@ span#sec_three_left_descrip {
       family: $primaryfont,
     )
   );
+  @include mq(large_laptop) {
+    margin-top: 153px;
+  }
 }
 
 img#eb_graphic {
   opacity: 0.5;
   @include abs(35px, null, null, -140px);
+  @include mq(large_laptop) {
+    left: -166px;
+  }
 }
 
 #sec_three_right {
   padding-left: 40px;
+  @include mq(large_laptop) {
+    padding-left: 229px;
+  }
 }
 
 #sec_three_content {
