@@ -125,8 +125,11 @@ span.sec_two_slide_type {
 }
 
 #sec_two_top_arrows {
-  @include flex();
-  @include abs(null, 0, 0, null);
+  display: none;
+  @include mq(small_laptop) {
+    @include flex();
+    @include abs(null, 0, 0, null);
+  }
 }
 
 .sec_two_arrow {

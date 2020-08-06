@@ -12,7 +12,7 @@
 
       </div><!-- sec_one_content -->
 
-      <a class='button free_consult_button' href='consultation'><span>Request a Free Consultation</span></a><!-- button -->
+      <a class='button free_consult_button' href='#consultation'><span>Request a Free Consultation</span></a><!-- button -->
     
     </div><!-- sec_one_top -->
 
