@@ -4,6 +4,8 @@
   width: 100%;
   display: inline-block;
   z-index: 1;
+  border-radius: 50px;
+  box-shadow: 0px 3px 7px #12283e59;
   &:hover {
     &:after {
       opacity: 1;

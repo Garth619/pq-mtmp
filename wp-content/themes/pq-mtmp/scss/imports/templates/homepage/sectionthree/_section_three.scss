@@ -3,9 +3,47 @@
   @include mq(small_tablet) {
     padding: 82px 97px 75px;
   }
+  @include mq(small_laptop) {
+    @include flex();
+    padding: 115px 65px 115px 97px;
+  }
 }
 
 #sec_three_left {
+  @include mq(small_laptop) {
+    display: block;
+    flex-shrink: 0;
+    flex-basis: 428px;
+    position: relative;
+  }
+}
+
+#sec_three_left_inner {
+  position: relative;
+  z-index: 1;
+}
+
+span#sec_three_left_descrip {
+  display: block;
+  margin-top: 135px;
+  margin-bottom: 48px;
+  @include type(
+    (
+      size: 45px,
+      height: 54px,
+      spacing: 0,
+      family: $primaryfont,
+    )
+  );
+}
+
+img#eb_graphic {
+  opacity: 0.5;
+  @include abs(35px, null, null, -140px);
+}
+
+#sec_three_right {
+  padding-left: 40px;
 }
 
 #sec_three_content {

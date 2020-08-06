@@ -4,7 +4,15 @@
 	
 		<div id='sec_three_left'>
 		
+			<div id='sec_three_left_inner'>
 			
+				<span id='sec_three_left_descrip'>We never charge a fee to handle a dangerous product case. <strong>You only pay us if we win your case!</strong></span><!-- sec_three_left_descrip -->
+
+				<a class='button free_consult_button' href='#consultation'><span>Request a Free Consultation</span></a><!-- button -->
+
+			</div><!-- sec_three_inner -->
+
+			<img id='eb_graphic' src='<?php bloginfo('template_directory');?>/images/eb-graphic.svg' alt=''/><!-- eb_graphic -->
 		
 		</div><!-- sec_three_left -->
 
@@ -20,7 +28,7 @@
    			
    			<h2>Call today for a free consultation</h2>
    			
-   			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+   			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
 			</div><!-- sec_three_content -->
 		
