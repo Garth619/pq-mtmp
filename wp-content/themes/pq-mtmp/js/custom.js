@@ -146,6 +146,8 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     mobileFirst: true,
     arrows: false,
+    adaptiveHeight: true,
+    fade: true,
     dots: false,
   });
 
@@ -154,19 +156,19 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
+    adaptiveHeight: true,
     arrows: true,
     dots: false,
     fade: true,
     prevArrow: ".sec_two_featured_arrow_left",
     nextArrow: ".sec_two_featured_arrow_right",
-    //autoplay: true,
-    //autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 1,
+          //adaptiveHeight: false,
+          slidesToScroll: 1,
         },
       },
     ],

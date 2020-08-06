@@ -58,7 +58,7 @@
 
 					<div class='sec_two_slide_descrip'>
 						
-							<span>“... they have gone above and beyond to make things as painless as humanly possible.”</span>
+ 							<span>“... they have gone above and beyond to make things as painless as humanly possible.”</span>
 						
 						</div><!-- sec_two_slide_descrip -->
 
@@ -164,17 +164,17 @@
 					
   						<div class='sec_two_featured_image'>
   						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-2.jpg' alt=''/><!-- name -->
   						
   						</div><!-- sec_two_featured_image -->
   
   						<div class='sec_two_featured_slide_content'>
   						
-  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  							<span class='sec_two_featured_slide_title'>Uloric</span><!-- class -->
   
   							<div class='sec_two_featured_slide_descrip'>
   							
-									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+									<p>The FDA has issued a Black Box Warning about gout medication, Ulroic (febuxostat) and cardiovascular death.</p>
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
@@ -192,17 +192,17 @@
 					
   						<div class='sec_two_featured_image'>
   						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-3.jpg' alt=''/><!-- name -->
   						
   						</div><!-- sec_two_featured_image -->
   
   						<div class='sec_two_featured_slide_content'>
   						
-  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  							<span class='sec_two_featured_slide_title'>Priolosec & Nexium</span><!-- class -->
   
   							<div class='sec_two_featured_slide_descrip'>
   							
-									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+									<p>Priolosec & Nexium, lawsuit claims the drugs cause serious side effects like storke, heart attack, dementia and kidney problems.</p>
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
@@ -220,13 +220,13 @@
 					
   						<div class='sec_two_featured_image'>
   						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
+  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-4.jpg' alt=''/><!-- name -->
   						
   						</div><!-- sec_two_featured_image -->
   
   						<div class='sec_two_featured_slide_content'>
   						
-  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  							<span class='sec_two_featured_slide_title'>Test</span><!-- class -->
   
   							<div class='sec_two_featured_slide_descrip'>
   							

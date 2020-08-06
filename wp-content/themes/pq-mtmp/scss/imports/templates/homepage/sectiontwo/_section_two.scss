@@ -2,11 +2,18 @@
 }
 
 #sec_two_inner {
+  @include mq(small_tablet) {
+    @include flex();
+  }
 }
 
 #sec_two_top {
   padding: 39px 32px 75px;
   background: $color_dark_three;
+  @include mq(small_tablet) {
+    width: 50%;
+    @include flex(null, center);
+  }
 }
 
 #sec_two_left_slider {
@@ -16,6 +23,9 @@
 
 .sec_two_slide {
   color: $color_light_one;
+  @include mq(small_tablet) {
+    height: 100%;
+  }
 }
 
 .sec_two_slide_profile_wrapper {
@@ -54,6 +64,9 @@
 
 .sec_two_slide_descrip {
   padding-top: 17px;
+  @include mq(small_tablet) {
+    padding-top: 28px;
+  }
   span {
     display: block;
     @include type(
@@ -64,6 +77,9 @@
         family: $primaryfont,
       )
     );
+    @include mq(small_tablet) {
+      @include quick_type(22px, 29px, null);
+    }
   }
 }
 
@@ -80,12 +96,19 @@ span.sec_two_slide_type {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    margin-top: 32px;
+  }
 }
 
 #sec_two_bottom {
   text-align: center;
   background: $color_light_two;
   padding: 36px 25px 42px;
+  @include mq(small_tablet) {
+    width: 50%;
+    padding: 36px 32px 28px;
+  }
 }
 
 span#sec_two_featured_title {
@@ -100,9 +123,15 @@ span#sec_two_featured_title {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    display: block;
+    text-align: left;
+  }
 }
 
 #sec_two_featured_slider_wrapper {
+  max-width: 375px;
+  @include margin_lr;
   @include flex(null, null, null, wrap);
 }
 
@@ -110,6 +139,9 @@ span#sec_two_featured_title {
   margin-top: 30px;
   width: 100%;
   order: 1;
+  @include mq(small_tablet) {
+    margin-top: 26px;
+  }
 }
 
 .sec_two_featured_slide {
@@ -133,7 +165,7 @@ span#sec_two_featured_title {
 
 .sec_two_featured_slide_content {
   background: $color_light_one;
-  padding: 16px 20px 22px;
+  padding: 16px 22px 22px;
 }
 
 span.sec_two_featured_slide_title {
@@ -162,6 +194,7 @@ span.sec_two_featured_slide_title {
       color: $color_light_four,
     )
   );
+
   p {
     margin-bottom: 10px;
   }
