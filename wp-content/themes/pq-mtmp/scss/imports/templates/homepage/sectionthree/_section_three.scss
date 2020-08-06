@@ -18,6 +18,7 @@
 }
 
 #sec_three_left {
+  display: none;
   @include mq(small_laptop) {
     display: block;
     flex-shrink: 0;
@@ -57,8 +58,13 @@ img#eb_graphic {
 }
 
 #sec_three_right {
-  padding-left: 40px;
+  @include mq(small_laptop) {
+    padding-left: 40px;
+  }
   @include mq(large_laptop) {
+    padding-left: 115px;
+  }
+  @include mq(small_monitor) {
     padding-left: 229px;
   }
 }
