@@ -1,11 +1,10 @@
 #section_four {
   background: $color_dark_one;
-  height: 3000px;
 }
 
 #sec_four_inner {
   text-align: center;
-  padding: 65px 20px;
+  padding: 65px 20px 55px;
 }
 
 span#sec_four_title {
@@ -22,4 +21,100 @@ span#sec_four_title {
       transform: uppercase,
     )
   );
+}
+
+#sec_four_slider_wrapper {
+  margin-top: 18px;
+}
+
+#sec_four_slider {
+  .slick-slide {
+    padding: 20px 0 0 0;
+    margin: 0 20px;
+  }
+  .slick-list {
+    padding: 0px 0 20px 0;
+    margin: 0 -20px;
+  }
+  .slick-dots {
+    position: static;
+    margin: 30px 0 0 0;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color_bright_two;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color_bright_two;
+        }
+      }
+    }
+    li {
+      margin: 0 7px;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: $color_light_one;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+.sec_four_slide {
+  text-align: center;
+  padding: 83px 20px;
+  box-shadow: 0px 1px 20px #000000;
+  img {
+    @include margin_lr;
+    @include image();
+    height: 42px;
+  }
+  span {
+    display: block;
+    &.sec_four_slide_title {
+      margin-top: 50px;
+      @include type(
+        (
+          size: 45px,
+          family: $primaryfont,
+          color: $color_light_one,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+    }
+    &.sec_four_slide_type {
+      margin-top: 26px;
+      @include type(
+        (
+          size: 18px,
+          spacing: 1.8px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+    }
+    &.sec_four_slide_descrip {
+      margin-top: 30px;
+      @include type(
+        (
+          size: 18px,
+          height: 25px,
+          family: $primaryfont,
+          color: $color_light_four,
+        )
+      );
+    }
+  }
 }
