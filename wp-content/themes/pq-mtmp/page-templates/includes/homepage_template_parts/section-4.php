@@ -10,7 +10,7 @@
 
 			<div id='sec_four_slider'>
 			
-				<div class='sec_four_slide'>
+				<div class='sec_four_slide one'>
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-1.svg' alt=''/><!-- name -->
 
@@ -22,7 +22,7 @@
 				
 				</div><!-- sec_four_slide -->
 
-				<div class='sec_four_slide'>
+				<div class='sec_four_slide two'>
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-2.svg' alt=''/><!-- name -->
 
@@ -34,7 +34,7 @@
 				
 				</div><!-- sec_four_slide -->
 
-				<div class='sec_four_slide'>
+				<div class='sec_four_slide three'>
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-3.svg' alt=''/><!-- name -->
 
@@ -46,7 +46,7 @@
 				
 				</div><!-- sec_four_slide -->
 
-				<div class='sec_four_slide'>
+				<div class='sec_four_slide four'>
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-1.svg' alt=''/><!-- name -->
 

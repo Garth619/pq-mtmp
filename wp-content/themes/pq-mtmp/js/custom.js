@@ -213,8 +213,33 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          fade: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 1170,
+        settings: {
+          fade: false,
+          dots: false,
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          prevArrow: ".sec_four_arrow_left",
+          nextArrow: ".sec_four_arrow_right",
+        },
+      },
+      {
+        breakpoint: 1380,
+        settings: {
+          fade: false,
+          dots: false,
+          arrows: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          prevArrow: ".sec_four_arrow_left",
+          nextArrow: ".sec_four_arrow_right",
         },
       },
     ],
