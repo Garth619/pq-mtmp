@@ -26,6 +26,7 @@ $small_laptop: 1170px !default;
 $large_laptop: 1380px !default;
 $small_monitor: 1695px !default;
 $monitor: 1800px !default;
+$large_monitor: 2050px !default;
 
 // $internal_xlarge_monitor: 1760px !default!default;
 
@@ -54,7 +55,10 @@ $media_queries: (
   monitor: (
     breakpoint: "(min-width: #{$monitor})",
   ),
-) !default;
+  large_monitor: (
+    breakpoint: "(min-width: #{$large_monitor})",
+  ),
+);
 
 // see _mixins.scss for media query mixin
 
