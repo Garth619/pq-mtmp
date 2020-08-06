@@ -11,6 +11,9 @@ body {
       family: $primaryfont,
     )
   );
+  @include mq(small_tablet) {
+    font-size: 17px;
+  }
   h1.page_header {
     @include type(
       (
@@ -21,11 +24,17 @@ body {
         weight: 700,
       )
     );
+    @include mq(small_tablet) {
+      @include quick_type(40px, 42px, null);
+    }
     &:after {
       background: $color_bright_two;
       margin-top: 23px;
       @include box(100%, 3px);
       @include contentdisplay();
+      @include mq(small_tablet) {
+        margin-top: 29px;
+      }
     }
   }
   h2 {
@@ -39,6 +48,9 @@ body {
         weight: 700,
       )
     );
+    @include mq(small_tablet) {
+      padding-top: 20px;
+    }
   }
   p {
     margin-bottom: 25px;

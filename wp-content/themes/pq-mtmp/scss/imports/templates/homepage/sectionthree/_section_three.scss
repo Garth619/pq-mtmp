@@ -1,5 +1,8 @@
 #sec_three_inner {
   padding: 42px 20px 25px;
+  @include mq(small_tablet) {
+    padding: 82px 97px 75px;
+  }
 }
 
 #sec_three_left {
@@ -7,4 +10,7 @@
 
 #sec_three_content {
   margin-top: 33px;
+  @include mq(small_tablet) {
+    margin-top: 22px;
+  }
 }
