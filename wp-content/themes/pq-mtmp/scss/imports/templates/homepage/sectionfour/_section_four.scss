@@ -1,3 +1,25 @@
 #section_four {
   background: $color_dark_one;
+  height: 3000px;
+}
+
+#sec_four_inner {
+  text-align: center;
+  padding: 65px 20px;
+}
+
+span#sec_four_title {
+  display: inline-block;
+  background: $color_bright_one;
+  padding: 6px 35px;
+  @include type(
+    (
+      size: 15px,
+      spacing: 3px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
 }
