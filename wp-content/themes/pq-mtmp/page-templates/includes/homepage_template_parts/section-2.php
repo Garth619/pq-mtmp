@@ -80,7 +80,7 @@
 						
 							<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
 
-							<span class='sec_two_profile_two'>Kerry - San Diego, CA</span><!-- sec_two_profile_two -->
+							<span class='sec_two_profile_two'>Person - San Diego, CA</span><!-- sec_two_profile_two -->
 						
 						</div><!-- sec_two_profile_info -->
 					
@@ -100,17 +100,9 @@
 
 			<div id='sec_two_top_arrows'>
 			
-				<div class='sec_two_arrow_left sec_two_arrow'>
-				
-					
-				
-				</div><!-- sec_two_arrow -->
+				<div class='sec_two_arrow_left sec_two_arrow'></div><!-- sec_two_arrow -->
 
-				<div class='sec_two_arrow_right sec_two_arrow'>
-				
-					
-				
-				</div><!-- sec_two_arrow -->
+				<div class='sec_two_arrow_right sec_two_arrow'></div><!-- sec_two_arrow -->
 			
 			</div><!-- sec_two_top_arrows -->
 		
@@ -122,11 +114,7 @@
 
 			<div id='sec_two_featured_slider_wrapper'>
 
-				<div class='sec_two_featured_arrow_left sec_two_featured_arrow'>
-				
-					
-				
-				</div><!-- sec_two_featured_arrow -->
+				<div class='sec_two_featured_arrow_left sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
 			
 				<div id='sec_two_featured_slider'>
 				
@@ -150,7 +138,11 @@
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
-								<span class='button_two'>Learn More</span><!-- button_two -->
+								<div class='learn_more_wrapper'>
+								
+									<span class='button_two'>Learn More</span><!-- button_two -->
+								
+								</div><!-- learn_more_wrapper -->
 
   						</div><!-- sec_two_featured_slide_content -->
 
@@ -178,7 +170,11 @@
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
-								<span class='button_two'>Learn More</span><!-- button_two -->
+								<div class='learn_more_wrapper'>
+								
+									<span class='button_two'>Learn More</span><!-- button_two -->
+								
+								</div><!-- learn_more_wrapper -->
 
   						</div><!-- sec_two_featured_slide_content -->
 
@@ -206,7 +202,11 @@
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
-								<span class='button_two'>Learn More</span><!-- button_two -->
+								<div class='learn_more_wrapper'>
+								
+									<span class='button_two'>Learn More</span><!-- button_two -->
+								
+								</div><!-- learn_more_wrapper -->
 
   						</div><!-- sec_two_featured_slide_content -->
 
@@ -234,7 +234,11 @@
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
-								<span class='button_two'>Learn More</span><!-- button_two -->
+								<div class='learn_more_wrapper'>
+								
+									<span class='button_two'>Learn More</span><!-- button_two -->
+								
+								</div><!-- learn_more_wrapper -->
 
   						</div><!-- sec_two_featured_slide_content -->
 
@@ -254,17 +258,21 @@
   
   						<div class='sec_two_featured_slide_content'>
   						
-  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
+  							<span class='sec_two_featured_slide_title'>Priolosec & Nexium</span><!-- class -->
   
   							<div class='sec_two_featured_slide_descrip'>
   							
-									<p>The FDA has warned that heartburn medication Zantac may be heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+								<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
-								<span class='button_two'>Learn More</span><!-- button_two -->
+								<div class='learn_more_wrapper'>
+								
+									<span class='button_two'>Learn More</span><!-- button_two -->
+								
+								</div><!-- learn_more_wrapper -->
 
-  						</div><!-- sec_two_featured_slide_content -->
+							</div><!-- sec_two_featured_slide_content -->
 
 					 </a>
 					
@@ -272,11 +280,7 @@
 				
 				</div><!-- sec_two_featured_slider -->
 				
-				<div class='sec_two_featured_arrow_right sec_two_featured_arrow'>
-				
-					
-				
-				</div><!-- sec_two_featured_arrow -->
+				<div class='sec_two_featured_arrow_right sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
 			
 			</div><!-- sec_two_featured_slider_wrapper -->
 		
