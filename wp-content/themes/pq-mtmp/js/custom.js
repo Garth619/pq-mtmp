@@ -149,6 +149,16 @@ jQuery(document).ready(function ($) {
     adaptiveHeight: true,
     fade: true,
     dots: false,
+    responsive: [
+      {
+        breakpoint: 1180,
+        settings: {
+          arrows: true,
+          prevArrow: ".sec_two_arrow_left",
+          nextArrow: ".sec_two_arrow_right",
+        },
+      },
+    ],
   });
 
   $("#sec_two_featured_slider").slick({
@@ -167,8 +177,15 @@ jQuery(document).ready(function ($) {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
-          //adaptiveHeight: false,
           slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1180,
+        settings: {
+          fade: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],

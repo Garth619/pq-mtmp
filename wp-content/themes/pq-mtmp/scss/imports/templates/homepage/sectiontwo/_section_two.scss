@@ -14,11 +14,18 @@
     width: 50%;
     @include flex(null, center);
   }
+  @include mq(small_laptop) {
+    width: 380px;
+    position: relative;
+  }
 }
 
 #sec_two_left_slider {
   max-width: 375px;
   @include margin_lr;
+  @include mq(small_laptop) {
+    max-width: 100%;
+  }
 }
 
 .sec_two_slide {
@@ -101,6 +108,25 @@ span.sec_two_slide_type {
   }
 }
 
+#sec_two_top_arrows {
+  @include flex();
+  @include abs(null, 0, 0, null);
+}
+
+.sec_two_arrow {
+  background: $color_bright_one;
+  transition: 200ms all ease-in-out;
+  @include flex(center, center);
+  @include box(52px, 34px);
+  &:hover {
+    background: $color_bright_four;
+  }
+  &:after {
+    @include contentdisplay();
+    @include tri(left, 6px, 6px, $color_light_one);
+  }
+}
+
 #sec_two_bottom {
   text-align: center;
   background: $color_light_two;
@@ -108,6 +134,9 @@ span.sec_two_slide_type {
   @include mq(small_tablet) {
     width: 50%;
     padding: 36px 32px 28px;
+  }
+  @include mq(small_laptop) {
+    width: calc(100% - 380px);
   }
 }
 
@@ -126,6 +155,8 @@ span#sec_two_featured_title {
   @include mq(small_tablet) {
     display: block;
     text-align: left;
+    max-width: 375px;
+    @include margin_lr;
   }
 }
 
@@ -133,6 +164,12 @@ span#sec_two_featured_title {
   max-width: 375px;
   @include margin_lr;
   @include flex(null, null, null, wrap);
+  @include mq(small_tablet) {
+    max-width: 100%;
+  }
+  @include mq(small_laptop) {
+    flex-wrap: inherit;
+  }
 }
 
 #sec_two_featured_slider {
@@ -141,6 +178,9 @@ span#sec_two_featured_title {
   order: 1;
   @include mq(small_tablet) {
     margin-top: 26px;
+  }
+  @include mq(small_laptop) {
+    order: 2;
   }
 }
 
@@ -207,9 +247,29 @@ span.sec_two_featured_slide_title {
   @include box(100%, 34px);
   @include flex(center, center);
   display: flex !important;
+  @include mq(small_laptop) {
+    flex-basis: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+  }
+  &:before {
+    @include mq(small_laptop) {
+      background: $color_light_one;
+      border-radius: 50%;
+      @include contentdisplay();
+      @include box(35px);
+    }
+  }
   &:after {
     @include contentdisplay();
     @include tri(left, 6px, 6px, $color_light_one);
+    @include mq(small_laptop) {
+      @include abs(18px, null, null, 18px);
+      @include tri(left, 7px, 8px, $color_dark_three);
+    }
   }
   &:hover {
     background: $color_dark_two;
@@ -218,6 +278,9 @@ span.sec_two_featured_slide_title {
 
 .sec_two_featured_arrow_left {
   order: 2;
+  @include mq(small_laptop) {
+    order: 1;
+  }
 }
 
 .sec_two_featured_arrow_right {

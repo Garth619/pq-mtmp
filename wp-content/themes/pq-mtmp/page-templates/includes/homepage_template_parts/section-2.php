@@ -50,7 +50,7 @@
 						
 							<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
 
-							<span class='sec_two_profile_two'>Kerry - San Diego, CA</span><!-- sec_two_profile_two -->
+							<span class='sec_two_profile_two'>Person - San Diego, CA</span><!-- sec_two_profile_two -->
 						
 						</div><!-- sec_two_profile_info -->
 					
@@ -58,7 +58,7 @@
 
 					<div class='sec_two_slide_descrip'>
 						
- 							<span>“... they have gone above and beyond to make things as painless as humanly possible.”</span>
+ 							<span>“... they have gone above and beyond to make they have gone above and beyond to make  things as painless as humanly possible.”</span>
 						
 						</div><!-- sec_two_slide_descrip -->
 
@@ -258,7 +258,7 @@
   
   							<div class='sec_two_featured_slide_descrip'>
   							
-									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
+									<p>The FDA has warned that heartburn medication Zantac may be heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
   							
 								</div><!-- sec_two_featured_slide_descrip -->
 								
