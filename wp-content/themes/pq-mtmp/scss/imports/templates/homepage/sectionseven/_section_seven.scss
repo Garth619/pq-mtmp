@@ -1,0 +1,73 @@
+#sec_seven_inner {
+  padding: 62px 25px 90px;
+}
+
+#sec_seven_top {
+}
+
+#sec_seven_video {
+  position: relative;
+  #video_overlay {
+    @include flex(center, center);
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+  img {
+    @include image();
+  }
+}
+
+#sec_seven_bottom {
+  text-align: center;
+  margin-top: 75px;
+  position: relative;
+}
+
+#sec_seven_bottom_inner {
+  position: relative;
+  z-index: 1;
+}
+
+span#sec_seven_title {
+  display: block;
+  @include type(
+    (
+      size: 40px,
+      height: 33px,
+      family: $primaryfont,
+      weight: 700,
+    )
+  );
+  &:after {
+    margin-top: 40px;
+    background: $color_bright_one;
+    @include box(100%, 3px);
+    @include contentdisplay();
+  }
+}
+
+#sec_seven_content {
+  margin-top: 25px;
+  @include type(
+    (
+      size: 17px,
+      height: 27px,
+      family: $primaryfont,
+    )
+  );
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+#sec_seven_learn_more {
+  margin-top: 33px;
+}
+
+#sec_seven_logo {
+  width: 100%;
+  @include flex(center, null);
+  @include abs(0, null, null, 0);
+  img {
+  }
+}

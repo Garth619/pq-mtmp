@@ -137,7 +137,7 @@ nav {
 nav {
   ul.sub-menu {
     display: none;
-    background: $color_dark_three;
+    background: $color_dark_one;
     @include mq(small_laptop) {
       display: block !important;
       opacity: 0;

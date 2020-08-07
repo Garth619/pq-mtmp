@@ -116,3 +116,51 @@
     color: $color_light_one;
   }
 }
+
+.button_five {
+  background: $color_bright_two;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 7px 33px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 14px,
+      height: 25px,
+      spacing: 0.7px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    background: $color_dark_one;
+  }
+}
+
+span.play_button {
+  display: block;
+  border-radius: 50%;
+  background: $color_light_rgba;
+  position: relative;
+  @include flex(center, center);
+  @include box(88px);
+  &:before {
+    background: $color_dark_one;
+    border-radius: 50%;
+    @include box(70px);
+    @include contentdisplay();
+  }
+  &:after {
+    @include abs(32px, null, null, 40px);
+    @include contentdisplay();
+    transition: all 200ms ease-in-out;
+    @include tri(right, 11px, 14px, $color_bright_two);
+  }
+  &:hover {
+    &:after {
+      @include tri(right, 11px, 14px, $color_bright_one);
+    }
+  }
+}
