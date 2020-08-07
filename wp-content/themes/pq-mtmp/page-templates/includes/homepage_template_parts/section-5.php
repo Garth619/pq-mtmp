@@ -2,53 +2,193 @@
 
 	<div id='sec_five_inner'>
 	
-		<div id='sec_five_left'>
+		<span id='sec_five_header'>Most Dangerous Products on the Market</span><!-- sec_five_header -->
+
+		<div id='sec_five_post_image_wrapper'>
 		
-			<div id='sec_five_image_wrapper'>
+			<div class='sec_five_post'>
 
-				<picture>
-
-					<?php $section_five_image_desktop = get_field( 'section_five_image_desktop' ); ?>
-					
-					<?php if ( $section_five_image_desktop ) { ?>
-
-						<source media='(min-width: 1380px)' data-srcset='<?php echo $section_five_image_desktop['url']; ?>'>
-
-					<?php } ?>
-
-					<?php $section_five_image_laptop = get_field( 'section_five_image_laptop' ); ?>
-
-					<?php if ( $section_five_image_laptop ) { ?>
-
-						<source media='(min-width: 1170px)' data-srcset='<?php echo $section_five_image_laptop['url']; ?>'>
-
-					<?php } ?>
-
-					<?php $section_five_image_mobile = get_field( 'section_five_image_mobile' ); ?>
-
-					<img class="lazyload" data-src='<?php echo $section_five_image_mobile['url']; ?>' /><!-- name -->
-
-				</picture>
+				<a href="">
 			
-			</div><!-- sec_five_image_wrapper -->
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>Zantac</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
 
-			<div id='sec_five_left_content'>
+				</a>
 			
-				<span style="display:none" class="double_line"></span>
+			</div><!-- sec_five_post -->
 
-				<span id='sec_five_intro'><?php the_field( 'section_five_quote' ); ?></span><!-- sec_five_intro -->
+			<div class='sec_five_post'>
 
-				<a class='button_two' href='<?php the_field( 'section_five_page_link' ); ?>'><?php the_field( 'section_five_button_verbiage' ); ?></a><!-- button_two -->
+				<a href="">
+			
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-2.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>Uloric</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>The FDA has issued a Black Box Warning about gout medication, Ulroic (febuxostat) and cardiovascular death.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
 
-			</div><!-- sec_five_left_content -->
+				</a>
+			
+			</div><!-- sec_five_post -->
+
+			<div class='sec_five_post'>
+
+				<a href="">
+			
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-3.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>Priolosec & Nexium</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>Priolosec & Nexium, lawsuit claims the drugs cause serious side effects like storke, heart attack, dementia and kidney problems.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
+
+				</a>
+			
+			</div><!-- sec_five_post -->
+
+			<div class='sec_five_post'>
+
+				<a href="">
+			
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-4.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>PRODUCT LIABILITY</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>Talcum Powder</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>If you or a loved one experienced ovarian cancer after years of using talc-based powders, you could have a case against Johnson & Johnson.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
+
+				</a>
+			
+			</div><!-- sec_five_post -->
+
+			<div class='sec_five_post'>
+
+				<a href="">
+			
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-5.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>PRODUCT LIABILITY</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>3M Earplugs</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>3M is facing numerous lawsuits over claims that the defective design of its military earplugs caused hearing loss or damage.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
+
+				</a>
+			
+			</div><!-- sec_five_post -->
+
+			<div class='sec_five_post'>
+
+				<a href="">
+			
+  				<div class='sec_five_post_image_wrapper'>
+  				
+  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-6.jpg'/><!-- name -->
+  
+  					<span class='post_cat_title'>MEDICAL DEVICES</span><!-- post_cat_title -->
+  				
+  				</div><!-- sec_five_post_image_wrapper -->
+  
+  				<div class='sec_five_post_content'>
+  				
+  					<span class='sec_five_post_title'>Hernia Mesh</span><!-- sec_five_post_title -->
+  
+  					<span class='sec_five_post_descrip'>Lawsuits stem from device complications like infection, pain, bowel obstruction, organ or tissue perforation and adhesion.</span><!-- sec_five_post_descrip -->
+  
+  					<div class='sec_five_learn_more_wrapper'>
+  					
+  						<span class='button_three'>Learn More</span><!-- button_three -->
+  					
+  					</div><!-- sec_five_learn_more_wrapper -->
+  				
+  				</div><!-- sec_five_post_content -->
+
+				</a>
+			
+			</div><!-- sec_five_post -->
 		
-		</div><!-- sec_five_left -->
+		</div><!-- sec_five_post_wrapper -->
 
-		<div id='sec_five_right' class="content">
-		
-			<?php the_field( 'section_five_content' ); ?>
-		
-		</div><!-- sec_five_right -->
+		<a id='sec_five_button' class="button" href=''><span>View All Dangerous Products</span></a><!-- class -->
 	
 	</div><!-- sec_five_inner -->
 

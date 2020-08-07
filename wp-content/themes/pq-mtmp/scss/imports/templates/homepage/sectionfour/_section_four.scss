@@ -211,7 +211,7 @@ span#sec_four_title {
     @include contentdisplay();
     transition: all 200ms ease-in-out;
     @include abs(23px, null, null, 23px);
-    @include tri(left, 7px, 8px, $color_dark_three);
+    @include tri(left, 7px, 8px, $color_dark_one);
     @include mq(small_laptop) {
     }
   }

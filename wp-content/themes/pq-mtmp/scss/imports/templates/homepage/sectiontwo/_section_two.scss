@@ -9,7 +9,7 @@
 
 #sec_two_top {
   padding: 39px 32px 75px;
-  background: $color_dark_three;
+  background: $color_dark_one;
   @include mq(small_tablet) {
     width: 50%;
     flex-shrink: 0;
@@ -182,7 +182,7 @@ span#sec_two_featured_title {
       height: 17px,
       spacing: 3px,
       family: $primaryfont,
-      color: $color_dark_three,
+      color: $color_dark_one,
       weight: 700,
       transform: uppercase,
     )
@@ -321,7 +321,7 @@ span.sec_two_featured_slide_title {
       height: 27px,
       spacing: 0,
       family: $primaryfont,
-      color: $color_dark_three,
+      color: $color_dark_one,
       weight: 700,
     )
   );
@@ -355,7 +355,7 @@ span.sec_two_featured_slide_title {
 }
 
 .sec_two_featured_arrow {
-  background: $color_dark_three;
+  background: $color_dark_one;
   flex-basis: 50%;
   margin-top: 13px;
   cursor: pointer;
@@ -394,7 +394,7 @@ span.sec_two_featured_slide_title {
     @include mq(small_laptop) {
       transition: all 200ms ease-in-out;
       @include abs(18px, null, null, 18px);
-      @include tri(left, 7px, 8px, $color_dark_three);
+      @include tri(left, 7px, 8px, $color_dark_one);
     }
     @include mq(large_laptop) {
       @include abs(23px, null, null, 24px);

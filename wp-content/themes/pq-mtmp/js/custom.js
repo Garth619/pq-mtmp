@@ -245,6 +245,27 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $("#sec_six_post_wrapper").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    adaptiveHeight: true,
+    fade: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1180,
+        settings: {
+          arrows: true,
+          //prevArrow: ".sec_two_arrow_left",
+          //nextArrow: ".sec_two_arrow_right",
+        },
+      },
+    ],
+  });
+
   /* Landing Page
 --------------------------------------------------------------------------------------- */
 

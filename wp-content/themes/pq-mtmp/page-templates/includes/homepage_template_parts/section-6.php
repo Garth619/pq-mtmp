@@ -2,17 +2,191 @@
 
 	<div id='sec_six_inner'>
 	
-		<span id='sec_six_title'><?php the_field( 'section_six_title' ); ?></span><!-- sec_six_title -->
+		<span id='sec_six_title'>LaTEST CONSUMER SAFETY NEWS</span><!-- sec_six_title -->
 
-		<span class='double_line'></span><!-- double_line -->
-
-		<div id='sec_six_descrip'>
+		<div id='sec_six_post_wrapper'>
 		
-			<?php the_field( 'section_six_description' ); ?>
-		
-		</div><!-- sec_six -->
+			<div class='sec_six_post'>
+			
+				<a href=''>
 
-		<?php get_template_part('page-templates/includes/template','nationally_recognized_slider'); ?>
+					<div class='sec_six_meta'>
+					
+						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
+
+						<ul>
+							<li><a href="">Dangerous Drugs</a></li>
+						</ul>
+
+					</div><!-- sec_six_meta -->
+
+					<div class='sex_six_page_title_wrapper'>
+						
+						<img src='<?php bloginfo('template_directory');?>/images/news-photo-1.jpg' /><!-- name -->
+
+							<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
+						
+					</div><!-- sex_six_page_title_wrapper -->
+
+					<span class='sec_six_divider'></span><!-- sec_six_divider -->
+
+					<div class='sec_six_descrip'>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					
+					</div><!-- sec_six_descrip -->
+
+					<span class='sec_six_readmore button_four'>Read More</span><!-- button_four -->
+
+					</a>
+			
+			</div><!-- sec_six_post -->
+
+			<div class='sec_six_post'>
+			
+				<a href=''>
+
+					<div class='sec_six_meta'>
+					
+						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
+
+						<ul>
+							<li><a href="">Dangerous Drugs</a></li>
+						</ul>
+
+					</div><!-- sec_six_meta -->
+
+					<div class='sex_six_page_title_wrapper'>
+						
+						<img src='<?php bloginfo('template_directory');?>/images/news-photo-1.jpg' /><!-- name -->
+
+							<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
+						
+					</div><!-- sex_six_page_title_wrapper -->
+
+					<span class='sec_six_divider'></span><!-- sec_six_divider -->
+
+					<div class='sec_six_descrip'>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					
+					</div><!-- sec_six_descrip -->
+
+					<span class='sec_six_readmore button_four'>Read More</span><!-- button_four -->
+
+					</a>
+			
+			</div><!-- sec_six_post -->
+
+			<div class='sec_six_post'>
+			
+				<a href=''>
+
+					<div class='sec_six_meta'>
+					
+						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
+
+						<ul>
+							<li><a href="">Dangerous Drugs</a></li>
+						</ul>
+
+					</div><!-- sec_six_meta -->
+
+					<div class='sex_six_page_title_wrapper'>
+						
+						<img src='<?php bloginfo('template_directory');?>/images/news-photo-1.jpg' /><!-- name -->
+
+							<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
+						
+					</div><!-- sex_six_page_title_wrapper -->
+
+					<span class='sec_six_divider'></span><!-- sec_six_divider -->
+
+					<div class='sec_six_descrip'>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					
+					</div><!-- sec_six_descrip -->
+
+					<span class='sec_six_readmore button_four'>Read More</span><!-- button_four -->
+
+					</a>
+			
+			</div><!-- sec_six_post -->
+
+			<div class='sec_six_post'>
+			
+				<a href=''>
+
+					<div class='sec_six_meta'>
+					
+						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
+
+						<ul>
+							<li><a href="">Dangerous Drugs</a></li>
+						</ul>
+
+					</div><!-- sec_six_meta -->
+
+					<div class='sex_six_page_title_wrapper'>
+						
+						<img src='<?php bloginfo('template_directory');?>/images/news-photo-1.jpg' /><!-- name -->
+
+							<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
+						
+					</div><!-- sex_six_page_title_wrapper -->
+
+					<span class='sec_six_divider'></span><!-- sec_six_divider -->
+
+					<div class='sec_six_descrip'>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					
+					</div><!-- sec_six_descrip -->
+
+					<span class='sec_six_readmore button_four'>Read More</span><!-- button_four -->
+
+					</a>
+			
+			</div><!-- sec_six_post -->
+
+			<div class='sec_six_post'>
+			
+				<a href=''>
+
+					<div class='sec_six_meta'>
+					
+						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
+
+						<ul>
+							<li><a href="">Dangerous Drugs</a></li>
+						</ul>
+
+					</div><!-- sec_six_meta -->
+
+					<div class='sex_six_page_title_wrapper'>
+						
+						<img src='<?php bloginfo('template_directory');?>/images/news-photo-1.jpg' /><!-- name -->
+
+							<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
+						
+					</div><!-- sex_six_page_title_wrapper -->
+
+					<span class='sec_six_divider'></span><!-- sec_six_divider -->
+
+					<div class='sec_six_descrip'>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					
+					</div><!-- sec_six_descrip -->
+
+					<span class='sec_six_readmore button_four'>Read More</span><!-- button_four -->
+
+					</a>
+			
+			</div><!-- sec_six_post -->
+		
+		</div><!-- sec_six_post_wrapper -->
 	
 	</div><!-- sec_six_inner -->
 

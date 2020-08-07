@@ -26,9 +26,9 @@
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-2.svg' alt=''/><!-- name -->
 
-					<span class='sec_four_slide_title'>$7.5 Million</span><!-- sec_four_slide_title -->
+					<span class='sec_four_slide_title'>$4.7 Million</span><!-- sec_four_slide_title -->
 
-					<span class='sec_four_slide_type'>Drug Side Effects</span><!-- sec_four_slide_type -->
+					<span class='sec_four_slide_type'>Dangerous Products</span><!-- sec_four_slide_type -->
 
 					<span class='sec_four_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- sec_four_slide_descrip -->
 				
@@ -38,9 +38,9 @@
 				
 					<img src='<?php bloginfo('template_directory');?>/images/result-icon-3.svg' alt=''/><!-- name -->
 
-					<span class='sec_four_slide_title'>$7.5 Million</span><!-- sec_four_slide_title -->
+					<span class='sec_four_slide_title'>$1.3 Million</span><!-- sec_four_slide_title -->
 
-					<span class='sec_four_slide_type'>Drug Side Effects</span><!-- sec_four_slide_type -->
+					<span class='sec_four_slide_type'>Defective Medical Device</span><!-- sec_four_slide_type -->
 
 					<span class='sec_four_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- sec_four_slide_descrip -->
 				

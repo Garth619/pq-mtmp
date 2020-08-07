@@ -1,7 +1,6 @@
 .button {
   text-decoration: none;
   position: relative;
-  width: 100%;
   display: inline-block;
   z-index: 1;
   border-radius: 50px;
@@ -31,7 +30,7 @@
     display: block;
     z-index: 1;
     text-align: center;
-    padding: 20px 15px;
+    padding: 20px 29px;
     @include type(
       (
         size: 18px,
@@ -68,5 +67,52 @@
   &:hover {
     border: 2px solid $color_bright_one;
     color: $color_bright_one;
+  }
+}
+
+.button_three {
+  background: $color_light_two;
+  padding: 13px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 12px,
+      spacing: 0.62px,
+      family: $primaryfont,
+      color: $color_bright_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  @include mq(large_laptop) {
+    font-size: 14px;
+  }
+  &:hover {
+    background: $color_bright_one;
+    color: $color_light_one;
+  }
+}
+
+.button_four {
+  background: $color_bright_one;
+  padding: 9px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 13px,
+      spacing: 0.65px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    background: $color_dark_one;
+    color: $color_light_one;
   }
 }
