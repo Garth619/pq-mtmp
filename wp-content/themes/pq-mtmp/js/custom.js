@@ -257,11 +257,7 @@ jQuery(document).ready(function ($) {
     responsive: [
       {
         breakpoint: 1180,
-        settings: {
-          arrows: true,
-          //prevArrow: ".sec_two_arrow_left",
-          //nextArrow: ".sec_two_arrow_right",
-        },
+        settings: "unslick",
       },
     ],
   });

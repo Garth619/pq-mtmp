@@ -4,13 +4,51 @@
 
 #sec_six_inner {
   padding: 52px 11px;
+  @include mq(small_tablet) {
+    padding: 90px 11px 50px;
+  }
+  @include mq(small_laptop) {
+    padding: 90px 11px 20px;
+  }
+}
+
+span#sec_six_title {
+  display: block;
+  text-align: center;
+  max-width: 372px;
+  padding: 6px 10px;
+  background: $color_dark_one;
+  @include margin_lr;
+  @include type(
+    (
+      size: 15px,
+      spacing: 3px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
 }
 
 #sec_six_post_wrapper {
   margin-top: 60px;
+  max-width: 375px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 485px;
+  }
+  @include mq(small_laptop) {
+    max-width: 1020px;
+    margin-top: 69px;
+    @include flex(space-between, null, null, wrap);
+  }
   .slick-dots {
     margin-top: 48px;
     position: static;
+    @include mq(small_tablet) {
+      margin-top: 75px;
+    }
     li.slick-active {
       button {
         &:before {
@@ -42,25 +80,13 @@
   }
 }
 
-span#sec_six_title {
-  display: block;
-  text-align: center;
-  padding: 6px 10px;
-  background: $color_dark_one;
-  @include type(
-    (
-      size: 15px,
-      spacing: 3px,
-      family: $primaryfont,
-      color: $color_light_one,
-      weight: 700,
-      transform: uppercase,
-    )
-  );
-}
-
 .sec_six_post {
   text-align: center;
+  @include mq(small_laptop) {
+    flex-basis: 45%;
+    text-align: left;
+    margin-bottom: 103px;
+  }
   a {
     text-decoration: none;
   }
@@ -115,10 +141,22 @@ span#sec_six_title {
   max-width: 320px;
   @include margin_lr;
   @include flex();
-  img {
-    @include box(84px);
-    @include image();
+  @include mq(small_tablet) {
+    max-width: 100%;
+    padding: 0 20px;
   }
+  @include mq(small_laptop) {
+    padding: 0;
+  }
+  .sec_six_image {
+    flex-basis: 84px;
+    flex-shrink: 0;
+    img {
+      @include box(84px);
+      @include image();
+    }
+  }
+
   span.sec_six_page_title {
     position: relative;
     top: -5px;
@@ -132,6 +170,9 @@ span#sec_six_title {
         weight: 700,
       )
     );
+    @include mq(small_tablet) {
+      top: 15px;
+    }
   }
 }
 
@@ -140,6 +181,12 @@ span.sec_six_divider {
   margin: 25px 0 15px;
   @include box(100%, 1px);
   @include contentdisplay();
+  @include mq(small_tablet) {
+    margin: 34px 0 15px;
+  }
+  @include mq(small_laptop) {
+    margin: 25px 0 15px;
+  }
 }
 
 .sec_six_descrip {
@@ -151,6 +198,9 @@ span.sec_six_divider {
       family: $primaryfont,
     )
   );
+  @include mq(small_laptop) {
+    padding: 0;
+  }
 }
 
 .sec_six_readmore {
