@@ -10,6 +10,9 @@
   @include mq(small_laptop) {
     padding: 90px 11px 20px;
   }
+  @include mq(small_monitor) {
+    padding: 111px 11px 120px;
+  }
 }
 
 span#sec_six_title {
@@ -42,6 +45,9 @@ span#sec_six_title {
     max-width: 1020px;
     margin-top: 69px;
     @include flex(space-between, null, null, wrap);
+  }
+  @include mq(large_laptop) {
+    max-width: 1120px;
   }
   .slick-dots {
     margin-top: 48px;
@@ -87,7 +93,17 @@ span#sec_six_title {
     text-align: left;
     margin-bottom: 103px;
   }
+  @include mq(large_laptop) {
+    flex-basis: 40%;
+  }
+  &:hover {
+    .button_four {
+      background: $color_dark_one;
+      color: $color_light_one;
+    }
+  }
   a {
+    cursor: pointer;
     text-decoration: none;
   }
 }
@@ -172,6 +188,9 @@ span#sec_six_title {
     );
     @include mq(small_tablet) {
       top: 15px;
+    }
+    @include mq(large_laptop) {
+      max-width: 375px;
     }
   }
 }
