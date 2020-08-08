@@ -1,7 +1,3 @@
-
-
-
-
 .alignleft,
 img.alignleft {
   display: block;
@@ -56,16 +52,16 @@ img.aligncenter {
 }
 
 .gform_wrapper ul li ::-webkit-input-placeholder {
-  //color: $gform_placeholder;
+  color: $color_light_five;
 }
 .gform_wrapper ul li ::-moz-placeholder {
-  color: $gform_placeholder;
+  color: $color_light_five;
 }
 .gform_wrapper ul li :-moz-placeholder {
-  //color: $gform_placeholder;
+  color: $color_light_five;
 }
 .gform_wrapper ul li :-ms-input-placeholder {
-  //color: $gform_placeholder;
+  color: $color_light_five;
 }
 .gform_wrapper ul li ::-moz-placeholder {
   opacity: 1;

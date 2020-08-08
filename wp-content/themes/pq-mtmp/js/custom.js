@@ -262,17 +262,10 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  /* Landing Page
+  /* Form Select Triangle
 --------------------------------------------------------------------------------------- */
 
-  // var macyInstance = Macy({
-  //   container: "#lp_sec_five_bullets",
-  //   columns: 2,
-  //   margin: 49,
-  //   breakAt: {
-  //     768: 1,
-  //   },
-  // });
+  $("li").has("select").addClass("custom_select");
 
   /* Case Results Page
 --------------------------------------------------------------------------------------- */
