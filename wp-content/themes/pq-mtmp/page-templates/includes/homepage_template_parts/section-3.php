@@ -18,7 +18,7 @@
 
 		<div id='sec_three_right' class="content">
 		
-			<h1 class='page_header'>Dangerous Products Lawyers</h1><!-- page_header -->
+			<h1 id="sec_three_header" class='page_header'>Dangerous Products Lawyers</h1><!-- page_header -->
 
 			<div id='sec_three_content'>
 			

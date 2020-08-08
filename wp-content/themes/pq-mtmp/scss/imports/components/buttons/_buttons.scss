@@ -146,21 +146,41 @@ span.play_button {
   position: relative;
   @include flex(center, center);
   @include box(88px);
+  @include mq(small_tablet) {
+    @include box(106px);
+  }
+  @include mq(small_monitor) {
+    @include box(122px);
+  }
   &:before {
     background: $color_dark_one;
     border-radius: 50%;
     @include box(70px);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      @include box(84px);
+    }
+    @include mq(small_monitor) {
+      @include box(97px);
+    }
   }
   &:after {
     @include abs(32px, null, null, 40px);
     @include contentdisplay();
     transition: all 200ms ease-in-out;
     @include tri(right, 11px, 14px, $color_bright_two);
+    @include mq(small_tablet) {
+      @include abs(38px, null, null, 46px);
+      @include tri(right, 14px, 17px, $color_bright_two);
+    }
+    @include mq(small_monitor) {
+      @include abs(43px, null, null, 54px);
+      @include tri(right, 16px, 19px, $color_bright_two);
+    }
   }
   &:hover {
     &:after {
-      @include tri(right, 11px, 14px, $color_bright_one);
+      border-left-color: $color_bright_one;
     }
   }
 }

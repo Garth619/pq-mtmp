@@ -36,7 +36,7 @@ span#sec_six_title {
 
 #sec_six_post_wrapper {
   margin-top: 60px;
-  max-width: 375px;
+  max-width: 490px;
   @include margin_lr;
   @include mq(small_tablet) {
     max-width: 485px;
@@ -152,9 +152,10 @@ span#sec_six_title {
   }
 }
 
-.sex_six_page_title_wrapper {
+.sec_six_page_title_wrapper {
   margin-top: 28px;
-  max-width: 320px;
+  max-width: 450px;
+  padding: 10px;
   @include margin_lr;
   @include flex();
   @include mq(small_tablet) {
@@ -197,7 +198,7 @@ span#sec_six_title {
 
 span.sec_six_divider {
   background: $color_dark_three;
-  margin: 25px 0 15px;
+  margin: 15px 0;
   @include box(100%, 1px);
   @include contentdisplay();
   @include mq(small_tablet) {

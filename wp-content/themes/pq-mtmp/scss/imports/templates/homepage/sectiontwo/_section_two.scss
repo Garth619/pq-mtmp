@@ -28,7 +28,7 @@
 }
 
 #sec_two_left_slider {
-  max-width: 375px;
+  max-width: 490px;
   @include margin_lr;
   @include mq(small_tablet) {
     max-width: 100%;
@@ -211,7 +211,7 @@ span#sec_two_featured_title {
 }
 
 #sec_two_featured_slider_wrapper {
-  max-width: 375px;
+  max-width: 490px;
   @include margin_lr;
   @include flex(null, null, null, wrap);
   @include mq(small_tablet) {

@@ -1,12 +1,47 @@
 #sec_seven_inner {
   padding: 62px 25px 90px;
+  max-width: 540px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    padding: 84px 0px 90px;
+    max-width: 535px;
+  }
+  @include mq(small_laptop) {
+    padding: 170px 64px 154px;
+    max-width: 100%;
+    @include flex(space-between);
+  }
+  @include mq(small_monitor) {
+    max-width: 1380px;
+    padding: 153px 0 200px;
+    @include margin_lr;
+  }
 }
 
 #sec_seven_top {
+  @include mq(small_laptop) {
+    flex-shrink: 0;
+    flex-basis: 535px;
+    position: relative;
+    z-index: 1;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 672px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 739px;
+  }
 }
 
 #sec_seven_video {
   position: relative;
+  &:hover {
+    span.play_button {
+      &:after {
+        border-left-color: $color_bright_one;
+      }
+    }
+  }
   #video_overlay {
     @include flex(center, center);
     @include box(100%);
@@ -21,6 +56,19 @@
   text-align: center;
   margin-top: 75px;
   position: relative;
+  @include mq(small_laptop) {
+    text-align: left;
+    margin-top: 0;
+    padding-left: 136px;
+  }
+  @include mq(large_laptop) {
+    padding-left: 200px;
+    margin-top: 27px;
+  }
+  @include mq(small_monitor) {
+    padding-left: 0px;
+    flex-basis: 405px;
+  }
 }
 
 #sec_seven_bottom_inner {
@@ -29,20 +77,26 @@
 }
 
 span#sec_seven_title {
-  display: block;
+  display: inline-block;
   @include type(
     (
       size: 40px,
-      height: 33px,
+      height: 42px,
       family: $primaryfont,
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(45px, 47px, null);
+  }
   &:after {
-    margin-top: 40px;
+    margin-top: 35px;
     background: $color_bright_one;
     @include box(100%, 3px);
     @include contentdisplay();
+    @include mq(small_laptop) {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -55,6 +109,9 @@ span#sec_seven_title {
       family: $primaryfont,
     )
   );
+  @include mq(small_tablet) {
+    margin-top: 38px;
+  }
   p {
     margin-bottom: 20px;
   }
@@ -62,6 +119,12 @@ span#sec_seven_title {
 
 #sec_seven_learn_more {
   margin-top: 33px;
+  @include mq(small_tablet) {
+    margin-top: 9px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 28px;
+  }
 }
 
 #sec_seven_logo {
@@ -69,5 +132,15 @@ span#sec_seven_title {
   @include flex(center, null);
   @include abs(0, null, null, 0);
   img {
+  }
+  @include mq(small_laptop) {
+    top: -77px;
+    left: -59px;
+  }
+  @include mq(large_laptop) {
+    left: -30px;
+  }
+  @include mq(small_monitor) {
+    left: -130px;
   }
 }

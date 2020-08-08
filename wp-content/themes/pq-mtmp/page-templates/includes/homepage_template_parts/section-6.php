@@ -20,7 +20,7 @@
 
 				</div><!-- sec_six_meta -->
 
-				<div class='sex_six_page_title_wrapper'>
+				<div class='sec_six_page_title_wrapper'>
 					
 					<div class="sec_six_image">
 						
@@ -30,7 +30,7 @@
 					
 					<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
 					
-				</div><!-- sex_six_page_title_wrapper -->
+				</div><!-- sec_six_page_title_wrapper -->
 
 				<span class='sec_six_divider'></span><!-- sec_six_divider -->
 
@@ -60,7 +60,7 @@
 
 					</div><!-- sec_six_meta -->
 
-					<div class='sex_six_page_title_wrapper'>
+					<div class='sec_six_page_title_wrapper'>
 						
   					<div class="sec_six_image">
   						
@@ -70,7 +70,7 @@
   					
   					<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
 						
-					</div><!-- sex_six_page_title_wrapper -->
+					</div><!-- sec_six_page_title_wrapper -->
 
 					<span class='sec_six_divider'></span><!-- sec_six_divider -->
 
@@ -100,7 +100,7 @@
 
 					</div><!-- sec_six_meta -->
 
-					<div class='sex_six_page_title_wrapper'>
+					<div class='sec_six_page_title_wrapper'>
 						
   					<div class="sec_six_image">
   						
@@ -110,7 +110,7 @@
   					
   					<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
 						
-					</div><!-- sex_six_page_title_wrapper -->
+					</div><!-- sec_six_page_title_wrapper -->
 
 					<span class='sec_six_divider'></span><!-- sec_six_divider -->
 
@@ -140,7 +140,7 @@
 
 					</div><!-- sec_six_meta -->
 
-					<div class='sex_six_page_title_wrapper'>
+					<div class='sec_six_page_title_wrapper'>
 						
   					<div class="sec_six_image">
   						
@@ -150,7 +150,7 @@
   					
   					<span class='sec_six_page_title'>The FDA Requests Market Withdrawal of all Zantac Products</span><!-- sec_six_page_title -->
 						
-					</div><!-- sex_six_page_title_wrapper -->
+					</div><!-- sec_six_page_title_wrapper -->
 
 					<span class='sec_six_divider'></span><!-- sec_six_divider -->
 
