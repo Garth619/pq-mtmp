@@ -1,6 +1,6 @@
 footer {
-  height: 3000px;
   background: $color_dark_one;
+  padding-bottom: 35px;
 }
 
 #form_wrapper {
@@ -309,5 +309,36 @@ a#get_directions {
   );
   &:hover {
     border: 2px solid $color_bright_two;
+  }
+}
+
+#copyright_wrapper {
+  margin-top: 45px;
+  padding: 0 28px;
+}
+
+#copyright_inner {
+  border-top: 1px solid $color_dark_two;
+  padding-top: 22px;
+  text-align: center;
+  ul {
+    list-style: none;
+    margin-bottom: 30px;
+    li {
+      display: inline-block;
+      @include type(
+        (
+          size: 14px,
+          height: 25px,
+          spacing: 0.35px,
+          color: $color_light_six,
+          family: $primaryfont,
+        )
+      );
+      a {
+        color: $color_light_six;
+        text-decoration: none;
+      }
+    }
   }
 }

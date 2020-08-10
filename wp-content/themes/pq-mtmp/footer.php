@@ -66,6 +66,26 @@
 
 </div><!-- footer_bottom -->
 
+<div id='copyright_wrapper'>
+
+  <div id='copyright_inner'>
+  
+    <ul>
+      <li>Copyright &copy; <?php echo date('Y'); ?> Estey Bomberger</li>
+      <li><a href="">Policies & Disclaimer</a></li>
+      <li><a href="">Privacy Policy</li>
+    </ul>
+
+    <a id='ilawyer' href=''>
+
+      <img src='<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg' alt=''/>
+
+    </a><!-- ilawyer -->
+  
+  </div><!-- copyright_inner -->
+
+</div><!-- copyright_wrapper -->
+
 </footer>
 
 <?php wp_footer();?>
