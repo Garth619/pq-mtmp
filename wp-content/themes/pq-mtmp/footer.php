@@ -10,9 +10,13 @@
 
   </div><!-- form_descrip -->
 
-  <?php gravity_form(3, false, false, false, '', true, 1245); ?>
+  <div id='gform_outer'>
+  
+    <?php gravity_form(3, false, false, false, '', true, 1245); ?>
 
-  <span id='required'><span>*</span>Required Field</span></span><!-- required -->
+    <span id='required'><span>*</span>Required Field</span></span><!-- required -->
+
+  </div><!-- gform_outer -->
 
 </div><!-- form_wrapper -->
 

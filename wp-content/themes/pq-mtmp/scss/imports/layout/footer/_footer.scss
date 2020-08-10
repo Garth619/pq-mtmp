@@ -5,7 +5,10 @@ footer {
     padding: 86px 55px 45px;
   }
   @include mq(small_laptop) {
-    padding: 86px 45px 45px;
+    padding: 86px 45px 25px;
+  }
+  @include mq(large_laptop) {
+    padding: 86px 55px 25px;
   }
 }
 
@@ -22,6 +25,12 @@ footer {
   @include mq(small_laptop) {
     max-width: 100%;
     padding: 65px 33px 203px;
+  }
+  #gform_outer {
+    @include mq(large_laptop) {
+      max-width: 1010px;
+      @include margin_lr;
+    }
   }
   .gform_wrapper {
     margin-top: 77px;
@@ -259,8 +268,18 @@ span#form_title {
 #footer_bottom {
   margin-top: 140px;
   padding: 0 22px;
+  text-align: center;
   @include mq(small_tablet) {
     margin-top: 60px;
+  }
+  @include mq(small_laptop) {
+    max-width: 940px;
+    margin-top: 77px;
+    @include margin_lr;
+    @include flex(space-between, center);
+  }
+  @include mq(large_laptop) {
+    margin-top: 87px;
   }
 }
 
@@ -314,14 +333,14 @@ span#footer_cta {
   }
 }
 
-#footer_bottom {
-  text-align: center;
-}
-
 #footer_col_two {
   margin-top: 57px;
+  padding-right: 60px;
   @include mq(small_tablet) {
     margin-top: 68px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 42px;
   }
 }
 
@@ -395,8 +414,11 @@ a#get_directions {
 }
 
 #copyright_wrapper {
-  margin-top: 45px;
+  margin-top: 65px;
   padding: 0 28px;
+  @include mq(small_laptop) {
+    padding: 0;
+  }
 }
 
 #copyright_inner {
@@ -405,6 +427,11 @@ a#get_directions {
   text-align: center;
   max-width: 550px;
   @include margin_lr;
+  @include mq(small_laptop) {
+    max-width: 100%;
+    padding-top: 28px;
+    @include flex(space-between, center);
+  }
   ul {
     list-style: none;
     margin-bottom: 30px;
