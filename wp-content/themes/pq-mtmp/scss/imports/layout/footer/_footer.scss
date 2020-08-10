@@ -5,11 +5,13 @@ footer {
 
 #form_wrapper {
   padding: 50px 20px;
+  text-align: center;
   .gform_wrapper {
     margin-top: 77px;
   }
   ul {
     list-style: none;
+    text-align: left;
     li {
       margin-bottom: 23px;
       label {
@@ -59,6 +61,87 @@ footer {
           @include tri(down, 8px, 8px, $color_dark_one);
         }
       }
+    }
+  }
+  .gform_footer {
+    display: inline-block;
+    position: relative;
+    margin-top: 41px;
+    z-index: 1;
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:before,
+    &:after {
+      border-radius: 50px;
+      z-index: -1;
+      @include contentdisplay();
+      @include box(100%);
+      @include abs(0, null, null, 0);
+    }
+    &:before {
+      background: $color_grad_one;
+    }
+    &:after {
+      background: $color_grad_two;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+    input[type="submit"] {
+      background: transparent;
+      border: none;
+      padding: 19px 32px;
+      @include type(
+        (
+          size: 17px,
+          family: $primaryfont,
+          color: $color_light_one,
+          weight: 700,
+          align: center,
+        )
+      );
+    }
+  }
+  .gfield_description,
+  .validation_message {
+    color: $color_light_one;
+    margin-top: 6px;
+    @include type(
+      (
+        size: 15px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 700,
+      )
+    );
+  }
+  span#required {
+    display: block;
+    text-align: left;
+    margin-top: -112px;
+    @include type(
+      (
+        size: 18px,
+        spacing: 0.9px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 700,
+        transform: lowercase,
+      )
+    );
+    span {
+      @include type(
+        (
+          size: 18px,
+          spacing: 0.9px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 700,
+          transform: lowercase,
+        )
+      );
     }
   }
 }

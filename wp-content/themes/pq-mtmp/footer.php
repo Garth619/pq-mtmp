@@ -12,6 +12,12 @@
 
   <?php gravity_form(3, false, false, false, '', true, 1245); ?>
 
+  <span id='required'><span>*</span>Required Field</span>
+  
+    
+  
+  </span><!-- required -->
+
 </div><!-- form_wrapper -->
 
 </footer>
