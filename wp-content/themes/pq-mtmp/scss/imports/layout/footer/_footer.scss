@@ -183,3 +183,131 @@ span#form_title {
     }
   }
 }
+
+#footer_bottom {
+  margin-top: 140px;
+  padding: 0 22px;
+}
+
+a#footer_logo {
+  &:after {
+    background: $color_bright_one;
+    margin-top: 38px;
+    @include margin_lr;
+    @include box(109px, 3px);
+    @include contentdisplay();
+  }
+  img {
+    @include image();
+  }
+}
+span#footer_cta {
+  display: block;
+  text-align: center;
+  margin-top: 27px;
+  @include type(
+    (
+      size: 21px,
+      height: 23px,
+      spacing: 1px,
+      family: $primaryfont,
+      color: $color_light_one,
+    )
+  );
+}
+
+#social_media {
+  text-align: center;
+  margin: 36px 0px 0;
+  a {
+    margin: 0 15px;
+    text-decoration: none;
+    &:hover {
+      svg {
+        path {
+          fill: $color_bright_two !important;
+        }
+      }
+    }
+    svg {
+      path {
+        transition: all 200ms ease-in-out;
+        fill: $color_light_one !important;
+      }
+    }
+  }
+}
+
+#footer_bottom {
+  text-align: center;
+}
+
+span#location_title {
+  margin-top: 57px;
+  display: block;
+  @include type(
+    (
+      size: 16px,
+      spacing: 3.2px,
+      family: $primaryfont,
+      color: $color_bright_two,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}
+
+span#address {
+  display: block;
+  margin-top: 25px;
+  @include type(
+    (
+      size: 20px,
+      height: 24px,
+      family: $primaryfont,
+      color: $color_light_one,
+    )
+  );
+}
+
+span#footer_phone {
+  display: block;
+  margin-top: 35px;
+  @include type(
+    (
+      size: 20px,
+      spacing: 2px,
+      family: $primaryfont,
+      color: $color_light_one,
+    )
+  );
+  span {
+    font-weight: 700;
+    color: $color_bright_one;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color_bright_two;
+    }
+  }
+}
+
+a#get_directions {
+  display: inline-block;
+  margin-top: 38px;
+  border: 2px solid $color_light_one;
+  border-radius: 50px;
+  padding: 6px 10px 10px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 12px,
+      spacing: 0.6px,
+      family: $primaryfont,
+      color: $color_light_one,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    border: 2px solid $color_bright_two;
+  }
+}
