@@ -4,6 +4,9 @@ footer {
   @include mq(small_tablet) {
     padding: 86px 55px 45px;
   }
+  @include mq(small_laptop) {
+    padding: 86px 45px 45px;
+  }
 }
 
 #form_wrapper {
@@ -14,12 +17,19 @@ footer {
   @include mq(small_tablet) {
     box-shadow: 0px 1px 20px #000000;
     padding: 65px 33px 170px;
+    max-width: 690px;
+  }
+  @include mq(small_laptop) {
     max-width: 100%;
+    padding: 65px 33px 203px;
   }
   .gform_wrapper {
     margin-top: 77px;
     @include mq(small_tablet) {
       margin-top: 50px;
+    }
+    @include mq(small_laptop) {
+      margin-top: 65px;
     }
   }
   ul {
@@ -34,10 +44,19 @@ footer {
         margin-bottom: 17px;
         flex-basis: 100%;
       }
+      @include mq(small_laptop) {
+        margin-bottom: 23px;
+      }
       &:nth-of-type(-n + 4) {
         @include mq(small_tablet) {
           flex-basis: 49%;
         }
+        @include mq(small_laptop) {
+          flex-basis: calc(33.3333333% - 12px);
+        }
+      }
+      &:nth-of-type(5) {
+        flex-basis: calc(66.6666666% - 7px);
       }
       label {
         display: block;
@@ -93,6 +112,9 @@ footer {
     position: relative;
     margin-top: 41px;
     z-index: 1;
+    @include mq(small_laptop) {
+      margin-top: 61px;
+    }
     &:hover {
       &:after {
         opacity: 1;
@@ -127,6 +149,10 @@ footer {
           align: center,
         )
       );
+      @include mq(small_laptop) {
+        font-size: 20px;
+        padding: 24px 32px;
+      }
     }
   }
   .gfield_description,
@@ -148,6 +174,9 @@ footer {
     margin-top: -112px;
     @include mq(small_tablet) {
       margin-top: -105px;
+    }
+    @include mq(small_laptop) {
+      margin-top: -135px;
     }
     @include type(
       (
@@ -192,6 +221,9 @@ span#form_title {
   @include mq(small_tablet) {
     font-size: 45px;
     max-width: 100%;
+  }
+  @include mq(small_laptop) {
+    font-size: 50px;
   }
 }
 
