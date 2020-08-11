@@ -1,3 +1,41 @@
+#internal_main {
+  margin-top: 141px;
+  @include mq(small_tablet) {
+    margin-top: 121px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 124px;
+  }
+}
+
+.internal_title {
+  display: block;
+  @include type(
+    (
+      size: 38px,
+      height: 40px,
+      family: $primaryfont,
+      weight: 700,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 40px;
+  }
+  &:after {
+    margin-top: 22px;
+    background: $color_bright_two;
+    @include box(100%, 3px);
+    @include contentdisplay();
+    @include mq(small_tablet) {
+      margin-top: 28px;
+    }
+  }
+}
+
+.page_title {
+  padding: 40px 20px;
+}
+
 .alignleft,
 img.alignleft {
   display: block;

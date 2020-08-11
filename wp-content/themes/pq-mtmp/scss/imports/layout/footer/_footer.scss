@@ -25,6 +25,9 @@ footer {
   @include mq(small_laptop) {
     max-width: 100%;
     padding: 65px 33px 203px;
+    max-width: 1380px;
+  }
+  @include mq(small_monitor) {
   }
   #gform_outer {
     @include mq(large_laptop) {
@@ -335,12 +338,12 @@ span#footer_cta {
 
 #footer_col_two {
   margin-top: 57px;
-  padding-right: 60px;
   @include mq(small_tablet) {
     margin-top: 68px;
   }
   @include mq(small_laptop) {
     margin-top: 42px;
+    padding-right: 60px;
   }
 }
 
@@ -419,6 +422,9 @@ a#get_directions {
   @include mq(small_laptop) {
     padding: 0;
   }
+  @include mq(small_monitor) {
+    margin-top: 112px;
+  }
 }
 
 #copyright_inner {
@@ -430,13 +436,25 @@ a#get_directions {
   @include mq(small_laptop) {
     max-width: 100%;
     padding-top: 28px;
+    max-width: 1380px;
     @include flex(space-between, center);
   }
+  @include mq(small_monitor) {
+  }
+  padding-left: 20px;
+  padding-right: 20px;
   ul {
     list-style: none;
     margin-bottom: 30px;
+    max-width: 257px;
+    @include margin_lr;
     @include mq(small_tablet) {
       margin-bottom: 13px;
+      max-width: 100%;
+    }
+    @include mq(small_laptop) {
+      margin-left: 0;
+      margin-right: 0;
     }
     li {
       display: inline-block;
@@ -461,9 +479,17 @@ a#get_directions {
         margin: 0 10px;
         @include contentdisplay(inline-block, "|");
       }
+      &:first-of-type,
       &:last-of-type {
         &:after {
           display: none;
+        }
+      }
+      &:first-of-type {
+        &:after {
+          @include mq(small_tablet) {
+            display: inline-block;
+          }
         }
       }
     }
