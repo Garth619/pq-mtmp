@@ -33,25 +33,6 @@
   }
 }
 
-#sec_seven_video {
-  position: relative;
-  &:hover {
-    span.play_button {
-      &:after {
-        border-left-color: $color_bright_one;
-      }
-    }
-  }
-  #video_overlay {
-    @include flex(center, center);
-    @include box(100%);
-    @include abs(0, null, null, 0);
-  }
-  img {
-    @include image();
-  }
-}
-
 #sec_seven_bottom {
   text-align: center;
   margin-top: 75px;

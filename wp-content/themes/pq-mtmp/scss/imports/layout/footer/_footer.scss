@@ -68,7 +68,9 @@ footer {
         }
       }
       &:nth-of-type(5) {
-        flex-basis: calc(66.6666666% - 7px);
+        @include mq(small_laptop) {
+          flex-basis: calc(66.6666666% - 7px);
+        }
       }
       label {
         display: block;

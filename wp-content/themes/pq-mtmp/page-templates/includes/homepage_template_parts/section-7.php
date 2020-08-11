@@ -4,7 +4,7 @@
 
   <div id='sec_seven_top'>
   
-    <div id='sec_seven_video'>
+    <div id='sec_seven_video' class="video_module">
     
       <div id='video_overlay'>
       
