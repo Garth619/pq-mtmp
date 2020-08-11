@@ -103,16 +103,11 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  createWaypoint("section_three", "#section_three", "visible", 550, null, true);
-  createWaypoint("section_four", "#section_four", "visible", 600, null, true);
-  createWaypoint("section_five", "#section_five", "visible", 400, null, true);
-  createWaypoint("section_six", "#section_six", "visible", 400, null, true);
-  createWaypoint("consultation", "footer", "visible", 300, null, true);
   createWaypoint(
-    "about_bottom_wrapper",
-    "#about_bottom_wrapper",
-    "visible",
-    300,
+    "header",
+    "body#header_trigger",
+    "header_fixed",
+    -70,
     null,
     true
   );

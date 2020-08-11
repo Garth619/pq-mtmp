@@ -1,7 +1,9 @@
 header {
   width: 100%;
   background: $color_dark_one;
-  @include fixed(0, null, null, 0, 10);
+  @include mq(small_tablet) {
+    @include fixed(0, null, null, 0, 10);
+  }
   @include mq(small_laptop) {
     position: absolute;
   }
@@ -44,6 +46,16 @@ header {
       @include mq(large_laptop) {
         max-width: 370px;
       }
+    }
+  }
+}
+
+body.header_fixed {
+  #header_right {
+    width: 100%;
+    @include fixed(0, null, null, 0, 10);
+    @include mq(small_tablet) {
+      position: static;
     }
   }
 }

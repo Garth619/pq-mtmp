@@ -1,5 +1,14 @@
+body.header_fixed {
+  #section_one {
+    margin-top: 68px;
+    @include mq(small_tablet) {
+      margin-top: 122px;
+    }
+  }
+}
+
 #section_one {
-  margin-top: 141px;
+  //margin-top: 141px;
   position: relative;
   @include mq(small_tablet) {
     margin-top: 122px;

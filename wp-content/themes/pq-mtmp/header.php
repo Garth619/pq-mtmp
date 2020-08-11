@@ -84,9 +84,9 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body id="header_trigger" <?php body_class(); ?>>
 
-<header>
+<header id="header">
 
 <div id='header_inner'>
 

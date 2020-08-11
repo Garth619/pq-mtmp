@@ -20,31 +20,51 @@
 
 	<div id='page_wrapper'>
 	
+   	<?php // if(get_field('banner_h1') == "Yes") : ?>
+   			
+   			<!-- <h2 class="internal_title page_title"><?php the_title();?></h2> -->
+   		
+   		<?php //else:?>
+   		
+   			<!-- <h1 class="internal_title page_title"><?php the_title();?></h1> -->
+   		
+   		<?php //endif;?>
+
+ 		<div id='page_content'>
+ 		
+    		<ul id='page_meta'>
+    			<li>Overview</li>
+    			<li>Results</li>
+    			<li>Review</li>
+    			<li>Contact</li>
+    		</ul><!-- page_meta -->
+    
+    		<h1 class="internal_title page_title"><?php the_title();?></h1>
+
+				<div id='page_content_inner' class="content">
+				
+					<?php //get_template_part( 'loop', 'page' ); ?>
+    
+					<p>Our goal is to keep you informed so you can keep your family safe from harm, as well as to provide experect advice. Estey Bomberger is reviewing claims on behalf of women who developed ovarian cancer or mesothelioma after using talc powder or other talc products.</p>
+				
+				</div><!-- page_content_inner -->
+    	
+    	</div><!-- page_content -->
+
 		
-	
+		 <?php if(!get_field('disable_sidebar')) {
+
+			//get_sidebar();
+
+			} ?>
+
 	</div><!-- page_wrapper -->
 
-	<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-				<h2 class="internal_title page_title"><?php the_title();?></h2>
-			
-			<?php else:?>
-			
-				<h1 class="internal_title page_title"><?php the_title();?></h1>
-			
-			<?php endif;?>
-
-			
-			
-			<?php get_template_part( 'loop', 'page' ); ?>
+	
 			
 		
 
-		<?php if(!get_field('disable_sidebar')) {
-
-			get_sidebar();
-
-		} ?>
+	
 		
 
 	
