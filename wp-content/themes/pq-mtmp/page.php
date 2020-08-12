@@ -61,18 +61,20 @@
 
 					<p>Since 1971, more than 20 studies have linked talc powder to ovarian cancer, and, in 2003, an analysis of 16 of these studies found that ** women using talcum powder were 33 percent more likely to develop ovarian cancer**. It has been alleged that Johnson & Johnson, the maker of popular talc-based products, knew about the ovarian cancer risk since at least 1982, but failed to warn women using these products. In addition, recently unearthed information reported by The New York Times, showed that Johnson & Johnson knew of the possible link of asbestos to their talc products. </p>
 					
+					<p>According to the article, the company spent decades trying to keep this negative information from reaching the public. According to the article, the company spent decades trying to keep this negative information from reaching the public. According to the article, the company spent decades trying to keep this negative information from reaching the public. According to the article, the company spent decades trying to keep this negative information from reaching the public. According to the article, the company spent decades trying to keep this negative information from reaching the public.</p>
+
+					<h2>Does Talcum Powder Cause Cancer?</h2>
+
+					<h3>Talc and Ovarian Cancer</h3>
+
+					<p>For decades, researchers have been studying the potential link between ovarian cancer and talcum powder. It is believed that talc powder, when used near the genitals, can travel to the ovaries and become embedded in the ovarian tissue. While talc is a natural mineral, it is very difficult for the body to remove the particles and, as a result, inflammation may occur and cancerous tumors may form.</p>
+
 					<ul>
 						<li>Lorem ipsum dolor sit</li>
 						<li>Lorem ipsum dolor sit</li>
 						<li>Lorem ipsum dolor sit</li>
 						<li>Lorem ipsum dolor sit</li>
 					</ul>
-					
-					<p>According to the article, the company spent decades trying to keep this negative information from reaching the public.</p>
-
-					<h2>Does Talcum Powder Cause Cancer?</h2>
-
-					<h3>Talc and Ovarian Cancer</h3>
 
 					<p>For decades, researchers have been studying the potential link between ovarian cancer and talcum powder. It is believed that talc powder, when used near the genitals, can travel to the ovaries and become embedded in the ovarian tissue. While talc is a natural mineral, it is very difficult for the body to remove the particles and, as a result, inflammation may occur and cancerous tumors may form.</p>
 

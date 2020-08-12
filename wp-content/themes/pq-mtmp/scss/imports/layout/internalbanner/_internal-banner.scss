@@ -17,8 +17,8 @@ body.page-template-default {
     height: 310px;
     @include flex(center, center);
   }
-  @include mq(large_laptop) {
-    height: 360px;
+  @include mq(small_monitor) {
+    height: 377px;
   }
 }
 
@@ -38,6 +38,9 @@ body.page-template-default {
     &:after {
       display: none;
     }
+  }
+  @include mq(large_laptop) {
+    @include quick_type(55px, 65px, null);
   }
 }
 
