@@ -1,18 +1,18 @@
 <?php if(!get_field('disable_banner_new')) { ?>
 	
-	<div id="internal_banner">
-		
-		<div id="internal_banner_content">
+	<div id='internal_banner'>
+	
+	<div id='internal_banner_content'>
 
 			<?php if(get_field('banner_title')) : ?>
 			
 				<?php if(get_field('banner_h1') == "Yes") : ?>
 			
-					<h1 class="banner_title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
+					<h1 class="internal_title banner_title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
 				
 					<?php else: ?>
 				
-					<span class="banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
+					<span class="internal_title banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
 				
 				<?php endif;?>
 			
@@ -20,58 +20,42 @@
 			
 			<?php if(get_field('banner_h1') == "Yes") : ?>
 			
-				<h1 class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
+				<h1 class="internal_title banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
 
 				<?php else: ?>
 			
-				<span class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
+				<span class="internal_title banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
 
 			<?php endif;?>
 			
 			<?php endif;?>
 
-			<span class='double_line'></span><!-- double_line -->
-			
-			<?php if(get_field('turn_off_button') == "Yes") : ?>
+		<?php if(get_field('turn_off_button') == "Yes") : ?>
 			
 			<?php else: ?>
 			
-				<a class="button internal_button" href="#consultation">
+				<a class="button free_consult_button internal_banner_button" href="#consultation">
 				
 					<span><?php the_field( 'global_internal_banner_button_verbiage','option'); ?></span>
 			
-				</a>
+				</a> 
 			
 			<?php endif;?>
 
 		</div><!-- internal_banner_content -->
-		
+
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
-		<?php $global_internal_banner_image_tablet = get_field( 'global_internal_banner_image_tablet','option'); ?>
-		
 		<?php $banner_image = get_field( 'banner_image' ); ?>
-		<?php $banner_image_tablet = get_field( 'banner_image_tablet' ); ?>
 		
-		<?php if($banner_image || $banner_image_tablet) : ?>
-
-			<picture>
-
-				<source media='(min-width: 1170px)' srcset='<?php echo $banner_image['url']; ?>'>
 		
-				<img id="internal_hero" src="<?php echo $banner_image_tablet['url']; ?>" alt="<?php echo $banner_image_tablet['alt']; ?>"/><!-- internal_hero -->
+		<?php if($banner_image) : ?>
 
-			</picture>
-		
-		<?php else: ?>
+			<img id="banner_hero" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>"/><!-- internal_hero -->
 
-			<picture>
+			<?php else: ?>
 
-			<source media='(min-width: 1170px)' srcset='<?php echo $global_internal_banner_image['url']; ?>'>
-		
-			<img id="internal_hero" src="<?php echo $global_internal_banner_image_tablet['url']; ?>" alt="<?php echo $global_internal_banner_image_tablet['alt']; ?>"/><!-- internal_hero -->
+			<img id='banner_hero' src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
 
-			</picture>
-		
 		<?php endif;?>
 		
 	</div><!-- internal_banner -->
