@@ -1,0 +1,209 @@
+.featured_case_results_module {
+  text-align: center;
+  margin: 50px 0;
+}
+
+span.featured_case_results_module_title {
+  display: inline-block;
+  background: $color_bright_one;
+  padding: 7px 35px;
+  @include type(
+    (
+      size: 13px,
+      height: 13px,
+      spacing: 1.3px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}
+
+.featured_case_results_module_slider_wrapper {
+  margin-top: 34px;
+  max-width: 490px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 900px;
+    margin-top: 35px;
+  }
+  @include mq(small_laptop) {
+    max-width: 1108px;
+    @include flex(center, center);
+  }
+  @include mq(large_laptop) {
+    max-width: 100%;
+  }
+  @include mq(small_monitor) {
+    margin-top: 41px;
+  }
+}
+
+.featured_case_results_module_slider {
+  @include mq(small_laptop) {
+    width: calc(100% - 120px);
+    order: 2;
+    padding: 0 70px;
+  }
+  @include mq(large_laptop) {
+    padding: 0 30px;
+  }
+  @include mq(small_monitor) {
+    padding: 0 80px;
+  }
+  .slick-slide {
+    padding: 20px 0 0 0;
+    margin: 0 20px;
+    @include mq(small_monitor) {
+      margin: 0 64px;
+    }
+  }
+  .slick-list {
+    padding: 0px 0 20px 0;
+    margin: 0 -20px;
+    @include mq(small_monitor) {
+      margin: 0 -64px;
+    }
+  }
+  .slick-dots {
+    position: static;
+    margin: 30px 0 0 0;
+    @include mq(small_tablet) {
+      margin: 10px 0 0 0;
+    }
+    li.slick-active {
+      button {
+        &:before {
+          color: $color_bright_two;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color_bright_two;
+        }
+      }
+    }
+    li {
+      margin: 0 7px;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: $color_light_one;
+          font-size: 28px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.featured_case_results_module_slide {
+  text-align: center;
+  padding: 74px 20px;
+  background: $color_dark_one;
+  box-shadow: 0px 1px 20px #000000;
+  @include mq(small_tablet) {
+    padding: 83px 20px 67px;
+  }
+  @include mq(small_laptop) {
+    padding: 83px 20px 97px;
+  }
+  @include mq(large_laptop) {
+    padding: 83px 20px 67px;
+  }
+  @include mq(small_monitor) {
+    padding: 83px 20px 95px;
+  }
+  span {
+    display: block;
+    &.featured_case_results_module_slide_title {
+      @include type(
+        (
+          size: 40px,
+          height: 40px,
+          family: $primaryfont,
+          color: $color_light_one,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+      &:after {
+        background: $color_bright_two;
+        @include box(176px, 2px);
+        @include contentdisplay(inline-block);
+      }
+    }
+    &.featured_case_results_module_slide_descrip {
+      margin-top: 30px;
+      max-width: 400px;
+      @include margin_lr;
+      @include type(
+        (
+          size: 17px,
+          height: 25px,
+          family: $primaryfont,
+          color: $color_light_one,
+        )
+      );
+    }
+  }
+}
+
+.featured_case_results_module_arrow {
+  background: $color_light_rgba_two;
+  transition: all 200ms ease-in-out;
+  margin-top: 13px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  flex-basis: 60px;
+  height: 60px;
+  @include mq(small_laptop) {
+    @include flex(center, center);
+  }
+  &:before {
+    background: $color_light_one;
+    border-radius: 50%;
+    @include contentdisplay();
+    @include box(44px);
+  }
+  &:after {
+    @include contentdisplay();
+    transition: all 200ms ease-in-out;
+    @include abs(23px, null, null, 23px);
+    @include tri(left, 7px, 8px, $color_dark_one);
+    @include mq(small_laptop) {
+    }
+  }
+  &:hover {
+    background: $color_light_rgba;
+    &:after {
+      @include tri(left, 7px, 8px, $color_bright_two);
+    }
+  }
+}
+
+.featured_case_results_module_arrow_left {
+  order: 2;
+  @include mq(small_laptop) {
+    order: 1;
+  }
+}
+
+.featured_case_results_module_arrow_right {
+  order: 3;
+  &:after {
+    transform: rotate(-180deg);
+    @include mq(small_laptop) {
+      left: 27px;
+    }
+  }
+}

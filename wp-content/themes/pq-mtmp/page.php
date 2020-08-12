@@ -29,9 +29,9 @@
 				
 					<?php //get_template_part( 'loop', 'page' ); ?>
 
-					<div id='page_video_module' class="video_module video_shadow">
+					<div class="page_video_module video_module video_shadow">
     
-      			<div id='video_overlay'>
+      			<div class='video_overlay'>
       
         			<span class='play_button'></span><!-- play_button -->
       
@@ -80,6 +80,56 @@
 					<p>The first publication to suggest that talc may cause ovarian cancer was published in 1971 in the medical journal The Lancet. In the study, researchers discovered that a majority of ovarian tumors had talc particles “deeply embedded” in them. Then, in 1982, researchers found that women using talcum powder during ovulation were at a 92 percent increased risk of developing ovarian cancer. During the next three decades, an additional 21 studies were performed on talc powder, and almost all of these studies found that women using these products near their genitals were at an increased risk for developing ovarian cancer.</p>
 					
 					<p>To date, both the National Cancer Institute and the American Cancer Society consider talc use near the genitals as a “risk factor” for ovarian cancer. Despite this possible link, Johnson & Johnson and other talc powder manufacturers have not placed warnings about this risk on their products.</p>
+
+					<div class='featured_case_results_module'>
+					
+						<span class='featured_case_results_module_title'>Featured case Results</span><!-- featured_case_results_module_title -->
+
+						<div class='featured_case_results_module_slider_wrapper'>
+		
+							<div class='featured_case_results_module_arrow_left featured_case_results_module_arrow'></div><!-- featured_case_results_module_arrow -->
+
+          			<div id='featured_case_results_module_slider'>
+          			
+          				<div class='featured_case_results_module_slide one'>
+          
+          					<span class='featured_case_results_module_slide_title'>$7.5 Million</span><!-- featured_case_results_module_slide_title -->
+          
+          					<span class='featured_case_results_module_slide_descrip'>In February 2016, the family of Jacqueline Fox was awarded $72 million after a jury agreed that her daily use of Johnson & Johnson’s talc powder over the course of 35 years caused the ovarian cancer that killed her. The jury awarded $10 million for actual damages while the other $62 million, one million for each year of her life, was awarded for punitive damages.</span><!-- featured_case_results_module_slide_descrip -->
+          				
+          				</div><!-- featured_case_results_module_slide -->
+          
+          				<div class='featured_case_results_module_slide two'>
+          				
+          					<span class='featured_case_results_module_slide_title'>$4.7 Million</span><!-- featured_case_results_module_slide_title -->
+          
+          					<span class='featured_case_results_module_slide_descrip'>In May 2016, Gloria Ristesund was awarded $55 million by a Missouri jury because they agreed that her ovarian cancer was caused by her frequent use of Johnson & Johnson’s talc powder. Although she was already at risk of ovarian cancer because she suffered from endometriosis, her attorneys argued that her use of talc powder increased her chances of developing ovarian cancer by 200 percent.</span><!-- featured_case_results_module_slide_descrip -->
+          				
+          				</div><!-- featured_case_results_module_slide -->
+          
+          				<div class='featured_case_results_module_slide three'>
+          				
+          					<span class='featured_case_results_module_slide_title'>$1.3 Million</span><!-- featured_case_results_module_slide_title -->
+          
+          					<span class='featured_case_results_module_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- featured_case_results_module_slide_descrip -->
+          				
+          				</div><!-- featured_case_results_module_slide -->
+          
+          				<div class='featured_case_results_module_slide four'>
+          
+          					<span class='featured_case_results_module_slide_title'>$7.5 Million</span><!-- featured_case_results_module_slide_title -->
+          
+          					<span class='featured_case_results_module_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- featured_case_results_module_slide_descrip -->
+          				
+          				</div><!-- featured_case_results_module_slide -->
+          			
+          			</div><!-- featured_case_results_module_slider -->
+
+			         <div class='featured_case_results_module_arrow_right featured_case_results_module_arrow'></div><!-- featured_case_results_module_arrow -->
+		
+		        </div><!-- featured_case_results_module_slider_wrapper -->
+					
+					</div><!-- featured_case_results_module -->
 
 					<h2>Have Lawsuits Been Filed Against Johnson & Johnson?</h2>
 

@@ -7,6 +7,7 @@
         // "imports/global/content/variables",
         "imports/components/buttons/variables",
         "imports/components/video_module/variables",
+        "imports/components/featured_case_results/variables",
         // "imports/components/internal_forms/variables",
         // "imports/components/logo_slider/variables",
          "imports/layout/header/variables",
@@ -62,6 +63,7 @@
 // components
 
  @import "imports/components/buttons/buttons",
+        "imports/components/featured_case_results/featured_case_results",
         "imports/components/video_module/video_module";
 //         "imports/components/logo_slider/_logo_slider",
 //         "imports/components/internal_forms/internal_content_forms";

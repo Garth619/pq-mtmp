@@ -202,8 +202,6 @@ jQuery(document).ready(function ($) {
     fade: true,
     arrows: false,
     dots: true,
-    // autoplay: true,
-    //autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 767,
@@ -253,6 +251,51 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1180,
         settings: "unslick",
+      },
+    ],
+  });
+
+  $("#featured_case_results_module_slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    adaptiveHeight: true,
+    fade: true,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          fade: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 1170,
+        settings: {
+          fade: false,
+          dots: false,
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          prevArrow: ".sec_four_arrow_left",
+          nextArrow: ".sec_four_arrow_right",
+        },
+      },
+      {
+        breakpoint: 1380,
+        settings: {
+          fade: false,
+          dots: false,
+          arrows: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          prevArrow: ".sec_four_arrow_left",
+          nextArrow: ".sec_four_arrow_right",
+        },
       },
     ],
   });

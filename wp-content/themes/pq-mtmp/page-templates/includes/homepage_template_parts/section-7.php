@@ -6,7 +6,7 @@
   
     <div id='sec_seven_video' class="video_module">
     
-      <div id='video_overlay'>
+      <div class='video_overlay'>
       
         <span class='play_button'></span><!-- play_button -->
       

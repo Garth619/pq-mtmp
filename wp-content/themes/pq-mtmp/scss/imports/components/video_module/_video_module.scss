@@ -17,7 +17,7 @@
       }
     }
   }
-  #video_overlay {
+  .video_overlay {
     @include flex(center, center);
     @include box(100%);
     @include abs(0, null, null, 0);
@@ -73,7 +73,7 @@ span.play_button {
   }
 }
 
-#page_video_module {
+.page_video_module {
   &.video_module {
     @include mq(small_laptop) {
       max-width: 340px;
