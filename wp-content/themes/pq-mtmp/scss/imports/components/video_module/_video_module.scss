@@ -1,6 +1,11 @@
 .video_module {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  max-width: 739px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    margin-bottom: 40px;
+  }
   &.video_shadow {
     border: 13px solid $color_light_one;
     box-shadow: 0px 3px 6px #00000029;
@@ -69,14 +74,51 @@ span.play_button {
 }
 
 #page_video_module {
+  &.video_module {
+    @include mq(small_laptop) {
+      max-width: 340px;
+      margin: 0 30px 30px 0;
+      float: left;
+    }
+  }
   span.play_button {
     @include box(64px);
+    @include mq(small_tablet) {
+      @include box(106px);
+    }
+    @include mq(small_laptop) {
+      @include box(64px);
+    }
+    @include mq(small_monitor) {
+      @include box(122px);
+    }
     &:before {
       @include box(51px);
+      @include mq(small_tablet) {
+        @include box(84px);
+      }
+      @include mq(small_laptop) {
+        @include box(51px);
+      }
+      @include mq(small_monitor) {
+        @include box(97px);
+      }
     }
     &:after {
       @include abs(23px, null, null, 30px);
       @include tri(right, 8px, 10px, $color_bright_two);
+      @include mq(small_tablet) {
+        @include abs(38px, null, null, 46px);
+        @include tri(right, 14px, 17px, $color_bright_two);
+      }
+      @include mq(small_laptop) {
+        @include abs(23px, null, null, 30px);
+        @include tri(right, 8px, 10px, $color_bright_two);
+      }
+      @include mq(small_monitor) {
+        @include abs(43px, null, null, 54px);
+        @include tri(right, 16px, 19px, $color_bright_two);
+      }
     }
   }
 }

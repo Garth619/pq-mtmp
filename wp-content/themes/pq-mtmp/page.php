@@ -53,11 +53,11 @@
       
       			</div><!-- video_overlay -->
 
-      			<img src='<?php bloginfo('template_directory');?>/images/video-photo.jpg' /><!-- name -->
+      			<img src='<?php bloginfo('template_directory');?>/images/vid-test.png' /><!-- name -->
     
    			 </div><!-- page_video_module -->
     
-					<p>Our goal is to <a href="">keep you</a> informed so you can keep your family safe from harm, as well as to provide experect advice. Estey Bomberger is reviewing claims on behalf of women who developed ovarian cancer or mesothelioma after using talc powder or other talc products.</p>
+					<p>Our goal is to keep you informed so you can keep your family safe from harm, as well as to provide experect advice. Estey Bomberger is reviewing claims on behalf of women who developed ovarian cancer or mesothelioma after using talc powder or other talc products.</p>
 
 					<p>Since 1971, more than 20 studies have linked talc powder to ovarian cancer, and, in 2003, an analysis of 16 of these studies found that ** women using talcum powder were 33 percent more likely to develop ovarian cancer**. It has been alleged that Johnson & Johnson, the maker of popular talc-based products, knew about the ovarian cancer risk since at least 1982, but failed to warn women using these products. In addition, recently unearthed information reported by The New York Times, showed that Johnson & Johnson knew of the possible link of asbestos to their talc products. </p>
 					
@@ -122,7 +122,7 @@
 		
 		 <?php if(!get_field('disable_sidebar')) {
 
-			//get_sidebar();
+			get_sidebar();
 
 			} ?>
 

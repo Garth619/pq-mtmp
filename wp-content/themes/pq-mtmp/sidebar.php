@@ -1,15 +1,15 @@
 
-<div class="sidebar_wrapper">
+<div id="sidebar_wrapper">
 
-	<div class='sidebar_form'>
+	<div id='sidebar_form'>
 
-		<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
+		<span id='sidebar_form_title'>How can we help you?</span><!-- sidebar_form_title -->
 
-		<span class='double_line'></span><!-- double_line -->
+		<span id='sidebar_form_subtitle'>Request your free consultation today and an attorney will get back to you shortly.</span><!-- sidebar_form_title -->
 	
 		<?php gravity_form(4, false, false, false, '', true, 1233); ?>
 
-		<span class='required'>Required Field</span><!-- sidebar_required -->
+		<span id='form_required'>Required Field</span><!-- form_required -->
 	
 	</div><!-- sidebar_form -->
 			
