@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  $("#featured_case_results_module_slider").slick({
+  $(".featured_case_results_module_slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -269,6 +269,7 @@ jQuery(document).ready(function ($) {
         breakpoint: 767,
         settings: {
           fade: false,
+          adaptiveHeight: false,
           slidesToShow: 2,
           slidesToScroll: 2,
         },
@@ -279,10 +280,11 @@ jQuery(document).ready(function ($) {
           fade: false,
           dots: false,
           arrows: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          prevArrow: ".sec_four_arrow_left",
-          nextArrow: ".sec_four_arrow_right",
+          adaptiveHeight: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: ".featured_case_results_module_arrow_left",
+          nextArrow: ".featured_case_results_module_arrow_right",
         },
       },
       {
@@ -291,10 +293,11 @@ jQuery(document).ready(function ($) {
           fade: false,
           dots: false,
           arrows: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          prevArrow: ".sec_four_arrow_left",
-          nextArrow: ".sec_four_arrow_right",
+          adaptiveHeight: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          prevArrow: ".featured_case_results_module_arrow_left",
+          nextArrow: ".featured_case_results_module_arrow_right",
         },
       },
     ],

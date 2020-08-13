@@ -79,9 +79,9 @@ body {
   strong {
     color: $color_bright_two;
   }
-  ul {
+  > ul {
     list-style: none;
-    li {
+    > li {
       position: relative;
       padding-left: 20px;
       margin-bottom: 27px;
@@ -91,6 +91,23 @@ body {
         @include abs(11px, null, null, 0);
         @include box(6px);
         @include contentdisplay();
+      }
+      > ul {
+        list-style: none;
+        margin-top: 20px;
+        margin-left: 0px;
+        > li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 27px;
+          &:before {
+            background: $color_bright_two;
+            border-radius: 50%;
+            @include abs(11px, null, null, 0);
+            @include box(6px);
+            @include contentdisplay();
+          }
+        }
       }
     }
   }

@@ -54,7 +54,14 @@
 					<p>For decades, researchers have been studying the potential link between ovarian cancer and talcum powder. It is believed that talc powder, when used near the genitals, can travel to the ovaries and become embedded in the ovarian tissue. While talc is a natural mineral, it is very difficult for the body to remove the particles and, as a result, inflammation may occur and cancerous tumors may form.</p>
 
 					<ul>
-						<li>Lorem ipsum dolor sit</li>
+						<li>Lorem ipsum dolor sit
+						<ul>
+							<li>test</li>
+							<li>test</li>
+							<li>test</li>
+							<li>test</li>
+						</ul>
+						</li>
 						<li>Lorem ipsum dolor sit</li>
 						<li>Lorem ipsum dolor sit</li>
 						<li>Lorem ipsum dolor sit</li>
@@ -89,37 +96,53 @@
 		
 							<div class='featured_case_results_module_arrow_left featured_case_results_module_arrow'></div><!-- featured_case_results_module_arrow -->
 
-          			<div id='featured_case_results_module_slider'>
+          			<div class='featured_case_results_module_slider'>
           			
           				<div class='featured_case_results_module_slide one'>
+
+										<a href=''>
           
           					<span class='featured_case_results_module_slide_title'>$7.5 Million</span><!-- featured_case_results_module_slide_title -->
           
           					<span class='featured_case_results_module_slide_descrip'>In February 2016, the family of Jacqueline Fox was awarded $72 million after a jury agreed that her daily use of Johnson & Johnson’s talc powder over the course of 35 years caused the ovarian cancer that killed her. The jury awarded $10 million for actual damages while the other $62 million, one million for each year of her life, was awarded for punitive damages.</span><!-- featured_case_results_module_slide_descrip -->
+
+										</a>
           				
           				</div><!-- featured_case_results_module_slide -->
           
           				<div class='featured_case_results_module_slide two'>
+
+										<a href=''>
           				
           					<span class='featured_case_results_module_slide_title'>$4.7 Million</span><!-- featured_case_results_module_slide_title -->
           
           					<span class='featured_case_results_module_slide_descrip'>In May 2016, Gloria Ristesund was awarded $55 million by a Missouri jury because they agreed that her ovarian cancer was caused by her frequent use of Johnson & Johnson’s talc powder. Although she was already at risk of ovarian cancer because she suffered from endometriosis, her attorneys argued that her use of talc powder increased her chances of developing ovarian cancer by 200 percent.</span><!-- featured_case_results_module_slide_descrip -->
+
+										</a>
           				
           				</div><!-- featured_case_results_module_slide -->
           
           				<div class='featured_case_results_module_slide three'>
+
+										<a href=''>
           				
           					<span class='featured_case_results_module_slide_title'>$1.3 Million</span><!-- featured_case_results_module_slide_title -->
           
           					<span class='featured_case_results_module_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- featured_case_results_module_slide_descrip -->
+
+										</a>
           				
           				</div><!-- featured_case_results_module_slide -->
           
           				<div class='featured_case_results_module_slide four'>
+
+									<a href=''>
           
           					<span class='featured_case_results_module_slide_title'>$7.5 Million</span><!-- featured_case_results_module_slide_title -->
           
           					<span class='featured_case_results_module_slide_descrip'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- featured_case_results_module_slide_descrip -->
+
+										</a>
           				
           				</div><!-- featured_case_results_module_slide -->
           			

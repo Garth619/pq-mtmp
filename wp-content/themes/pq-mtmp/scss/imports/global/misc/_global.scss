@@ -70,9 +70,14 @@ body.header_fixed {
   @include mq(small_laptop) {
     order: 2;
     padding-left: 60px;
+    width: calc(100% - 350px);
+  }
+  @include mq(large_laptop) {
+    width: calc(100% - 430px);
   }
   @include mq(small_monitor) {
     padding-left: 127px;
+    width: calc(100% - 475px);
   }
 }
 
