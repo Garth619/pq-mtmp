@@ -336,7 +336,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 1380,
+        breakpoint: 1490,
         settings: {
           fade: false,
           dots: false,
@@ -359,10 +359,10 @@ jQuery(document).ready(function ($) {
     if ($(window).width() >= 768 && $(window).width() < 1170) {
       $(".client_reviews_module_slide").css("height", stHeight + "px");
     }
-    if ($(window).width() >= 1170 && $(window).width() < 1380) {
+    if ($(window).width() >= 1170 && $(window).width() < 1490) {
       $(".client_reviews_module_slide").css("height", "auto");
     }
-    if ($(window).width() >= 1380) {
+    if ($(window).width() >= 1490) {
       $(".client_reviews_module_slide").css("height", stHeight + "px");
     }
   }

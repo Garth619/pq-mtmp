@@ -244,9 +244,9 @@
 											
    											<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
                
-               					<span class='client_reviews_module_slide_descrip'>“It’s rare to find an attorney with a humanitarian side, but that’s exactly what I found in Mike and his team.”</span><!-- client_reviews_module_slide_descrip -->
+               					<span class='client_reviews_module_slide_descrip'>“They have done an excellent job with my representation and I couldn’t be happier with the amount of care and compassion in how they handled my case.”</span><!-- client_reviews_module_slide_descrip -->
      
-     										<span class='client_reviews_module_slide_name'>Kerry</span><!-- client_reviews_module_slide_name -->
+     										<span class='client_reviews_module_slide_name'>Tom</span><!-- client_reviews_module_slide_name -->
 
 											</div><!-- client_reviews_module_slide_top -->
 
@@ -332,9 +332,9 @@
 											
    											<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
                
-               					<span class='client_reviews_module_slide_descrip'>“It’s rare to find an attorney with a humanitarian side, but that’s exactly what I found in Mike and his team.”</span><!-- client_reviews_module_slide_descrip -->
+               					<span class='client_reviews_module_slide_descrip'>“They have done an excellent job with my representation and I couldn’t be happier with the amount of care and compassion in how they handled my case.” Tom</span><!-- client_reviews_module_slide_descrip -->
      
-     										<span class='client_reviews_module_slide_name'>Kerry</span><!-- client_reviews_module_slide_name -->
+     										<span class='client_reviews_module_slide_name'>Tom</span><!-- client_reviews_module_slide_name -->
 
 											</div><!-- client_reviews_module_slide_top -->
 

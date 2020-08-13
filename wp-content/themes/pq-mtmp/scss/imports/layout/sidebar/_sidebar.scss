@@ -1,8 +1,10 @@
 #sidebar_wrapper {
+  padding-top: 20px;
   @include mq(small_laptop) {
     flex-shrink: 0;
     width: 350px;
     order: 1;
+    padding: 0;
   }
   @include mq(large_laptop) {
     width: 430px;

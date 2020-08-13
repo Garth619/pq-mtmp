@@ -38,6 +38,7 @@ span.client_reviews_module_title {
   }
   @include mq(large_laptop) {
     max-width: 100%;
+    margin-top: 53px;
   }
 }
 
@@ -122,10 +123,6 @@ span.client_reviews_module_title {
     display: block;
     transition: none;
     text-decoration: none;
-    // &:hover {
-    //   color: $color_light_one;
-    //   text-decoration: none;
-    // }
   }
   @include mq(small_tablet) {
     padding: 83px 0px 160px;
@@ -135,15 +132,31 @@ span.client_reviews_module_title {
     text-align: left;
   }
   @include mq(large_laptop) {
-    padding: 83px 0px 160px;
+    padding: 63px 0px 160px;
   }
   @include mq(small_monitor) {
-    padding: 83px 0px 0px;
+    padding: 63px 0px 140px;
   }
   .client_reviews_module_slide_top {
     padding: 0 20px;
+    @include mq(small_tablet) {
+      padding: 0 40px;
+    }
+    @include mq(small_laptop) {
+      max-width: 595px;
+      @include margin_lr;
+    }
+    @include mq(large_laptop) {
+      padding: 0 35px;
+    }
+    @include mq(small_monitor) {
+      max-width: 310px;
+    }
     img {
       @include margin_lr;
+      @include mq(small_laptop) {
+        margin: 0;
+      }
     }
     span {
       display: block;
@@ -163,12 +176,16 @@ span.client_reviews_module_title {
           max-width: 310px;
         }
         @include mq(small_laptop) {
-          max-width: 465px;
+          max-width: 100%;
+        }
+        @include mq(large_laptop) {
+          @include quick_type(19px, 27px, null);
         }
       }
       &.client_reviews_module_slide_name {
         font-size: 16px;
         font-weight: 700;
+        text-align: center;
         @include type(
           (
             size: 16px,
@@ -177,11 +194,17 @@ span.client_reviews_module_title {
             weight: 700,
           )
         );
+        @include mq(small_laptop) {
+          text-align: left;
+        }
         &:before {
           margin: 25px auto;
           background: $color_bright_one;
           @include box(61px, 3px);
           @include contentdisplay();
+          @include mq(small_laptop) {
+            margin: 25px 0;
+          }
         }
       }
     }
@@ -191,7 +214,6 @@ span.client_reviews_module_title {
     padding: 30px 25px;
     margin-top: 40px;
     width: 100%;
-
     @include flex(center, center);
     @include mq(small_tablet) {
       @include abs(null, null, 0, 0);
@@ -206,6 +228,7 @@ span.client_reviews_module_slide_amount {
       height: 24px,
       family: $primaryfont,
       weight: 700,
+      color: $color_dark_one,
     )
   );
   &:hover {
@@ -219,6 +242,7 @@ span.client_reviews_module_slide_subtitle {
     (
       size: 14px,
       height: 16px,
+      color: $color_dark_one,
       family: $primaryfont,
       weight: 700,
     )
@@ -242,6 +266,7 @@ span.client_reviews_module_slide_turned {
 .client_reviews_module_slide_col {
   flex-shrink: 0;
   flex-grow: 1;
+  text-align: center;
   width: calc(66.666% - 70px);
   span {
     display: block;
