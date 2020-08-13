@@ -352,14 +352,18 @@ jQuery(document).ready(function ($) {
   });
 
   function getSlickheight() {
-    if ($(window).width() >= 768) {
-      var stHeight = $(".client_reviews_module_slider .slick-track").height();
+    var stHeight = $(".client_reviews_module_slider .slick-track").height();
+    if ($(window).width() < 768) {
+      $(".client_reviews_module_slide").css("height", "auto");
+    }
+    if ($(window).width() >= 768 && $(window).width() < 1170) {
       $(".client_reviews_module_slide").css("height", stHeight + "px");
     }
-
-    if ($(window).width() < 768) {
-      var stHeight = $(".client_reviews_module_slider .slick-track").height();
+    if ($(window).width() >= 1170 && $(window).width() < 1380) {
       $(".client_reviews_module_slide").css("height", "auto");
+    }
+    if ($(window).width() >= 1380) {
+      $(".client_reviews_module_slide").css("height", stHeight + "px");
     }
   }
 
