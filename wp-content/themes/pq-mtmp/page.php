@@ -332,7 +332,7 @@
 											
    											<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
                
-               					<span class='client_reviews_module_slide_descrip'>“They have done an excellent job with my representation and I couldn’t be happier with the amount of care and compassion in how they handled my case.” Tom</span><!-- client_reviews_module_slide_descrip -->
+               					<span class='client_reviews_module_slide_descrip'>“They have done an excellent job with my representation and I couldn’t be happier with the amount of care and compassion in how they handled my case.”</span><!-- client_reviews_module_slide_descrip -->
      
      										<span class='client_reviews_module_slide_name'>Tom</span><!-- client_reviews_module_slide_name -->
 
@@ -379,6 +379,32 @@
 					</div><!-- client_reviews_module -->
 				
   				<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
+
+					<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
+
+					<div class='linked_cta_module'>
+
+						<a href="">
+					
+  						<div class='linked_cta_module_left'>
+  						
+  							<span class='linked_cta_title'>Top 10 Talc<br/> Dangers Questions<br/> Answered</span><!-- linked_cta_title -->
+  						
+  						</div><!-- linked_cta_module_left -->
+  
+  						<div class='linked_cta_module_right'>
+  						
+  							<img src='<?php bloginfo('template_directory');?>/images/top-ten.jpg' alt=''/><!-- name -->
+  						
+  						</div><!-- linked_cta_module_right -->
+
+						</a>
+					
+					</div><!-- linked_cta_module -->
+
+					<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
+
+					<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
 
 				</div><!-- page_content_inner -->
     	
