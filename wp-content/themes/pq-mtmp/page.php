@@ -160,17 +160,127 @@
 					
 					<p>A major initial victory for individuals suing Johnson & Johnson dates back to 2013, when a jury found that Johnson & Johnson should have warned women about the risk of developing ovarian cancer when using its talcum and baby powders near the genitals. In that case, the plaintiff alleged that she developed ovarian cancer after using Johnson & Johnson’s talc-based Baby Powder and Shower-to-Shower products for nearly 30 years. According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
 
+					<div class='blockquote_module'>
+					
+						<span class='blockquote_descrip'>“It is believed that talc powder, when used near the genitals, can travel to the ovaries and become embedded in the ovarian tissue.”</span><!-- blockquote_descrip -->
+
+						<span class='blockquote_source'>Source: Etsey Bomberger, Plaintiff’s Attorney</span><!-- blockquote_source -->
+					
+					</div><!-- blockquote_module -->
+
 					<h2>Big Individual Victories in the Fight Over the Link Between Talc Powder and Ovarian Cancer</h2>
 
 					<p>Individual women suing Johnson & Johnson have secured some major victories in their fight against the company over its claims about talc.</p>
 					
 					<p><strong>$70 Million:</strong> In October 2016, a Missouri jury ordered Johnson and Johnson to pay Deborah Giannecchini, 62, $70 million dollars in damages, because they agreed that her frequent use of the companies talc powder caused her ovarian cancer, according to Bloomberg News. The California woman was diagnosed with ovarian cancer three years ago after using Johnson and Johnson’s talc powder for more than four decades.</p>
+
+					
 					
 					<p><strong>$55 Million:</strong> In May 2016, Gloria Ristesund was awarded $55 million by a Missouri jury because they agreed that her ovarian cancer was caused by her frequent use of Johnson & Johnson’s talc powder. Although she was already at risk of ovarian cancer because she suffered from endometriosis, her attorneys argued that her use of talc powder increased her chances of developing ovarian cancer by 200 percent.</p>
 					
 					<p><strong>$72 Million:</strong> In February 2016, the family of a Jacqueline Fox was awarded $72 million after a jury agreed that her daily use of Johnson & Johnson’s talc powder over the course of 35 years caused the ovarian cancer that killed her. The jury award $10 million for actual damages while the other $62 million, one million for each year of her life, was awarded for punitive damages.</p> 
 					
 				  <p>A major initial victory for individuals suing Johnson & Johnson dates back to 2013, when a jury found that Johnson & Johnson should have warned women about the risk of developing ovarian cancer when using its talcum and baby powders near the genitals. In that case, the plaintiff alleged that she developed ovarian cancer after using Johnson & Johnson’s talc-based Baby Powder and Shower-to-Shower products for nearly 30 years.</p>
+
+					<div class='client_reviews_module'>
+					
+						<span class='client_reviews_module_title'>Client Reviews</span><!-- client_reviews_module_title -->
+
+						<div class='client_reviews_module_slider_wrapper'>
+		
+							<div class='client_reviews_module_arrow_left client_reviews_module_arrow'></div><!-- client_reviews_module_arrow -->
+
+          			<div class='client_reviews_module_slider'>
+          			
+          				<div class='client_reviews_module_slide one'>
+
+										<a href=''>
+          
+            					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+            
+            					<span class='client_reviews_module_slide_descrip'>“It’s rare to find an attorney with a humanitarian side, but that’s exactly what I found in Mike and his team.”</span><!-- client_reviews_module_slide_descrip -->
+  
+  										<span class='client_reviews_module_slide_name'>Kerry</span><!-- client_reviews_module_slide_name -->
+
+											<div class='client_reviews_module_slide_bottom'>
+											
+												<div class='client_reviews_module_slide_col'>
+												
+													<span class='client_reviews_module_slide_amount'>$2,500</span><!-- client_reviews_module_slide_amount -->
+
+													<span class='client_reviews_module_slide_subtitle'>Insurance offer</span><!-- client_reviews_module_slide_subtitle -->
+												
+												</div><!-- client_reviews_module_slide_col -->
+
+												<div class='client_reviews_module_slide_col'>
+												
+												<span class='client_reviews_module_slide_turned'>Turned<br/> Into</span><!-- client_reviews_module_slide_turned -->
+												
+												</div><!-- client_reviews_module_slide_col -->
+
+												<div class='client_reviews_module_slide_col'>
+												
+												 <span class='client_reviews_module_slide_amount'>$2,500</span><!-- client_reviews_module_slide_amount -->
+
+												 <span class='client_reviews_module_slide_subtitle'>What we got</span><!-- client_reviews_module_slide_subtitle -->
+												
+												</div><!-- client_reviews_module_slide_col -->
+											
+											</div><!-- client_reviews_module_slide_bottom -->
+
+										</a>
+          				
+          				</div><!-- client_reviews_module_slide -->
+          
+          				<div class='client_reviews_module_slide two'>
+
+									<a href=''>
+          
+          					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+          
+          					<span class='client_reviews_module_slide_descrip'>“They have done an excellent job with my representation and I couldn’t be happier with the amount of care and compassion in how they handled my case.”</span><!-- client_reviews_module_slide_descrip -->
+          
+          					<span class='client_reviews_module_slide_name'>Tom</span><!-- client_reviews_module_slide_name -->
+        
+        					</a>
+          				
+          				</div><!-- client_reviews_module_slide -->
+          
+          				<div class='client_reviews_module_slide three'>
+
+									<a href=''>
+          
+          					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+          
+          					<span class='client_reviews_module_slide_descrip'>“It’s rare to find an attorney with a humanitarian side, but that’s exactly what I found in Mike and his team.”</span><!-- client_reviews_module_slide_descrip -->
+          
+          					<span class='client_reviews_module_slide_name'>Kerry</span><!-- client_reviews_module_slide_name -->
+        
+        					</a>
+          				
+          				</div><!-- client_reviews_module_slide -->
+          
+          				<div class='client_reviews_module_slide four'>
+
+									  <a href=''>
+          
+            					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+            
+            					<span class='client_reviews_module_slide_descrip'>“It’s rare to find an attorney with a humanitarian side, but that’s exactly what I found in Mike and his team.”</span><!-- client_reviews_module_slide_descrip -->
+  
+  										<span class='client_reviews_module_slide_name'>Kerry</span><!-- client_reviews_module_slide_name -->
+
+										</a>
+          				
+          				</div><!-- client_reviews_module_slide -->
+          			
+          			</div><!-- client_reviews_module_slider -->
+
+			         <div class='client_reviews_module_arrow_right client_reviews_module_arrow'></div><!-- client_reviews_module_arrow -->
+		
+		        </div><!-- client_reviews_module_slider_wrapper -->
+					
+					</div><!-- client_reviews_module -->
 				
   				<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
 

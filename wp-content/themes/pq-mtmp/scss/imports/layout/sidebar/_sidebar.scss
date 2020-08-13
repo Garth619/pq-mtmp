@@ -302,9 +302,12 @@ span#sidebar_form_subtitle {
         position: relative;
         &:after {
           transition: all 200ms ease-in-out;
-          @include abs(28px, 15px, null, null);
+          @include abs(22px, 15px, null, null);
           @include tri(down, 5px, 5px, $color_dark_one);
           @include contentdisplay();
+          @include mq(large_laptop) {
+            @include abs(28px, 15px, null, null);
+          }
         }
       }
     }

@@ -60,7 +60,7 @@ body.header_fixed {
   }
   @include mq(small_monitor) {
     margin-top: 66px;
-    max-width: 1530px;
+    max-width: 1462px;
     padding: 40px 0px 115px;
     @include margin_lr;
   }
@@ -76,7 +76,7 @@ body.header_fixed {
     width: calc(100% - 430px);
   }
   @include mq(small_monitor) {
-    padding-left: 127px;
+    padding-left: 150px;
     width: calc(100% - 475px);
   }
 }
