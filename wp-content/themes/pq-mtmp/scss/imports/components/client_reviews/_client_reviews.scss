@@ -5,15 +5,6 @@
   @include mq(large_laptop) {
     margin: 84px 0 110px;
   }
-  a {
-    display: block;
-    transition: none;
-    text-decoration: none;
-    &:hover {
-      color: $color_light_one;
-      text-decoration: none;
-    }
-  }
 }
 
 span.client_reviews_module_title {
@@ -127,8 +118,17 @@ span.client_reviews_module_title {
   text-align: center;
   padding: 55px 0px 0;
   background: $color_dark_one;
+  a {
+    display: block;
+    transition: none;
+    text-decoration: none;
+    // &:hover {
+    //   color: $color_light_one;
+    //   text-decoration: none;
+    // }
+  }
   @include mq(small_tablet) {
-    padding: 83px 0px 120px;
+    padding: 83px 0px 160px;
     position: relative;
   }
   @include mq(large_laptop) {
@@ -190,11 +190,6 @@ span.client_reviews_module_title {
     @include mq(small_tablet) {
       @include abs(null, null, 0, 0);
     }
-    a {
-      &:hover {
-        color: $color_dark_one;
-      }
-    }
   }
 }
 
@@ -207,6 +202,9 @@ span.client_reviews_module_slide_amount {
       weight: 700,
     )
   );
+  &:hover {
+    color: $color_dark_one;
+  }
 }
 
 span.client_reviews_module_slide_subtitle {
