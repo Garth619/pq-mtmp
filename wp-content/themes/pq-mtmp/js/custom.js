@@ -351,6 +351,26 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  function getSlickheight() {
+    if ($(window).width() >= 768) {
+      var stHeight = $(".client_reviews_module_slider .slick-track").height();
+      $(".client_reviews_module_slide").css("height", stHeight + "px");
+    }
+
+    if ($(window).width() < 768) {
+      var stHeight = $(".client_reviews_module_slider .slick-track").height();
+      $(".client_reviews_module_slide").css("height", "auto");
+    }
+  }
+
+  getSlickheight();
+
+  $(window).resize(
+    _.debounce(function () {
+      getSlickheight();
+    }, 100)
+  );
+
   /* Form Select Triangle
 --------------------------------------------------------------------------------------- */
 

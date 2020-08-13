@@ -58,27 +58,27 @@ span.client_reviews_module_title {
   }
   .slick-track {
     @include mq(small_tablet) {
-      @include flex();
+      // @include flex();
     }
     @include mq(small_laptop) {
-      display: block;
+      //display: block;
     }
     @include mq(large_laptop) {
-      @include flex();
+      // @include flex();
     }
   }
   .slick-slide {
-    background: $color_dark_one;
+    // background: $color_dark_one;
     @include mq(small_tablet) {
       margin: 0 13px;
-      @include flex(center);
+      //@include flex(center);
       height: auto;
     }
     @include mq(small_laptop) {
-      display: block;
+      //display: block;
     }
     @include mq(large_laptop) {
-      @include flex(center);
+      //@include flex(center);
     }
   }
   .slick-list {
@@ -126,17 +126,16 @@ span.client_reviews_module_title {
 .client_reviews_module_slide {
   text-align: center;
   padding: 55px 0px 0;
+  background: $color_dark_one;
   @include mq(small_tablet) {
-    padding: 83px 0px 67px;
-  }
-  @include mq(small_laptop) {
-    padding: 83px 0px 97px;
+    padding: 83px 0px 120px;
+    position: relative;
   }
   @include mq(large_laptop) {
-    padding: 83px 0px 67px;
+    padding: 83px 0px 0px;
   }
   @include mq(small_monitor) {
-    padding: 83px 0px 95px;
+    padding: 83px 0px 0px;
   }
   img {
     @include margin_lr;
@@ -186,7 +185,16 @@ span.client_reviews_module_title {
     background: $color_light_two;
     padding: 30px 25px;
     margin-top: 40px;
+    width: 100%;
     @include flex(center, center);
+    @include mq(small_tablet) {
+      @include abs(null, null, 0, 0);
+    }
+    a {
+      &:hover {
+        color: $color_dark_one;
+      }
+    }
   }
 }
 
@@ -231,10 +239,13 @@ span.client_reviews_module_slide_turned {
   flex-shrink: 0;
   flex-grow: 1;
   width: calc(66.666% - 70px);
-  // width: 100px;
-  background: pink;
   &:nth-of-type(2) {
     width: 70px;
+  }
+  &:nth-of-type(3) {
+    span {
+      color: $color_bright_two;
+    }
   }
 }
 
