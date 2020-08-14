@@ -304,14 +304,13 @@ function my_acf_init() {
 	
 	// check function exists
 	if( function_exists('acf_register_block') ) {
-		
-		// register a testimonial block
+	
 		acf_register_block(array(
 			'name'				=> 'custom-video',
 			'title'				=> __('Custom Video'),
 			'description'		=> __('A custom video block.'),
-            'render_template'	=> 'page-templates/includes/blocks/module-video.php',
-            'enqueue_style'     =>  get_bloginfo("template_directory") . '/style.css',
+            'render_template'	=> 'page-templates/includes/blocks/video-block.php',
+            'enqueue_style'     =>  get_bloginfo("template_directory") . '/scss/imports/components/acf-blocks/video_block/style.css',
 			'category'			=> 'common-blocks',
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'video', 'quote' ),
