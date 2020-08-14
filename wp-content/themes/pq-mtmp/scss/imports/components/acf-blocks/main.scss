@@ -1,0 +1,18 @@
+// pull in mixins and third party files needed to make the blocks look correctly on front and back end
+
+// variables
+
+@import "../../global/fonts/variables", 
+        "../../global/colors/variables",
+        "../../global/mediaqueries/variables",
+        "../../utils/variables_do_not_edit",
+        "../../utils/mixins_do_not_edit";
+
+// third party files
+
+@import "../../vendors/slick",
+        "../../vendors/lity";
+
+// reset
+
+@import "../../base/reset";

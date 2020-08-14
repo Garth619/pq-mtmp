@@ -175,7 +175,7 @@ body {
         @include type(
           (
             size: 90px,
-            family: $primaryfont,
+            family: $secondaryfont,
             color: $color_bright_two,
           )
         );
@@ -187,14 +187,14 @@ body {
         }
       }
       &:before {
-        content: '"';
+        content: "\201C";
         margin-right: 25px;
         @include mq(small_monitor) {
           margin-right: 45px;
         }
       }
       &:after {
-        content: '"';
+        content: "\201D";
         margin-left: 25px;
         @include mq(small_monitor) {
           margin-left: 45px;

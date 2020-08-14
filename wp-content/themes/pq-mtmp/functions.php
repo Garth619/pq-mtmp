@@ -296,6 +296,29 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+/* ACF Blocks for PA Pages and Posts
+-------------------------------------------------------------- */
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'custom-video',
+			'title'				=> __('Custom Video'),
+			'description'		=> __('A custom video block.'),
+            'render_template'	=> 'page-templates/includes/blocks/module-video.php',
+            'enqueue_style'     =>  get_bloginfo("template_directory") . '/style.css',
+			'category'			=> 'common-blocks',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'video', 'quote' ),
+		));
+	}
+}
+
 
 
 

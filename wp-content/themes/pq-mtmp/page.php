@@ -30,6 +30,8 @@
 					<?php //get_template_part( 'loop', 'page' ); ?>
 
 					<div class="page_video_module video_module video_shadow">
+
+						<a href="https://www.youtube.com/embed/EEIk7gwjgIM" data-lity>
     
       			<div class='video_overlay'>
       
@@ -38,6 +40,24 @@
       			</div><!-- video_overlay -->
 
       			<img src='<?php bloginfo('template_directory');?>/images/vid-test.png' /><!-- name -->
+
+						</a>
+    
+   			 </div><!-- page_video_module -->
+
+					<div class="page_video_module video_module video_shadow">
+
+						<div class='mywistia wistia_embed wistia_async_waichudc62 popover=true popoverContent=html'></div><!-- mywistia -->
+					
+    				<div class='video_overlay'>
+      
+        			<span class='play_button'></span><!-- play_button -->
+      
+      			</div><!-- video_overlay -->
+
+      			<img src='<?php bloginfo('template_directory');?>/images/vid-test.png' /><!-- name -->
+
+						
     
    			 </div><!-- page_video_module -->
     
