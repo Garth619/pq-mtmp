@@ -68,9 +68,9 @@ span.linked_cta_title {
 
 .linked_cta_module_right {
   margin-top: 40px;
-  margin-left: 20px;
   @include mq(small_laptop) {
     margin-top: 0px;
+    margin-left: 20px;
     flex-shrink: 0;
     flex-basis: 330px;
   }

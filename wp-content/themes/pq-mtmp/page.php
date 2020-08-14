@@ -404,6 +404,86 @@
 
 					<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
 
+					<div class='timeline_module'>
+
+						<span class='timeline_module_line'></span><!-- timeline_module_line -->
+
+						<div class='timeline_module_date_row_inner'>
+						
+						  <div class='timeline_module_date_row'>
+  						
+  							<span class='timeline_module_date_title'>ApRIL 2014</span><!-- timeline_module_date_title -->
+  
+  							<div class='timeline_module_date_content'>
+  							
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  							
+  							</div><!-- timeline_module_date_content -->
+  						
+  						</div><!-- timeline_module_date_row -->
+  
+  						<div class='timeline_module_date_row'>
+  						
+  							<span class='timeline_module_date_title'>ApRIL 2014</span><!-- timeline_module_date_title -->
+  
+  							<div class='timeline_module_date_content'>
+  							
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  							
+  							</div><!-- timeline_module_date_content -->
+  						
+  						</div><!-- timeline_module_date_row -->
+  
+  						<div class='timeline_module_date_row'>
+  						
+  							<span class='timeline_module_date_title'>ApRIL 2014</span><!-- timeline_module_date_title -->
+  
+  							<div class='timeline_module_date_content'>
+  							
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  							
+  							</div><!-- timeline_module_date_content -->
+  						
+  						</div><!-- timeline_module_date_row -->
+  
+  						<div class='timeline_module_date_row'>
+  						
+  							<span class='timeline_module_date_title'>ApRIL 2014</span><!-- timeline_module_date_title -->
+  
+  							<div class='timeline_module_date_content'>
+  							
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  							
+  							</div><!-- timeline_module_date_content -->
+  						
+  						</div><!-- timeline_module_date_row -->
+  
+  						<div class='timeline_module_date_row'>
+  						
+  							<span class='timeline_module_date_title'>ApRIL 2014</span><!-- timeline_module_date_title -->
+  
+  							<div class='timeline_module_date_content'>
+  							
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  
+  								<p>California Talc Class Action – Mona Estrada claimed Johnson & Johnson failed to warn about the cancer risk of its talc products. A California federal judge moved the case to New Jersey making it part of the MDL underway there. A New Jersey federal judge dismissed Estrada’s claim in 2017 saying she did not suffer an actual injury.<p>
+  							
+  							</div><!-- timeline_module_date_content -->
+  						
+  						</div><!-- timeline_module_date_row -->
+
+						</div><!-- timeline_module_date_row_inner -->
+					
+					</div><!-- timeline_module -->
+
 					<p>According to the lawsuit, Johnson & Johnson knew about the link between talc powder and cancer since as early as 1982, when a landmark study found that women using these products as hygienic powders were at a 92 percent increased risk of developing ovarian cancer.</p>
 
 				</div><!-- page_content_inner -->
@@ -419,15 +499,6 @@
 
 	</div><!-- page_wrapper -->
 
-	
-			
-		
-
-	
-		
-
-	
-	
 </div><!-- internal_main -->
 		
 

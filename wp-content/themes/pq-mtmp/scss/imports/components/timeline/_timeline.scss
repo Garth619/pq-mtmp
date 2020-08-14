@@ -1,0 +1,79 @@
+.timeline_module {
+  padding: 40px 30px;
+  margin: 55px 0;
+  background: $color_light_ten;
+  position: relative;
+  @include mq(small_tablet) {
+    padding: 55px 45px;
+    max-width: 90%;
+    @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    padding: 55px 60px;
+  }
+  @include mq(small_monitor) {
+    padding: 73px 60px;
+  }
+}
+
+.timeline_module_line {
+  display: block;
+  background: $color_light_eleven;
+  @include box(1px, calc(100% - 145px));
+  @include abs(57px, null, null, 30px);
+  @include mq(small_tablet) {
+    @include abs(60px, null, null, 45px);
+  }
+  @include mq(small_laptop) {
+    @include abs(60px, null, null, 60px);
+  }
+  @include mq(small_monitor) {
+    @include box(1px, calc(100% - 180px));
+    @include abs(76px, null, null, 60px);
+  }
+}
+
+.timeline_module_date_row_inner {
+  padding-left: 30px;
+}
+
+.timeline_module_date_row {
+  margin-bottom: 50px;
+  &:last-of-type {
+    margin-bottom: 0;
+    position: relative;
+    &:before {
+      background: $color_light_ten;
+      @include abs(4px, null, null, -32px);
+      @include box(5px, 100%);
+      @include contentdisplay();
+    }
+  }
+}
+
+span.timeline_module_date_title {
+  position: relative;
+  display: block;
+  margin-bottom: 13px;
+  @include type(
+    (
+      size: 17px,
+      height: 19px,
+      family: $primaryfont,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+  &:before {
+    border-radius: 50%;
+    background: $color_bright_two;
+    @include abs(2px, null, null, -37px);
+    @include box(16px);
+    @include contentdisplay();
+  }
+}
+
+.timeline_module_date_content {
+  p {
+  }
+}
