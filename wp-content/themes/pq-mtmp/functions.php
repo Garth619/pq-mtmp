@@ -301,14 +301,14 @@ function my_acf_init() {
 			'description'		=> __('An iLawyer video block that supports Wistia and Youtube.'),
             'render_template'	=> 'page-templates/includes/blocks/video-block.php',
             'enqueue_style'     =>  get_template_directory_uri() . '/scss/imports/components/acf-blocks/video_block/style.css',
-            'category'			=> 'common',
+            'category'			=> 'media',
             'post_types'        => array('post', 'page'),
             'supports'	        =>  array(
                 'align'	=>  false,
             ),
             'keywords'		    => array( 'video', 'quote' ),
 			'icon' => array(
-                'foreground' => '#7e70af',
+                'foreground' => '#3766eb',
                 'src'        => 'format-video',
               ),
               'example'  => array(
@@ -320,6 +320,9 @@ function my_acf_init() {
 		));
 	}
 }
+
+/* Adds Deafault Images to ACF Image Field
+-------------------------------------------------------------- */
 
 add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field');
 	function add_default_value_to_image_field($field) {
