@@ -123,6 +123,14 @@ ul#page_meta {
   }
 }
 
+.page_video_block {
+  &.video_block {
+    @include mq(small_laptop) {
+      float: left;
+    }
+  }
+}
+
 .alignleft,
 img.alignleft {
   display: block;

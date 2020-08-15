@@ -10,6 +10,25 @@
     border: 13px solid $color_light_one;
     box-shadow: 0px 3px 6px #00000029;
   }
+  &.wistia_no_thumbnail {
+    max-width: 540px;
+    @include margin_lr;
+    .mywistia_thumbnail {
+      position: relative;
+      @include box(100%, 300px);
+      @include mq(small_laptop) {
+        max-width: 100%;
+        @include box(340px, 200px);
+      }
+      @include mq(small_monitor) {
+        @include box(388px, 230px);
+      }
+    }
+    .video_overlay {
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
   &:hover {
     span.play_button {
       &:after {
@@ -83,7 +102,6 @@ span.play_button {
     @include mq(small_laptop) {
       max-width: 340px;
       margin: 0 30px 30px 0;
-      float: left;
     }
     @include mq(small_monitor) {
       max-width: 388px;

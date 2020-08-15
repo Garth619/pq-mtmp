@@ -310,8 +310,12 @@ function my_acf_init() {
 			'title'				=> __('Custom Video'),
 			'description'		=> __('A custom video block.'),
             'render_template'	=> 'page-templates/includes/blocks/video-block.php',
-            'enqueue_style'     =>  get_bloginfo("template_directory") . '/scss/imports/components/acf-blocks/video_block/style.css',
-			'category'			=> 'common-blocks',
+            'enqueue_style'     =>  get_template_directory_uri() . '/scss/imports/components/acf-blocks/video_block/style.css',
+            'enqueue_script'    => get_template_directory_uri() . '/js/acf-blocks/custom-min.js',
+            'category'			=> 'common-blocks',
+            'supports'	=> array(
+                'align'		=> false,
+            ),
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'video', 'quote' ),
 		));
