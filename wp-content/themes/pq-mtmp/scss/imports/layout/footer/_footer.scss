@@ -171,13 +171,12 @@ footer {
   }
   .gfield_description,
   .validation_message {
-    color: $color_light_one;
     margin-top: 6px;
     @include type(
       (
         size: 15px,
         family: $primaryfont,
-        color: $color_light_one,
+        color: $color_bright_two,
         weight: 700,
       )
     );

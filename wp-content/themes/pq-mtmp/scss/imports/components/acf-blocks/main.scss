@@ -1,4 +1,4 @@
-// pull in mixins and third party files needed to make the blocks look correctly on front and back end. This file is pulle dinto each acf block
+// pull in mixins and third party files needed to make the blocks look correctly on front and back end. This file is pulled into each acf block
 
 // variables
 
@@ -8,11 +8,4 @@
         "../../utils/variables_do_not_edit",
         "../../utils/mixins_do_not_edit";
 
-// third party files
 
-@import "../../vendors/slick",
-        "../../vendors/lity";
-
-// reset
-
-@import "../../base/reset";

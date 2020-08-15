@@ -1,8 +1,8 @@
 <?php
 /**
- * Block Name: Custom Video
+ * Block Name: iLawyer Video
  *
- * This is the template that displays the custom video block.
+ * This is the template that displays the ilawyer video block.
  */
 
 ?>

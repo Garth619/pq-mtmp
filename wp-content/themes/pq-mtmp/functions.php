@@ -38,14 +38,19 @@ function load_my_styles_scripts() {
 /* Backend/Admin Styles and Scripts
 -------------------------------------------------------------- */
 
-function admin_scripts( $hook ) {
+function admin_scripts( ) {
 
-    // Lity - this is loading an ACF Gutenberg Video Block in the text editor
+    // Styles
+
+    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor see /scss/imports/components/acf-blocks/admin/admin.scss file for reference
+
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf-blocks/admin/admin.css', '', 5, 'all' ); 
+
+    // Scripts
+
+    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor
 
     wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
-
-    // Slick - this is loading a couple ACF Gutenberg Blocks in the text editor
-
     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
 
   }
@@ -291,21 +296,40 @@ function my_acf_init() {
 	if( function_exists('acf_register_block') ) {
 	
 		acf_register_block(array(
-			'name'				=> 'custom-video',
-			'title'				=> __('Custom Video'),
-			'description'		=> __('A custom video block.'),
+			'name'				=> 'ilawyer-video',
+			'title'				=> __('iLawyer Video'),
+			'description'		=> __('An iLawyer video block that supports Wistia and Youtube.'),
             'render_template'	=> 'page-templates/includes/blocks/video-block.php',
             'enqueue_style'     =>  get_template_directory_uri() . '/scss/imports/components/acf-blocks/video_block/style.css',
-            //'enqueue_script'    => get_template_directory_uri() . '/js/acf-blocks/custom-min.js',
-            'category'			=> 'common-blocks',
+            'category'			=> 'common',
+            'post_types'        => array('post', 'page'),
             'supports'	        =>  array(
-                'align'		    =>  false,
+                'align'	=>  false,
             ),
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'video', 'quote' ),
+            'keywords'		    => array( 'video', 'quote' ),
+			'icon' => array(
+                'foreground' => '#7e70af',
+                'src'        => 'format-video',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                    
+                )
+            )
 		));
 	}
 }
+
+add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field');
+	function add_default_value_to_image_field($field) {
+		acf_render_field_setting( $field, array(
+			'label'			=> 'Default Image',
+			'instructions'		=> 'Appears when creating a new post',
+			'type'			=> 'image',
+			'name'			=> 'default_value',
+		));
+	}
 
 
 /* Allow Various to Media Upload
