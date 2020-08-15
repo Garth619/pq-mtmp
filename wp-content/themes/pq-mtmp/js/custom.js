@@ -1,11 +1,3 @@
-// @codekit-prepend 'waypoints.js'
-// @codekit-prepend 'slick.js'
-// @codekit-prepend 'lity.js'
-// @codekit-prepend 'modernizr-webp.js'
-// @codekit-prepend 'underscore.js'
-// @codekit-prepend 'lazysizes.js'
-// @codekit-prepend 'macy.js'
-
 jQuery(document).ready(function ($) {
   $("body").addClass("ready");
 

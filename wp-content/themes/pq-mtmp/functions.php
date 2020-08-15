@@ -1,64 +1,56 @@
 <?php 
 
-
-
-/* Enqueued Scripts
+/* Front Facing Styles and Scripts
 -------------------------------------------------------------- */
-
-
-
  
 function load_my_styles_scripts() {
-  
+    
+    // Styles
     
    	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
-
-    // disables jquery then registers it again to go into footer
+    // Disables jquery then registers it again to go into footer
     
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
     wp_enqueue_script( 'jquery' );
+		
+    // Enqueue Script
 
-		// custom js to fall uner jquery in footer
-		    
-    wp_register_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js','', 1);
+     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/waypoints-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/js/modernizr-webp.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-underscore', get_template_directory_uri() . '/js/underscore-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-lazysizes', get_template_directory_uri() . '/js/lazysizes-min.js', 'jquery', '', true );
+     wp_enqueue_script( 'jquery-lazysizes', get_template_directory_uri() . '/js/lazysizes-min.js', 'jquery', '', true );
 
-		
-		// Localized PHP Data that needs to be passed onto my custom-min.js file, this grabs the live chat script acf and applies to my lazyload "getScript" function
+    // Gravity Form Files if you want to defer all gform files to the footer
 
-			
-		$map_current_domain = get_bloginfo('url');
-		
-		
-		
-			// Localize the script with new data array 
-		
-			$translation_array = array(
-    		'mydomain' => $map_current_domain
-			);
-
-			wp_localize_script( 'jquery-addon', 'my_data', $translation_array );
-		
-		
-		
-		// carry on to enqueue script like normal, but now it contains my needed js variable with php data tied to it from above
-		
-
-        // Enqueue Script
-        
-        
-		    
-    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
-    
-
-    
     // wp_enqueue_script( 'jquery-mygravity', get_template_directory_uri() . '/js/gravityforms-min.js', 'jquery', '', true );
     
 
  }
  
  add_action( 'wp_enqueue_scripts', 'load_my_styles_scripts', 20 );
+
+/* Backend/Admin Styles and Scripts
+-------------------------------------------------------------- */
+
+function admin_scripts( $hook ) {
+
+    // Lity - this is loading an ACF Gutenberg Video Block in the text editor
+
+    wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+
+    // Slick - this is loading a couple ACF Gutenberg Blocks in the text editor
+
+    wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
+
+  }
+
+  add_action('admin_enqueue_scripts', 'admin_scripts');
  
  
  
@@ -137,13 +129,8 @@ add_action("gform_enqueue_scripts", "deregister_scripts");
 // add_action( 'wp_head', 'internal_css_print' );
 
 
-
-
- 
- 
 /* Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed
 -------------------------------------------------------------- */
-
 
 add_filter( 'gform_init_scripts_footer', '__return_true' );
 add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
@@ -170,8 +157,6 @@ function ilaw_remove_html_admin_margin() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'ilaw_remove_html_admin_margin');
-
-
 
 /* No Tab Conflicts Gravity Forms
  --------------------------------------------------------------------------------------- */
@@ -311,10 +296,10 @@ function my_acf_init() {
 			'description'		=> __('A custom video block.'),
             'render_template'	=> 'page-templates/includes/blocks/video-block.php',
             'enqueue_style'     =>  get_template_directory_uri() . '/scss/imports/components/acf-blocks/video_block/style.css',
-            'enqueue_script'    => get_template_directory_uri() . '/js/acf-blocks/custom-min.js',
+            //'enqueue_script'    => get_template_directory_uri() . '/js/acf-blocks/custom-min.js',
             'category'			=> 'common-blocks',
-            'supports'	=> array(
-                'align'		=> false,
+            'supports'	        =>  array(
+                'align'		    =>  false,
             ),
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'video', 'quote' ),
@@ -323,13 +308,10 @@ function my_acf_init() {
 }
 
 
-
-
 /* Allow Various to Media Upload
 -------------------------------------------------------------- */
 
-
- add_filter('upload_mimes', 'add_custom_upload_mimes');
+add_filter('upload_mimes', 'add_custom_upload_mimes');
  function add_custom_upload_mimes($existing_mimes) {
      
     $existing_mimes['woff2'] = 'application/x-font-woff2';
@@ -338,10 +320,6 @@ function my_acf_init() {
 
      return $existing_mimes;
  }
-
-
-
-
 
 /* Blog Pagination
 -------------------------------------------------------------- */
@@ -378,8 +356,8 @@ function wpbeginner_numeric_posts_nav() {
     echo '<div class="paged_wrapper"><div class="navigation"><ul>' . "\n";
  
     /** Previous Post Link */
-    //if ( get_previous_posts_link() )
-        //printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
+    if ( get_previous_posts_link() )
+        printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
  
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -408,27 +386,24 @@ function wpbeginner_numeric_posts_nav() {
     }
  
     /** Next Post Link */
-    //if ( get_next_posts_link() )
-        //printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
+    if ( get_next_posts_link() )
+        printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
  
     echo '</ul></div></div>' . "\n";
  
 }
 
+/* Remove Block Library 
+-------------------------------------------------------------- */
 
+// function smartwp_remove_wp_block_library_css(){
+//  wp_dequeue_style( 'wp-block-library' );
+//  wp_dequeue_style( 'wp-block-library-theme' );
+// }
+// add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
 
-
-
-function smartwp_remove_wp_block_library_css(){
- wp_dequeue_style( 'wp-block-library' );
- wp_dequeue_style( 'wp-block-library-theme' );
-}
-add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
-
-
-
-
-// Responsive Content Images */
+/* Responsive Content Images 
+-------------------------------------------------------------- */
 
 function ilaw_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
