@@ -1,4 +1,4 @@
-.linked_cta_module {
+.linked_cta_block {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -27,7 +27,7 @@
   }
 }
 
-.linked_cta_module_left {
+.linked_cta_block_left {
   @include mq(small_laptop) {
     flex-grow: 1;
   }
@@ -66,7 +66,7 @@ span.linked_cta_title {
   }
 }
 
-.linked_cta_module_right {
+.linked_cta_block_right {
   margin-top: 40px;
   @include mq(small_laptop) {
     margin-top: 0px;
