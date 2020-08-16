@@ -59,7 +59,7 @@
       mobileFirst: true,
       fade: true,
       arrows: true,
-      dots: true,
+      dots: false,
       prevArrow: ".featured_case_results_block_arrow_left",
       nextArrow: ".featured_case_results_block_arrow_right",
     });

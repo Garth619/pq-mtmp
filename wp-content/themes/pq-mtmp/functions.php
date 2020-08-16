@@ -340,6 +340,7 @@ function my_acf_init() {
             'supports'	        =>  array(
                 'align'	=>  false,
             ),
+            
 			'icon' => array(
                 'foreground' => '#3766eb',
                 'src'        => 'wordpress',
@@ -347,7 +348,9 @@ function my_acf_init() {
               'example'  => array(
                 'attributes' => array(
                     'mode' => 'preview',
-                    
+                    'data' => array(
+                        //'featured_case_results_title'   => "Garrett"
+                      )
                 )
             )
 		));
@@ -370,34 +373,48 @@ add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_f
 /* Adds Default Rows to ACF Featured Case Results Block Repeater 
 -------------------------------------------------------------- */
 
-    add_filter('acf/load_value/key=field_5f3870bcc4d42',  'acf_load_my_defaults', 10, 3);
+    // add_filter('acf/load_value/key=field_5f3870bcc4d42',  'acf_load_my_defaults', 10, 3);
 
-    function acf_load_my_defaults($value, $post_id, $field) {
+    // function acf_load_my_defaults($value, $post_id, $field) {
     
-      if ($value === false) {
+    //   if ($value === false) {
     
-        $value = array();
+    //     $value = array();
     
-        $value[] = array(
-            'field_5f3870d1c4d43' => '$72 Million',
-            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-        );
-        $value[] = array(
-            'field_5f3870d1c4d43' => '$55 Million',
-            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-          );
-        $value[] = array(
-            'field_5f3870d1c4d43' => '$72 Million',
-            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-        );
-        $value[] = array(
-            'field_5f3870d1c4d43' => '$55 Million',
-            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-          );
-      }
+    //     $value[] = array(
+    //         'field_5f3870d1c4d43' => '$72 Million',
+    //         'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    //     );
+    //     $value[] = array(
+    //         'field_5f3870d1c4d43' => '$55 Million',
+    //         'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+    //       );
+    //     $value[] = array(
+    //         'field_5f3870d1c4d43' => '$63 Million',
+    //         'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.'
+    //     );
+    //     $value[] = array(
+    //         'field_5f3870d1c4d43' => '$43 Million',
+    //         'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    //       );
+
+    //       return $value;
+    //   }
+
+    // // if ($value !== NULL) {
+    // //     // if the value is exactly NULL it means
+    // //     // the field has never been updated
+    // //     // we don't want to change fields that have already been edited
+    // //     return $value;
+    // //   }
+
+
+
+
+
+    // }
+
     
-      return $value;
-    }
 
 
 /* Allow Various to Media Upload
