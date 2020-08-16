@@ -348,9 +348,6 @@ function my_acf_init() {
               'example'  => array(
                 'attributes' => array(
                     'mode' => 'preview',
-                    'data' => array(
-                        //'featured_case_results_title'   => "Garrett"
-                      )
                 )
             )
 		));
