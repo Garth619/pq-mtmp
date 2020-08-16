@@ -287,14 +287,16 @@ span.client_reviews_block_slide_turned {
   margin-top: 13px;
   flex-shrink: 0;
   border-radius: 50%;
-  display: none;
+  display: none !important;
   cursor: pointer;
   position: relative;
   flex-basis: 60px;
   height: 60px;
   z-index: 1;
   @include mq(small_laptop) {
-    @include flex(center, center);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
   }
   &:before {
     background: $color_dark_one;

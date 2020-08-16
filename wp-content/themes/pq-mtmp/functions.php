@@ -340,8 +340,7 @@ function my_acf_init() {
             'supports'	        =>  array(
                 'align'	=>  false,
             ),
-            
-			'icon' => array(
+            'icon' => array(
                 'foreground' => '#3766eb',
                 'src'        => 'wordpress',
               ),
@@ -350,7 +349,56 @@ function my_acf_init() {
                     'mode' => 'preview',
                 )
             )
-		));
+        ));
+        
+        acf_register_block(array(
+			'name'				=> 'ilawyer-blockquote',
+			'title'				=> __('iLawyer Blockquote'),
+			'description'		=> __('An iLawyer Blockquote block.'),
+            'render_template'	=> 'page-templates/includes/blocks/blockquote-block.php',
+            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/blockquote_block/style.css',
+            'category'			=> 'text',
+            'post_types'        => array('post', 'page'),
+            'keywords'		    => array( 'quote' ),
+            'supports'	        =>  array(
+                'align'	=>  false,
+            ),
+            'icon' => array(
+                'foreground' => '#3766eb',
+                'src'        => 'format-quote',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                )
+            )
+        ));
+        
+        acf_register_block(array(
+			'name'				=> 'ilawyer-client_reviews',
+			'title'				=> __('iLawyer Client Reviews'),
+			'description'		=> __('An iLawyer Client Reviews block.'),
+            'render_template'	=> 'page-templates/includes/blocks/client-reviews-block.php',
+            'enqueue_assets' => function(){
+                wp_enqueue_style( 'client-reviews-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/client_reviews_block/style.css' );
+                wp_enqueue_script( 'jquery-client-reviews-block', get_template_directory_uri() . '/js/acf_blocks/client_reviews_block/custom-min.js', 'jquery', '', true );
+              },
+            'category'			=> 'text',
+            'post_types'        => array('post', 'page'),
+            'keywords'		    => array( 'client reviews', 'quote' ),
+            'supports'	        =>  array(
+                'align'	=>  false,
+            ),
+            'icon' => array(
+                'foreground' => '#3766eb',
+                'src'        => 'format-chat',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                )
+            )
+        ));
 	}
 }
 

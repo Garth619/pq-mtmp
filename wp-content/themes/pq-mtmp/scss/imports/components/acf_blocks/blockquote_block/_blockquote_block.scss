@@ -1,0 +1,99 @@
+.blockquote_block {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  max-width: 500px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    max-width: 620px;
+  }
+  @include mq(large_laptop) {
+    max-width: 820px;
+  }
+  @include mq(small_monitor) {
+    padding-top: 80px;
+    max-width: 88%;
+    margin-bottom: 85px;
+  }
+  span {
+    display: block;
+  }
+  span.blockquote_descrip {
+    @include flex(center, center);
+    @include type(
+      (
+        size: 25px,
+        height: 30px,
+        family: $primaryfont,
+        color: $color_dark_four,
+      )
+    );
+    @include mq(small_tablet) {
+      @include quick_type(30px, 40px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(35px, 45px, null);
+    }
+    &:before,
+    &:after {
+      display: block;
+      margin-top: 40px;
+      @include type(
+        (
+          size: 90px,
+          family: $secondaryfont,
+          color: $color_bright_two,
+        )
+      );
+      @include mq(small_tablet) {
+        font-size: 110px;
+      }
+      @include mq(small_monitor) {
+        font-size: 150px;
+      }
+    }
+    &:before {
+      content: "\201C";
+      margin-right: 25px;
+      @include mq(small_monitor) {
+        margin-right: 45px;
+      }
+    }
+    &:after {
+      content: "\201D";
+      margin-left: 25px;
+      @include mq(small_monitor) {
+        margin-left: 45px;
+      }
+    }
+  }
+  span.blockquote_source {
+    margin-top: 20px;
+    @include type(
+      (
+        size: 15px,
+        height: 17px,
+        family: $primaryfont,
+        color: $color_light_eight,
+      )
+    );
+    @include mq(small_monitor) {
+      margin-top: 35px;
+    }
+  }
+}
+
+// backend
+.wp-admin {
+  .blockquote_block {
+    span.blockquote_descrip {
+      @include quick_type(24px, 34px, null);
+      &:before,
+      &:after {
+        font-size: 80px;
+      }
+    }
+  }
+}
