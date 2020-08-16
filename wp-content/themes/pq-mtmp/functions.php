@@ -17,14 +17,17 @@ function load_my_styles_scripts() {
 		
     // Enqueue Script
 
-     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
      wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
      wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
      wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/waypoints-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/js/modernizr-webp.js', 'jquery', '', true );
      wp_enqueue_script( 'jquery-underscore', get_template_directory_uri() . '/js/underscore-min.js', 'jquery', '', true );
      wp_enqueue_script( 'jquery-lazysizes', get_template_directory_uri() . '/js/lazysizes-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-lazysizes', get_template_directory_uri() . '/js/lazysizes-min.js', 'jquery', '', true );
+     
+     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+
+     // wp_enqueue_script( 'jquery-macy', get_template_directory_uri() . '/js/macy.js', 'jquery', '', true );
+
+     // wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/js/modernizr-webp.js', 'jquery', '', true );
 
     // Gravity Form Files if you want to defer all gform files to the footer
 
@@ -44,7 +47,7 @@ function admin_scripts( ) {
 
     // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor see /scss/imports/components/acf-blocks/admin/admin.scss file for reference
 
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf-blocks/admin/admin.css', '', 5, 'all' ); 
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/admin.css', '', 5, 'all' ); 
 
     // Scripts
 
@@ -300,7 +303,10 @@ function my_acf_init() {
 			'title'				=> __('iLawyer Video'),
 			'description'		=> __('An iLawyer video block that supports Wistia and Youtube.'),
             'render_template'	=> 'page-templates/includes/blocks/video-block.php',
-            'enqueue_style'     =>  get_template_directory_uri() . '/scss/imports/components/acf-blocks/video_block/style.css',
+            'enqueue_assets' => function(){
+                wp_enqueue_style( 'video-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/video_block/style.css' );
+                wp_enqueue_script( 'jquery-video-block', get_template_directory_uri() . '/js/acf_blocks/video_block/custom-min.js', 'jquery', '', true );
+              },
             'category'			=> 'media',
             'post_types'        => array('post', 'page'),
             'supports'	        =>  array(
@@ -317,11 +323,38 @@ function my_acf_init() {
                     
                 )
             )
+        ));
+        
+        acf_register_block(array(
+			'name'				=> 'ilawyer-case-results',
+			'title'				=> __('iLawyer Case Results'),
+			'description'		=> __('An iLawyer Case Results block.'),
+            'render_template'	=> 'page-templates/includes/blocks/featured-case-results-block.php',
+            'enqueue_assets' => function(){
+                wp_enqueue_style( 'featured-case-results-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/featured_case_results_block/style.css' );
+                wp_enqueue_script( 'jquery-featured-case-results-block', get_template_directory_uri() . '/js/acf_blocks/featured_case_results_block/custom-min.js', 'jquery', '', true );
+              },
+            'category'			=> 'text',
+            'post_types'        => array('post', 'page'),
+            'keywords'		    => array( 'case results', 'quote' ),
+            'supports'	        =>  array(
+                'align'	=>  false,
+            ),
+			'icon' => array(
+                'foreground' => '#3766eb',
+                'src'        => 'wordpress',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                    
+                )
+            )
 		));
 	}
 }
 
-/* Adds Deafault Images to ACF Image Field
+/* Adds Default Images to ACF Image Field
 -------------------------------------------------------------- */
 
 add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field');
@@ -333,6 +366,38 @@ add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_f
 			'name'			=> 'default_value',
 		));
 	}
+
+/* Adds Default Rows to ACF Featured Case Results Block Repeater 
+-------------------------------------------------------------- */
+
+    add_filter('acf/load_value/key=field_5f3870bcc4d42',  'acf_load_my_defaults', 10, 3);
+
+    function acf_load_my_defaults($value, $post_id, $field) {
+    
+      if ($value === false) {
+    
+        $value = array();
+    
+        $value[] = array(
+            'field_5f3870d1c4d43' => '$72 Million',
+            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        );
+        $value[] = array(
+            'field_5f3870d1c4d43' => '$55 Million',
+            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+          );
+        $value[] = array(
+            'field_5f3870d1c4d43' => '$72 Million',
+            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        );
+        $value[] = array(
+            'field_5f3870d1c4d43' => '$55 Million',
+            'field_5f3870d7c4d44' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+          );
+      }
+    
+      return $value;
+    }
 
 
 /* Allow Various to Media Upload

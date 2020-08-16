@@ -247,53 +247,7 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  $(".featured_case_results_module_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    adaptiveHeight: true,
-    fade: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          fade: false,
-          adaptiveHeight: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: {
-          fade: false,
-          dots: false,
-          arrows: true,
-          adaptiveHeight: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          prevArrow: ".featured_case_results_module_arrow_left",
-          nextArrow: ".featured_case_results_module_arrow_right",
-        },
-      },
-      {
-        breakpoint: 1380,
-        settings: {
-          fade: false,
-          dots: false,
-          arrows: true,
-          adaptiveHeight: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          prevArrow: ".featured_case_results_module_arrow_left",
-          nextArrow: ".featured_case_results_module_arrow_right",
-        },
-      },
-    ],
-  });
+  
 
   $(".client_reviews_module_slider").slick({
     infinite: true,
