@@ -422,6 +422,29 @@ function my_acf_init() {
                 )
             )
         ));
+
+        acf_register_block(array(
+			'name'				=> 'ilawyer-timeline',
+			'title'				=> __('iLawyer Timeline'),
+			'description'		=> __('An iLawyer Timeline block.'),
+            'render_template'	=> 'page-templates/includes/blocks/timeline-block.php',
+            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/timeline_block/style.css',
+            'category'			=> 'text',
+            'post_types'        => array('post', 'page'),
+            'keywords'		    => array( 'Timeline' ),
+            'supports'	        =>  array(
+                'align'	=>  false,
+            ),
+            'icon' => array(
+                'foreground' => '#3766eb',
+                'src'        => 'format-quote',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                )
+            )
+        ));
 	}
 }
 

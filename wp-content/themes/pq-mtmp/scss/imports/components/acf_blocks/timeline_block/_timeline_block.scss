@@ -1,4 +1,4 @@
-.timeline_module {
+.timeline_block {
   padding: 40px 30px;
   margin: 55px 0;
   background: $color_light_ten;
@@ -16,7 +16,7 @@
   }
 }
 
-.timeline_module_line {
+.timeline_block_line {
   display: block;
   background: $color_light_eleven;
   @include box(1px, calc(100% - 145px));
@@ -33,11 +33,11 @@
   }
 }
 
-.timeline_module_date_row_inner {
+.timeline_block_date_row_inner {
   padding-left: 30px;
 }
 
-.timeline_module_date_row {
+.timeline_block_date_row {
   margin-bottom: 50px;
   &:last-of-type {
     margin-bottom: 0;
@@ -51,7 +51,7 @@
   }
 }
 
-span.timeline_module_date_title {
+span.timeline_block_date_title {
   position: relative;
   display: block;
   margin-bottom: 13px;
@@ -73,7 +73,7 @@ span.timeline_module_date_title {
   }
 }
 
-.timeline_module_date_content {
+.timeline_block_date_content {
   p {
   }
 }
