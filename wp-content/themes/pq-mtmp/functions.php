@@ -399,6 +399,29 @@ function my_acf_init() {
                 )
             )
         ));
+
+        acf_register_block(array(
+			'name'				=> 'ilawyer-linked-cta',
+			'title'				=> __('iLawyer Linked Call to Action'),
+			'description'		=> __('An iLawyer Linked Call to Action block.'),
+            'render_template'	=> 'page-templates/includes/blocks/linked-cta-block.php',
+            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/linked_cta_block/style.css',
+            'category'			=> 'text',
+            'post_types'        => array('post', 'page'),
+            'keywords'		    => array( 'Linked Call to Action' ),
+            'supports'	        =>  array(
+                'align'	=>  false,
+            ),
+            'icon' => array(
+                'foreground' => '#3766eb',
+                'src'        => 'format-quote',
+              ),
+              'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                )
+            )
+        ));
 	}
 }
 

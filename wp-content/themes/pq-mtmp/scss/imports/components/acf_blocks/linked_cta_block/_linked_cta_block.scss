@@ -81,3 +81,17 @@ span.linked_cta_title {
     @include image();
   }
 }
+
+// make font small on the backend block
+
+.wp-admin {
+  span.linked_cta_title {
+    @include quick_type(22px, 32px, null);
+  }
+  .linked_cta_block_right {
+    margin-left: 30px;
+    @include mq(large_laptop) {
+      flex-basis: 340px;
+    }
+  }
+}
