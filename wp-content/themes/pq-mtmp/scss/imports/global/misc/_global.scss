@@ -203,7 +203,20 @@ img.aligncenter {
 #related_content_wrapper {
   background: $color_light_ten;
   padding: 45px 20px;
+  @include mq(small_tablet) {
+    padding: 45px 55px;
+  }
+  @include mq(small_laptop) {
+    padding: 53px 55px;
+  }
+  @include mq(large_laptop) {
+    padding: 53px 81px 116px;
+  }
   #related_content_inner {
+    @include mq(small_monitor) {
+      max-width: 1575px;
+      @include margin_lr;
+    }
   }
 }
 
@@ -216,6 +229,12 @@ span#related_content_title {
       weight: 700,
     )
   );
+  @include mq(small_laptop) {
+    @include quick_type(30px, 38px, null);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(40px, 48px, null);
+  }
   &:after {
     background: $color_bright_two;
     margin: 25px 0 0px 0px;
@@ -226,10 +245,20 @@ span#related_content_title {
 
 #related_posts_wrapper {
   margin: 40px 0 0 0;
+  @include mq(small_laptop) {
+    @include flex();
+    gap: 40px;
+  }
+  @include mq(small_monitor) {
+    gap: 90px;
+  }
 }
 
 .related_post_col {
   margin-bottom: 30px;
+  @include mq(small_laptop) {
+    margin-bottom: 0;
+  }
   &:last-of-type {
     margin-bottom: 0;
     .related_post_list {
@@ -238,6 +267,15 @@ span#related_content_title {
           padding: 0;
           margin: 0;
           border: 0;
+          @include mq(small_laptop) {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #dbdbdb;
+          }
+          @include mq(large_laptop) {
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+          }
         }
       }
     }
@@ -247,7 +285,7 @@ span#related_content_title {
 span.related_posts_title {
   display: inline-block;
   background: $color_dark_one;
-  padding: 5px;
+  padding: 5px 20px;
   @include type(
     (
       size: 13px,
@@ -268,14 +306,25 @@ span.related_posts_title {
 
 .related_post {
   padding-bottom: 30px;
-  // margin-bottom: 30px;
   cursor: pointer;
   border-bottom: 1px solid $color_light_thirteen;
+  @include mq(large_laptop) {
+    padding-bottom: 50px;
+  }
+  &:first-of-type {
+    margin-bottom: 30px;
+    @include mq(large_laptop) {
+      margin-bottom: 50px;
+    }
+  }
   &:last-of-type {
     display: none;
     border: none;
-    //padding-bottom: 0px;
-    //margin-bottom: 0px;
+    @include mq(small_laptop) {
+      display: block;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
   }
   &:hover {
     span.related_post_read_more {

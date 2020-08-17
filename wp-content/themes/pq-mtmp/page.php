@@ -110,7 +110,7 @@
 
 					<div class='related_post_col'>
 				
-					<span class='related_posts_title'>Related Blog Posts</span><!-- related_posts_title -->
+					<span class='related_posts_title'>Related News</span><!-- related_posts_title -->
 					
 						<div class='related_post_list'>
 						
@@ -168,7 +168,7 @@
 
 					<div class='related_post_col'>
 				
-					<span class='related_posts_title'>Related Blog Posts</span><!-- related_posts_title -->
+					<span class='related_posts_title'>Related News</span><!-- related_posts_title -->
 					
 						<div class='related_post_list'>
 						
