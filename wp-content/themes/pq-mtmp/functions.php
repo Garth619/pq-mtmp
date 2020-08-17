@@ -414,7 +414,7 @@ function my_acf_init() {
             ),
             'icon' => array(
                 'foreground' => '#3766eb',
-                'src'        => 'format-quote',
+                'src'        => 'format-aside',
               ),
               'example'  => array(
                 'attributes' => array(
@@ -437,7 +437,7 @@ function my_acf_init() {
             ),
             'icon' => array(
                 'foreground' => '#3766eb',
-                'src'        => 'format-quote',
+                'src'        => 'editor-ul',
               ),
               'example'  => array(
                 'attributes' => array(

@@ -88,6 +88,7 @@ span#sec_six_title {
 
 .sec_six_post {
   text-align: center;
+  cursor: pointer;
   @include mq(small_laptop) {
     flex-basis: 45%;
     text-align: left;
@@ -103,6 +104,7 @@ span#sec_six_title {
     }
   }
   a {
+    color: $color_dark_one;
     cursor: pointer;
     text-decoration: none;
   }
@@ -145,9 +147,13 @@ span#sec_six_title {
         @include box(5px);
         @include contentdisplay(inline-block);
       }
-      a {
-        color: $color_bright_two;
-      }
+      // a {
+      //   color: $color_bright_two;
+      //   transition: all 200ms ease-in-out;
+      //   &:hover {
+      //     color: $color_bright_one;
+      //   }
+      // }
     }
   }
 }

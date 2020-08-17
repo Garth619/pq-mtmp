@@ -15,7 +15,7 @@
 					<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
 
 					<ul>
-						<li><a href="">Dangerous Drugs</a></li>
+						<li>Dangerous Drugs</li>
 					</ul>
 
 				</div><!-- sec_six_meta -->
@@ -55,7 +55,7 @@
 						<span class='sec_six_date'>June 24, 2020</span><!-- sec_six_date -->
 
 						<ul>
-							<li><a href="">Dangerous Drugs</a></li>
+							<li>Dangerous Drugs</li>
 						</ul>
 
 					</div><!-- sec_six_meta -->
