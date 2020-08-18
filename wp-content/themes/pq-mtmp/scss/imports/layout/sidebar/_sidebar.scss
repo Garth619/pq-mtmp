@@ -365,6 +365,11 @@ span#sidebar_form_subtitle {
     }
     ul {
       li {
+        &.blog-active {
+          a {
+            color: $color_bright_one;
+          }
+        }
         &:last-of-type {
           a {
             border: none;

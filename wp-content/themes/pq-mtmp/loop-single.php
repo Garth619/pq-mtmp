@@ -16,7 +16,7 @@
 		
 		<div class="blog_meta">
 		
-			<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?> in</span>
+			<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
 			
 			<?php echo get_the_category_list();?>
 		

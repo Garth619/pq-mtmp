@@ -6,7 +6,7 @@
 
       <?php // blog main page conditionals
       
-      if(is_home() && is_single()) { ?>
+      if(is_home() || is_single()) { ?>
 
       <?php if(get_field('internal_banner_blog_title','option')) : ?>
 
