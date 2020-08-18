@@ -30,6 +30,7 @@ body.page-template-default {
 }
 
 .banner_title {
+  display: block;
   @include mq(small_laptop) {
     color: $color_light_one;
     max-width: 875px;
