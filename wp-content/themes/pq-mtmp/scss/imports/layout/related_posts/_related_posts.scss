@@ -212,18 +212,18 @@ span.related_post_author {
 span.related_post_read_more {
   display: inline-block;
   margin-top: 34px;
-  border-radius: 50px;
-  background: $color_bright_one;
-  padding: 9px 20px;
-  transition: all 200ms ease-in-out;
-  @include type(
-    (
-      size: 13px,
-      spacing: 0.65px,
-      family: $primaryfont,
-      color: $color_light_one,
-      weight: 700,
-      transform: lowercase,
-    )
-  );
+  //border-radius: 50px;
+  //background: $color_bright_one;
+  //padding: 9px 20px;
+  //transition: all 200ms ease-in-out;
+  // @include type(
+  //   (
+  //     size: 13px,
+  //     spacing: 0.65px,
+  //     family: $primaryfont,
+  //     color: $color_light_one,
+  //     weight: 700,
+  //     transform: lowercase,
+  //   )
+  // );
 }

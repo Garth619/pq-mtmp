@@ -45,10 +45,22 @@ body.header_fixed {
   padding: 0px;
 }
 
+body.page-template-default {
+  #page_wrapper {
+    padding-top: 40px;
+    @include mq(small_tablet) {
+      padding-top: 30px;
+    }
+    @include mq(small_monitor) {
+      padding-top: 66px;
+    }
+  }
+}
+
 #page_wrapper {
-  padding: 40px 20px 40px;
+  padding: 0px 20px 40px;
   @include mq(small_tablet) {
-    padding: 40px 55px 40px;
+    padding: 0px 55px 55px;
   }
   @include mq(small_laptop) {
     margin-top: 40px;
@@ -59,10 +71,21 @@ body.header_fixed {
     padding: 30px 81px 70px;
   }
   @include mq(small_monitor) {
-    margin-top: 66px;
     max-width: 1462px;
-    padding: 40px 0px 115px;
+    padding: 66px 0px 115px;
     @include margin_lr;
+  }
+  &.no_banner {
+    padding: 40px 20px 0;
+    @include mq(small_tablet) {
+      padding: 40px 55px 55px;
+    }
+    @include mq(small_laptop) {
+      padding: 70px 55px 115px;
+    }
+    @include mq(small_monitor) {
+      padding: 90px 55px 115px;
+    }
   }
 }
 

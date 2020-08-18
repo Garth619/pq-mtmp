@@ -228,6 +228,7 @@ span#sidebar_form_subtitle {
   }
   h3 {
     display: block;
+    margin-bottom: 10px;
     @include type(
       (
         size: 24px,
@@ -239,6 +240,7 @@ span#sidebar_form_subtitle {
       )
     );
     @include mq(large_laptop) {
+      margin-bottom: 38px;
       @include quick_type(30px, 25px, null);
     }
   }
@@ -276,9 +278,7 @@ span#sidebar_form_subtitle {
     }
   }
   ul.menu {
-    margin-top: 20px;
     @include mq(large_laptop) {
-      margin-top: 38px;
     }
     > li {
       &.active {
@@ -286,11 +286,11 @@ span#sidebar_form_subtitle {
           color: $color_bright_one;
         }
       }
-      // &:last-of-type {
-      //   > a {
-      //     border-bottom: none;
-      //   }
-      // }
+      &:last-of-type {
+        > a {
+          border-bottom: none;
+        }
+      }
     }
     > li.menu-item-has-children {
       &.active {
@@ -330,6 +330,9 @@ span#sidebar_form_subtitle {
       @include mq(small_monitor) {
         padding: 60px 60px 53px;
       }
+      h3 {
+        margin-bottom: 0;
+      }
     }
     &:nth-of-type(2) {
       ul {
@@ -338,11 +341,6 @@ span#sidebar_form_subtitle {
           margin-top: 21px;
         }
         li {
-          &:last-of-type {
-            > a {
-              border-bottom: none;
-            }
-          }
           a {
             position: relative;
             padding: 33px 40px 33px 20px;
@@ -353,6 +351,39 @@ span#sidebar_form_subtitle {
               @include box(6px);
               @include contentdisplay();
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar_blog {
+  .widget {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    ul {
+      li {
+        &:last-of-type {
+          a {
+            border: none;
+          }
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      ul {
+        li {
+          font-weight: 400;
+          line-height: 20px;
+          position: relative;
+          &:before {
+            background: $color_bright_two;
+            border-radius: 50%;
+            @include abs(21px, null, null, 0);
+            @include box(6px);
+            @include contentdisplay();
           }
         }
       }

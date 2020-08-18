@@ -21,6 +21,14 @@
 
 	<div class="blog_post">
 
+		<div class="blog_meta">
+		
+		<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
+		
+			<?php echo get_the_category_list();?>
+	
+		</div><!-- blog_meta -->
+
 		<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
 			
 			<h2 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
@@ -31,15 +39,9 @@
 		
 		<?php endif;?>
 
-		<span class='double_line'></span><!-- double_line -->
+
 		
-		<div class="blog_meta">
 		
-			<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
-			
-			<?php echo get_the_category_list();?>
-		
-		</div><!-- blog_meta -->
 		
 		<div class="blog_content content">
 			
@@ -47,7 +49,7 @@
 		
 		</div><!-- blog_content -->
 		
-		<a class="button_two read_more" href="<?php the_permalink();?>">Read More</a>
+		<a class="button_four" href="<?php the_permalink();?>">Read More</a>
 			
 		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	

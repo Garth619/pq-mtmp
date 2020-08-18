@@ -59,6 +59,13 @@ jQuery(document).ready(function ($) {
     });
   });
 
+
+  if ($("#internal_banner")[0]){
+    $('#page_wrapper').addClass('banner');
+  } else {
+    $('#page_wrapper').addClass('no_banner');
+  }
+
   /* Waypoints
      --------------------------------------------------------------------------------------- */
 

@@ -1,107 +1,89 @@
 .blog_post {
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid $blog_post_border_bg_color;
+  border-bottom: 3px solid $color_light_two;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
   @include mq(large_laptop) {
-    padding-bottom: 55px;
-    margin-bottom: 62px;
+    margin-bottom: 45px;
   }
-  span.double_line {
-    max-width: 130px;
-    @include mq(large_laptop) {
-      max-width: 224px;
-    }
-  }
-}
-
-#blog_feed,
-#single_post {
-  padding: 31px 0 0 0;
-  @include mq(small_tablet) {
-    padding: 48px 0 0 0;
-  }
-  @include mq(large_laptop) {
-    padding: 95px 0 0 0;
-  }
-}
-
-.blog_header {
-  padding: 0px 0 20px 0;
-  @include type(
-    (
-      size: $blog_header_size,
-      height: $blog_header_height,
-      family: $secondaryfont,
-      weight: $blog_header_weight,
-    )
-  );
-  @include mq(large_laptop) {
-    @include quick_type(
-      $blog_header_size_large_laptop,
-      $blog_header_height_large_laptop,
-      null
-    );
-  }
-  a {
-    color: $blog_header_color;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      color: $blog_header_color_hover;
-    }
+  &:last-of-type {
+    margin-bottom: 20px;
   }
 }
 
 .blog_meta {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  @include mq(large_laptop) {
-    margin-bottom: 25px;
+  ul {
+    list-style: none;
+    padding: 0px 0 10px;
+    display: inline;
+    @include mq(small_monitor) {
+      padding: 0px 0 30px;
+    }
   }
   span,
   li {
-    display: inline;
+    display: inline-block;
     @include type(
       (
-        size: $blog_meta_size,
-        spacing: $blog_meta_spacing,
-        height: $blog_meta_height,
+        size: 14px,
+        height: 16px,
         family: $primaryfont,
-        weight: $blog_meta_weight,
+        color: $color_bright_one,
+        weight: 700,
+        transform: uppercase,
       )
     );
-    &:after {
-      background: $blog_meta_bullet_bg_color;
-      border-radius: 50%;
-      vertical-align: top;
-      margin: 6px 9px 0 9px;
-      @include box(6px);
-      @include contentdisplay(inline-block);
-    }
     @include mq(large_laptop) {
-      font-size: $blog_meta_size_large_laptop;
+      @include quick_type(16px, 16px, null);
     }
-  }
-  li {
-    &:last-of-type {
-      &:after {
-        display: none;
+    a {
+      color: $color_bright_one;
+      text-decoration: none;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $color_bright_two;
       }
     }
   }
-  a {
-    color: $blog_meta_link_color;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      color: $blog_meta_link_color_hover;
+  li {
+    &:before {
+      background: $color_dark_one;
+      vertical-align: top;
+      border-radius: 50%;
+      margin: 5px 10px 0 7px;
+      @include box(6px);
+      @include contentdisplay(inline-block);
     }
   }
-  ul {
-    list-style: none;
-    display: inline;
+}
+
+.blog_header {
+  display: block;
+  margin-top: 20px;
+  @include type(
+    (
+      size: 27px,
+      height: 30px,
+      family: $primaryfont,
+      weight: 700,
+    )
+  );
+  a {
+    text-decoration: none;
+    color: $color_dark_one;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color_bright_two;
+    }
   }
-  span.date {
+  &:after {
+    background: $color_bright_two;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @include box(86px, 3px);
+    @include contentdisplay();
+    @include mq(large_laptop) {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -109,131 +91,29 @@
   margin-bottom: 30px;
 }
 
-a.read_more {
-  font-weight: $read_more_weight;
-  padding: 15px 27px;
-  @include mq(large_laptop) {
-    font-size: $read_more_size_large_laptop;
-    letter-spacing: $read_more_spacing_large_laptop;
-    border: 2px solid $read_more_border_bg_color;
-  }
-}
-
 .paged_wrapper {
-  margin-top: -15px;
-  @include mq(large_laptop) {
-    margin-top: -33px;
-  }
   ul {
     list-style: none;
-    @include flex();
-    flex-wrap: wrap;
+    @include flex(flex-end);
     li {
-      margin-right: 15px;
+      margin-left: 10px;
       @include type(
         (
-          size: $paged_wrapper_size,
-          spacing: $paged_wrapper_spacing,
-          height: $paged_wrapper_height,
+          size: 16px,
+          height: 20px,
+          transform: uppercase,
           family: $primaryfont,
-          weight: $paged_wrapper_weight,
+          weight: 700,
         )
       );
-      @include mq(large_laptop) {
-        margin-right: 20px;
-        @include quick_type(
-          $paged_wrapper_size_large_laptop,
-          $paged_wrapper_height_large_laptop,
-          null
-        );
-      }
-      &.active {
-        a {
-          color: $paged_wrapper_color_hover;
-        }
-      }
       a {
+        color: $color_dark_one;
         text-decoration: none;
-        color: $paged_wrapper_color;
         transition: all 200ms ease-in-out;
         &:hover {
-          color: $paged_wrapper_color_hover;
+          color: $color_bright_two;
         }
       }
-    }
-  }
-}
-
-.sidebar_blog {
-  .widget {
-    padding-top: 20px;
-    padding-bottom: 1px;
-    @include mq(small_laptop) {
-      margin-bottom: 30px;
-      padding-top: 30px;
-      padding-bottom: 10px;
-    }
-    @include mq(small_monitor) {
-      padding-top: 52px;
-      padding-bottom: 50px;
-      margin-bottom: 40px;
-    }
-    &:first-of-type {
-      padding-top: 40px;
-      @include mq(small_laptop) {
-        padding-top: 30px;
-        padding-bottom: 10px;
-      }
-      @include mq(small_monitor) {
-        padding-top: 52px;
-        padding-bottom: 50px;
-      }
-    }
-    &:last-of-type {
-      padding-bottom: 25px;
-      @include mq(small_laptop) {
-        padding-bottom: 10px;
-      }
-      @include mq(small_monitor) {
-        padding-bottom: 50px;
-      }
-    }
-    h3 {
-      @include mq(small_monitor) {
-        padding-left: 80px;
-        padding-right: 80px;
-      }
-    }
-    span.double_line {
-      max-width: 85px;
-      @include mq(small_monitor) {
-        margin-left: 80px;
-        margin-right: 80px;
-      }
-    }
-    ul {
-      margin-top: 31px;
-      li {
-        margin-bottom: 22px;
-        padding: 0 40px;
-        @include mq(small_monitor) {
-          padding: 0 80px;
-        }
-        &.blog-active {
-          a {
-            color: $sidebar_blog_active_color;
-          }
-        }
-      }
-    }
-  }
-}
-
-#single_post {
-  span.double_line {
-    max-width: 130px;
-    @include mq(large_laptop) {
-      max-width: 224px;
     }
   }
 }
