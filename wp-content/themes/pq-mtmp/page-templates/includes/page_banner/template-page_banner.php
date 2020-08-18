@@ -2,7 +2,7 @@
 	
 	<div id='internal_banner'>
 	
-	<div id='internal_banner_content'>
+		<div id='internal_banner_content'>
 
 			<?php if(get_field('banner_title')) : ?>
 			
@@ -61,3 +61,6 @@
 	</div><!-- internal_banner -->
 
 	<?php } ?>
+
+
+

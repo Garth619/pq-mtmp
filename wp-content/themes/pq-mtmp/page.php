@@ -2,7 +2,7 @@
 
 <div id="internal_main">
 
-	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
+	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
 
 	<div id='page_wrapper'>
 	
