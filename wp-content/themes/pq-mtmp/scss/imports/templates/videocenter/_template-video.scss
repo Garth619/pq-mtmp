@@ -27,11 +27,8 @@
   @include mq(small_laptop) {
     flex-basis: 30%;
   }
-  &:last-of-type {
-    border-bottom: none;
-  }
-  &:nth-last-of-type(-n + 2) {
-    border-bottom: none;
+  @include mq(large_laptop) {
+    margin-bottom: 90px;
   }
   a {
     text-decoration: none;
@@ -88,10 +85,10 @@
       @include box(106px);
     }
     @include mq(small_laptop) {
-      @include box(51px);
+      @include box(61px);
     }
     @include mq(small_monitor) {
-      @include box(64px);
+      @include box(91px);
     }
     &:before {
       @include box(51px);
@@ -99,26 +96,26 @@
         @include box(84px);
       }
       @include mq(small_laptop) {
-        @include box(42px);
+        @include box(52px);
       }
       @include mq(small_monitor) {
-        @include box(51px);
+        @include box(72px);
       }
     }
     &:after {
-      @include abs(23px, null, null, 30px);
+      @include abs(24px, null, null, 29px);
       @include tri(right, 8px, 10px, $color_bright_two);
       @include mq(small_tablet) {
         @include abs(38px, null, null, 46px);
         @include tri(right, 14px, 17px, $color_bright_two);
       }
       @include mq(small_laptop) {
-        @include abs(18px, null, null, 23px);
-        @include tri(right, 8px, 10px, $color_bright_two);
+        @include abs(20px, null, null, 27px);
+        @include tri(right, 10px, 12px, $color_bright_two);
       }
       @include mq(small_monitor) {
-        @include abs(23px, null, null, 31px);
-        @include tri(right, 10px, 10px, $color_bright_two);
+        @include abs(32px, null, null, 41px);
+        @include tri(right, 13px, 15px, $color_bright_two);
       }
     }
   }
@@ -134,5 +131,9 @@
         align: center,
       )
     );
+    @include mq(large_laptop) {
+      padding: 28px 0;
+      @include quick_type(20px, 26px, null);
+    }
   }
 }
