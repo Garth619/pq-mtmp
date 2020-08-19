@@ -1,7 +1,11 @@
+#video_center_wrapper {
+  margin: 0 0 -40px 0;
+}
+
 .single_video {
   position: relative;
-  margin-bottom: 30px;
   max-width: 739px;
+  margin-bottom: 40px;
   @include margin_lr;
   @include mq(small_tablet) {
     margin-bottom: 40px;
@@ -12,6 +16,9 @@
   }
   @include mq(small_monitor) {
     max-width: 388px;
+  }
+  a {
+    text-decoration: none;
   }
   &.video_shadow {
     border: 13px solid $color_light_one;
@@ -60,24 +67,61 @@
       @include abs(0, null, null, 0);
     }
   }
-
   img {
     @include image();
   }
+  span.play_button {
+    @include box(64px);
+    @include mq(small_tablet) {
+      @include box(106px);
+    }
+    @include mq(small_laptop) {
+      @include box(51px);
+    }
+    @include mq(small_monitor) {
+      @include box(64px);
+    }
+    &:before {
+      @include box(51px);
+      @include mq(small_tablet) {
+        @include box(84px);
+      }
+      @include mq(small_laptop) {
+        @include box(42px);
+      }
+      @include mq(small_monitor) {
+        @include box(51px);
+      }
+    }
+    &:after {
+      @include abs(23px, null, null, 30px);
+      @include tri(right, 8px, 10px, $color_bright_two);
+      @include mq(small_tablet) {
+        @include abs(38px, null, null, 46px);
+        @include tri(right, 14px, 17px, $color_bright_two);
+      }
+      @include mq(small_laptop) {
+        @include abs(18px, null, null, 23px);
+        @include tri(right, 8px, 10px, $color_bright_two);
+      }
+      @include mq(small_monitor) {
+        @include abs(23px, null, null, 31px);
+        @include tri(right, 10px, 10px, $color_bright_two);
+      }
+    }
+  }
   span.video_title {
     display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid $color_light_three;
     @include type(
       (
-        size: 20px,
-        height: 26px,
+        size: 17px,
+        height: 23px,
+        color: $color_dark_one,
         family: $primaryfont,
         align: center,
       )
     );
   }
-}
-
-.mywistia {
-  @include box(100%);
-  @include abs(0, null, null, 0, 1);
 }
