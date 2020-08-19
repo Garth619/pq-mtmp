@@ -43,6 +43,10 @@
       }
     }
   }
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
   .video_overlay {
     @include flex(center, center);
     @include box(100%);
@@ -91,9 +95,4 @@
       }
     }
   }
-}
-
-.mywistia {
-  @include box(100%);
-  @include abs(0, null, null, 0, 1);
 }
