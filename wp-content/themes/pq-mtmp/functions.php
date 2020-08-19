@@ -25,7 +25,11 @@ function load_my_styles_scripts() {
      
      wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
 
-     // wp_enqueue_script( 'jquery-macy', get_template_directory_uri() . '/js/macy.js', 'jquery', '', true );
+    if(is_page_template('page-templates/template-caseresults.php')) {
+
+        wp_enqueue_script( 'jquery-macy', get_template_directory_uri() . '/js/macy.js', 'jquery', '', true );
+    
+    }
 
      // wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/js/modernizr-webp.js', 'jquery', '', true );
 

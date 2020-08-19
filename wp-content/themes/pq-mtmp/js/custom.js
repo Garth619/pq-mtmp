@@ -59,11 +59,10 @@ jQuery(document).ready(function ($) {
     });
   });
 
-
-  if ($("#internal_banner")[0]){
-    $('#page_wrapper').addClass('banner');
+  if ($("#internal_banner")[0]) {
+    $("#page_wrapper").addClass("banner");
   } else {
-    $('#page_wrapper').addClass('no_banner');
+    $("#page_wrapper").addClass("no_banner");
   }
 
   /* Waypoints
@@ -253,6 +252,36 @@ jQuery(document).ready(function ($) {
       },
     ],
   });
+
+  /* Form Select Triangle
+--------------------------------------------------------------------------------------- */
+
+  if ($("#case_results_wrapper").length > 0) {
+    var macyInstance = Macy({
+      container: "#case_results_wrapper",
+      columns: 3,
+      margin: {
+        x: 60,
+        y: 60,
+      },
+      breakAt: {
+        1066: {
+          margin: {
+            x: 30,
+            y: 30,
+          },
+          columns: 2,
+        },
+        695: {
+          margin: {
+            x: 0,
+            y: 30,
+          },
+          columns: 1,
+        },
+      },
+    });
+  }
 
   /* Form Select Triangle
 --------------------------------------------------------------------------------------- */

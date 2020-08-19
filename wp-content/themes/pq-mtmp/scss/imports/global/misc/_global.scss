@@ -72,7 +72,7 @@ body.page-template-default {
   }
   @include mq(small_monitor) {
     max-width: 1462px;
-    padding: 66px 0px 115px;
+    padding: 85px 0px 115px;
     @include margin_lr;
   }
   &.no_banner {

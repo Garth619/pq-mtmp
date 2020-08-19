@@ -201,6 +201,12 @@ nav.nav_desktop {
         }
       }
     }
+    > li {
+      ul.sub-menu {
+        left: auto;
+        right: -20px;
+      }
+    }
     > li.menu-item-has-children {
       @include mq(small_laptop) {
         position: relative;

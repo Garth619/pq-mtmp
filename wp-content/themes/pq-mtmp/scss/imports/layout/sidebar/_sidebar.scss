@@ -256,6 +256,7 @@ span#sidebar_form_subtitle {
           weight: 700,
         )
       );
+
       @include mq(large_laptop) {
         @include quick_type(20px, 25px, null);
       }
@@ -313,6 +314,24 @@ span#sidebar_form_subtitle {
         }
       }
     }
+    > li.current-menu-item {
+      > a {
+        color: $color_bright_one;
+      }
+    }
+    > li.current-menu-ancestor {
+      > a {
+        color: $color_bright_one;
+      }
+      ul.sub-menu {
+        display: block;
+        li.current-menu-item {
+          a {
+            color: $color_bright_one;
+          }
+        }
+      }
+    }
   }
   ul.sub-menu {
     display: none;
@@ -350,6 +369,9 @@ span#sidebar_form_subtitle {
               @include abs(40px, null, null, 0);
               @include box(6px);
               @include contentdisplay();
+              @include mq(small_laptop) {
+                @include abs(43px, null, null, 0);
+              }
             }
           }
         }
