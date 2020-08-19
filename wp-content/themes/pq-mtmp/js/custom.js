@@ -265,6 +265,13 @@ jQuery(document).ready(function ($) {
         y: 60,
       },
       breakAt: {
+        1170: {
+          margin: {
+            x: 30,
+            y: 30,
+          },
+          columns: 3,
+        },
         1066: {
           margin: {
             x: 30,
