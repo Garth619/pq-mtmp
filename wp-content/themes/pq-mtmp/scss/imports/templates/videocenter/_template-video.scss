@@ -1,3 +1,7 @@
+#page_wrapper.video_page_wrapper {
+  max-width: 1515px;
+}
+
 #video_center_wrapper {
   margin: 0 auto -40px;
   max-width: 400px;
@@ -32,21 +36,6 @@
   }
   a {
     text-decoration: none;
-  }
-  &.wistia_no_thumbnail {
-    max-width: 540px;
-    @include margin_lr;
-    .mywistia_thumbnail {
-      position: relative;
-      @include box(100%, 300px);
-      @include mq(small_laptop) {
-        max-width: 100%;
-        @include box(340px, 200px);
-      }
-      @include mq(small_monitor) {
-        @include box(388px, 230px);
-      }
-    }
   }
   &:hover {
     span.play_button {
@@ -84,11 +73,12 @@
   }
   img {
     @include image();
+    width: 100%;
   }
   span.play_button {
     @include box(64px);
     @include mq(small_tablet) {
-      @include box(106px);
+      @include box(90px);
     }
     @include mq(small_laptop) {
       @include box(61px);
@@ -99,7 +89,7 @@
     &:before {
       @include box(51px);
       @include mq(small_tablet) {
-        @include box(84px);
+        @include box(75px);
       }
       @include mq(small_laptop) {
         @include box(52px);
@@ -112,7 +102,7 @@
       @include abs(24px, null, null, 29px);
       @include tri(right, 8px, 10px, $color_bright_two);
       @include mq(small_tablet) {
-        @include abs(38px, null, null, 46px);
+        @include abs(30px, null, null, 39px);
         @include tri(right, 14px, 17px, $color_bright_two);
       }
       @include mq(small_laptop) {

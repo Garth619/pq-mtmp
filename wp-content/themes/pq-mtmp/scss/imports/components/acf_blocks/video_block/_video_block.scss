@@ -54,6 +54,7 @@
   }
   img {
     @include image();
+    width: 100%;
   }
   span.play_button {
     @include box(64px);
