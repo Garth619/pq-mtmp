@@ -8,7 +8,7 @@ get_header(); ?>
 
 	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
 	
-	<div id='page_wrapper' class='testmonials_page_wrapper'>
+	<div id='page_wrapper' class='testimonials_page_wrapper one_col'>
 	
 		<div id='testimonials_video_wrapper'>
 
@@ -109,7 +109,15 @@ get_header(); ?>
 
 	</div><!-- testimonials_video_wrapper -->
 
+	<div id='testimonials_text_wrapper'>
+	
+		<div class='single_testimonial'>
 		
+			<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+		
+		</div><!-- single_testimonial -->
+	
+	</div><!-- testimonials_text_wrapper -->
 
 	</div><!-- page_wrapper -->
 	

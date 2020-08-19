@@ -87,6 +87,9 @@ body.page-template-default {
       padding: 90px 55px 115px;
     }
   }
+  &.one_col {
+    display: block;
+  }
 }
 
 #page_content {

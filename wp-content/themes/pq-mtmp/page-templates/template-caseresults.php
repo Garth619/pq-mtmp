@@ -8,7 +8,7 @@ get_header(); ?>
 
 	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
 	
-	<div id='page_wrapper'>
+	<div id='page_wrapper' class="one_col">
 	
 		<div id='case_results_wrapper'>
 

@@ -1,7 +1,10 @@
-#page_wrapper.testmonials_page_wrapper {
+#page_wrapper.testimonials_page_wrapper {
   @include mq(small_laptop) {
-    max-width: 1255px;
+    max-width: 1120px;
     @include margin_lr;
+  }
+  @include mq(small_monitor) {
+    max-width: 1290px;
   }
 }
 
@@ -27,13 +30,15 @@
   @include margin_lr;
   @include mq(small_tablet) {
     flex-basis: 46%;
+    margin: 0;
   }
   @include mq(small_laptop) {
-    flex-basis: 40%;
+    flex-basis: 44%;
     margin-bottom: 80px;
   }
   @include mq(large_laptop) {
     margin-bottom: 90px;
+    flex-basis: 40%;
   }
   a {
     text-decoration: none;
@@ -133,4 +138,8 @@
       @include quick_type(20px, 26px, null);
     }
   }
+}
+
+#testimonials_text_wrapper {
+  width: 100%;
 }
