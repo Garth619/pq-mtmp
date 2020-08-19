@@ -139,3 +139,26 @@
     background: $color_dark_one;
   }
 }
+
+span.play_button {
+  display: block;
+  border-radius: 50%;
+  background: $color_light_rgba;
+  position: relative;
+  @include flex(center, center);
+
+  &:before {
+    background: $color_dark_one;
+    border-radius: 50%;
+    @include contentdisplay();
+  }
+  &:after {
+    @include contentdisplay();
+    transition: all 200ms ease-in-out;
+  }
+  &:hover {
+    &:after {
+      border-left-color: $color_bright_one;
+    }
+  }
+}
