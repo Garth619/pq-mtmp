@@ -41,6 +41,98 @@ get_header(); ?>
 		<div id='meet_attorneys'>
 		
 			<span class='about_title meet_title'>Meet Our Attorneys</span><!-- about_title -->
+
+			<div id='meet_attorneys_inner'>
+			
+				<div class='single_att'>
+				
+					<a href="">
+					
+						<div class='single_attorney_profile'>
+						
+							<div class='single_att_overlay'></div><!-- single_att_overlay -->
+
+							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
+						
+						</div><!-- single_attorney_profile -->
+
+						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
+
+						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
+
+						<span class='button_two'>Learn More</span><!-- button_two -->
+						
+					</a>
+				
+				</div><!-- single_att -->
+
+				<div class='single_att'>
+				
+					<a href="">
+					
+						<div class='single_attorney_profile'>
+						
+							<div class='single_att_overlay'></div><!-- single_att_overlay -->
+
+							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
+						
+						</div><!-- single_attorney_profile -->
+
+						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
+
+						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
+
+						<span class='button_two'>Learn More</span><!-- button_two -->
+						
+					</a>
+				
+				</div><!-- single_att -->
+
+				<div class='single_att'>
+				
+					<a href="">
+					
+						<div class='single_attorney_profile'>
+						
+							<div class='single_att_overlay'></div><!-- single_att_overlay -->
+
+							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
+						
+						</div><!-- single_attorney_profile -->
+
+						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
+
+						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
+
+						<span class='button_two'>Learn More</span><!-- button_two -->
+						
+					</a>
+				
+				</div><!-- single_att -->
+
+				<div class='single_att'>
+				
+					<a href="">
+					
+						<div class='single_attorney_profile'>
+						
+							<div class='single_att_overlay'></div><!-- single_att_overlay -->
+
+							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
+						
+						</div><!-- single_attorney_profile -->
+
+						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
+
+						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
+
+						<span class='button_two'>Learn More</span><!-- button_two -->
+						
+					</a>
+				
+				</div><!-- single_att -->
+
+			</div><!-- meet_attorneys_inner -->
 		
 		</div><!-- meet_attorneys -->
 	
