@@ -6,129 +6,45 @@ get_header(); ?>
 
 <div id="internal_main">
 
-	<div id='about_banner'>
+	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
 	
-		<div id='about_content_inner'>
+	<div id='page_wrapper' class="one_col">
+	
+		<div id='about_top_wrapper'>
+
+		<span class='about_title firm_title'>About Our Firm</span><!-- about_title -->
+
+		<div class='about_description content'>
 		
-			<h1 class='about_title banner_title'><?php the_title();?></h1><!-- banner_title -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		
+		</div><!-- about_description -->
 
-			<span class='double_line'></span><!-- double_line -->
+		<div id='about_quote'>
 
-			<div id='about_intro' class="content">
+			<div id='about_quote_inner'>
 			
-				<?php the_field( 'about_intro' ); ?>
-
-			</div><!-- about_intro -->
-		
-		</div><!-- about_content_inner -->
-
-		<img id='about_banner_image' src='<?php bloginfo('template_directory');?>/images/hero-intl-about-tablet-new.jpg' alt=''/><!-- about_banner_image -->
-	
-	</div><!-- about_banner -->
-
-	<div class="page_container about_container two_col content">
-		
-		<div class='about_col'>
-		
-			<?php the_field( 'about_column_one' ); ?>
-
-		</div><!-- about_col -->
-
-		<div class='about_col'>
-
-			<div id='about_video_wrapper'>
-
-				<div id='about_video_inner'>
-
-				<?php if(get_field('about_video_wistia_or_youtube') == "Wistia") { ?>
-				
-					<div id='about_video' class="video_hover_styles">
-
-							<div id='mywistia' class="wistia_embed wistia_async_<?php the_field( 'about_video_id_wistia' ); ?> popover=true popoverContent=html"></div><!-- mywistia -->
-
-							<?php $about_video_image = get_field( 'about_video_image' ); ?>
-							
-							<?php if ( $about_video_image ) { ?>
-							
-								<img src="<?php echo $about_video_image['url']; ?>" alt="<?php echo $about_video_image['alt']; ?>" />
-							
-							<?php } ?>
-
-							<div id='video_overlay'>
-
-								<div class='play_button'></div><!-- play_button -->
-
-							</div><!-- video_overlay -->
-
-				</div><!-- about_video -->
-
-				<?php } ?>
-
-				<?php if(get_field('about_video_wistia_or_youtube') == "Youtube") { ?>
-				
-				<div id='about_video' class="video_hover_styles">
-
-						<a href="https://www.youtube.com/embed/<?php the_field( 'about_video_id_youtube' ); ?>" data-lity>
-
-						<?php $about_video_image = get_field( 'about_video_image' ); ?>
-						
-						<?php if ( $about_video_image ) { ?>
-						
-							<img src="<?php echo $about_video_image['url']; ?>" alt="<?php echo $about_video_image['alt']; ?>" />
-						
-						<?php } ?>
-
-						<div id='video_overlay'>
-
-							<div class='play_button'></div><!-- play_button -->
-
-						</div><!-- video_overlay -->
-
-					</a>
-
-			</div><!-- about_video -->
-
-			<?php } ?>
-
-				<?php if ( have_rows( 'about_video_bullets' ) ) : ?>
-					
-					<ul>
-
-					<?php while ( have_rows( 'about_video_bullets' ) ) : the_row(); ?>
-
-						<li><?php the_sub_field( 'bullet' ); ?></li>
-		
-					<?php endwhile; ?>
-
-					</ul>
-
-				<?php endif; ?>
+				<p>We never charge a fee to handle a dangerous product case. <strong>You only pay us if we win your case!</strong></p>
 			
-				</div><!-- about_video_inner -->
+			</div><!-- about_quote_inner -->
 
-				<span class='double_line'></span><!-- double_line -->
+			<div id="about_quote_img">
 			
-			</div><!-- about_video_wrapper -->
+				<img src='<?php bloginfo('template_directory');?>/images/eb-graphic.svg' alt='logo'/>
+			
+			</div>
+			
+		</div><!-- about_quote -->
 		
-			<?php the_field( 'about_column_two' ); ?>
-		
-		</div><!-- page_container -->
-		
-	</div><!-- about_container -->
+		</div><!-- about_top_wrapper -->
 
-	<div id='about_bottom_wrapper'>
+		<div id='meet_attorneys'>
+		
+			<span class='about_title meet_title'>Meet Our Attorneys</span><!-- about_title -->
+		
+		</div><!-- meet_attorneys -->
 	
-		<div id='about_bottom_inner'>
-		
-			<span id='about_bottom_title'><?php the_field( 'about_logos_title' ); ?></span><!-- about_bottom_title -->
-
-			<span class='double_line'></span><!-- double_line -->
-
-			<?php get_template_part('page-templates/includes/template','nationally_recognized_slider'); ?>
-		
-		</div><!-- about_bottom_inner -->
-	
-	</div><!-- about_bottom_wrapper -->
+	</div><!-- page_wrapper -->
 	
 </div><!-- internal_main -->
 		
