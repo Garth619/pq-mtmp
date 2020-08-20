@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<div class='about_description content'>
 		
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			<?php the_field( 'about_content' ); ?>
 		
 		</div><!-- about_description -->
 
@@ -24,13 +24,19 @@ get_header(); ?>
 
 			<div id='about_quote_inner'>
 			
-				<p>We never charge a fee to handle a dangerous product case. <strong>You only pay us if we win your case!</strong></p>
+				<?php the_field( 'about_quote' ); ?>
 			
 			</div><!-- about_quote_inner -->
 
 			<div id="about_quote_img">
 			
-				<img src='<?php bloginfo('template_directory');?>/images/eb-graphic.svg' alt='logo'/>
+				<?php $about_quote_logo = get_field( 'about_quote_logo' ); ?>
+				
+				<?php if ( $about_quote_logo ) { ?>
+				
+					<img src="<?php echo $about_quote_logo['url']; ?>" alt="<?php echo $about_quote_logo['alt']; ?>" />
+				
+				<?php } ?>
 			
 			</div>
 			
