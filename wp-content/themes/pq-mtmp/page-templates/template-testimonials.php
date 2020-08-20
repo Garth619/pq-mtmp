@@ -112,74 +112,50 @@ get_header(); ?>
 	<div id='testimonials_text_wrapper'>
 
 		<div class='testimonials_col'>
-		
-			<div class='single_testimonial'>
-		
-				<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
 
-				<div class='single_testimonial_descrip content'>
+			<?php if ( have_rows( 'testimonials_column_one_new' ) ) : ?>
+				<?php while ( have_rows( 'testimonials_column_one_new' ) ) : the_row(); ?>
 			
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
-
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
+				<div class='single_testimonial'>
 			
-				</div><!-- single_testimonial_descrip content -->
+					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
 
-				<span class='single_testimonial_name'>George Roussos</span><!-- single_testimonial_name -->
+					<div class='single_testimonial_descrip content'>
 		
-			</div><!-- single_testimonial -->
-
-			<div class='single_testimonial'>
+						<?php the_sub_field( 'description' ); ?>
 		
-				<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
+					</div><!-- single_testimonial_descrip content -->
 
-				<div class='single_testimonial_descrip content'>
-			
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
+					<span class='single_testimonial_name'><?php the_sub_field( 'name' ); ?></span><!-- single_testimonial_name -->
 
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
-			
-				</div><!-- single_testimonial_descrip content -->
-
-				<span class='single_testimonial_name'>George Roussos</span><!-- single_testimonial_name -->
-		
-			</div><!-- single_testimonial -->
+				</div><!-- single_testimonial -->
+				
+				<?php endwhile; ?>
+			<?php endif; ?>
 
 		</div><!-- testimonials_col -->
 
 		<div class='testimonials_col'>
-		
-			<div class='single_testimonial'>
-		
-				<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
 
-				<div class='single_testimonial_descrip content'>
+			<?php if ( have_rows( 'testimonials_column_two_new' ) ) : ?>
+				<?php while ( have_rows( 'testimonials_column_two_new' ) ) : the_row(); ?>
 			
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
-
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
+				<div class='single_testimonial'>
 			
-				</div><!-- single_testimonial_descrip content -->
+					<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
 
-				<span class='single_testimonial_name'>George Roussos</span><!-- single_testimonial_name -->
+					<div class='single_testimonial_descrip content'>
 		
-			</div><!-- single_testimonial -->
-
-			<div class='single_testimonial'>
+						<?php the_sub_field( 'description' ); ?>
 		
-				<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/>
+					</div><!-- single_testimonial_descrip content -->
 
-				<div class='single_testimonial_descrip content'>
-			
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
+					<span class='single_testimonial_name'><?php the_sub_field( 'name' ); ?></span><!-- single_testimonial_name -->
 
-					<p>Everybody at the office treated us well. Every time we called, they handled whatever situation was happening. We were kept up-to-date and the staff answered all of our questions when we had them. If someone asked me for a lawyer, I would recommend Estey & Bomberger.</p>
-			
-				</div><!-- single_testimonial_descrip content -->
-
-				<span class='single_testimonial_name'>George Roussos</span><!-- single_testimonial_name -->
-		
-			</div><!-- single_testimonial -->
+				</div><!-- single_testimonial -->
+				
+				<?php endwhile; ?>
+			<?php endif; ?>
 
 		</div><!-- testimonials_col -->
 	
