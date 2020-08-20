@@ -1,116 +1,90 @@
-#pa_directory {
-  text-align: center;
-  max-width: 350px;
-  margin-bottom: -35px;
+ul.pa_directory_top_menu {
+  margin-bottom: -40px;
+  max-width: 1220px;
   @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 600px;
-    padding-bottom: 20px;
-  }
-  @include mq(small_laptop) {
-    max-width: 900px;
-    padding-bottom: 0;
-    margin-bottom: -30px;
-  }
-  @include mq(large_laptop) {
-    max-width: 1205px;
-    margin-bottom: -55px;
-  }
-  @include mq(small_monitor) {
-    margin-bottom: -80px;
-  }
-  span.double_line {
-    max-width: 100%;
-  }
-  ul {
+  li {
     list-style: none;
-    li {
-      a {
-        display: block;
+    a {
+      display: block;
+    }
+  }
+  > li {
+    @include type(
+      (
+        size: 16px,
+        height: 19px,
+        spacing: 1.6px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    > a {
+      transition: all 200ms ease-in-out;
+      &:hover {
+        font-weight: 700;
+        color: $color_bright_two;
+      }
+      &:after {
+        margin-top: 17px;
+        background: $color_light_fifteen;
+        @include box(100%, 3px);
+        @include contentdisplay();
       }
     }
   }
-  ul.pa_directory_top_menu {
-    > li {
-      margin-bottom: 40px;
-      > a {
-        margin-bottom: 10px;
-        @include mq(small_tablet) {
-          margin-bottom: 20px;
-        }
+  div {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    @include mq(large_laptop) {
+      margin-top: 47px;
+      margin-bottom: 135px;
+    }
+    ul {
+      li {
         @include type(
           (
-            size: $pa_directory_top_menu_size,
-            spacing: $pa_directory_top_menu_spacing,
-            height: $pa_directory_top_menu_height,
-            weight: $pa_directory_top_menu_weight,
+            size: 18px,
+            height: 21px,
+            transform: capitalize,
             family: $primaryfont,
-            transform: uppercase,
           )
         );
-        @include mq(small_tablet) {
-          @include quick_type(
-            $pa_directory_top_menu_size_small_tablet,
-            $pa_directory_top_menu_height_small_tablet,
-            null
-          );
+        @include mq(large_laptop) {
+          text-align: center;
+          @include quick_type(22px, 25px, null);
         }
-        @include mq(small_monitor) {
-          @include quick_type(
-            $pa_directory_top_menu_size_small_monitor,
-            $pa_directory_top_menu_height_small_monitor,
-            null
-          );
-        }
-      }
-      div {
-        margin-top: 25px;
-        @include mq(small_tablet) {
-          margin-bottom: 55px;
-        }
-        @include mq(small_monitor) {
-          margin-bottom: 80px;
-        }
-        ul {
-          @include mq(small_tablet) {
-            @include flex(space-between, center, null, wrap);
+        &:last-of-type {
+          a {
+            border: none;
           }
-          li {
-            @include type(
-              (
-                size: $pa_directory_sub_menu_size,
-                height: $pa_directory_sub_menu_height,
-                spacing: $pa_directory_sub_menu_spacing,
-                family: $primaryfont,
-                weight: $pa_directory_sub_menu_weight,
-                transform: none,
-              )
-            );
+        }
+        &:nth-last-of-type(-n + 2) {
+          a {
             @include mq(small_tablet) {
-              flex-basis: 47%;
+              border: none;
             }
-            @include mq(small_laptop) {
-              flex-basis: 30%;
+          }
+        }
+        &:nth-last-of-type(-n + 4) {
+          a {
+            @include mq(large_laptop) {
+              border: none;
             }
-            @include mq(small_monitor) {
-              flex-basis: 27%;
-              @include quick_type(16px, 18px, null);
-            }
-            a {
-              padding: 14px 0;
-              color: $pa_directory_sub_menu_color;
-              text-decoration: none;
-              border-bottom: 1px solid $pa_directory_sub_menu_border_bg_color;
-              transition: all 200ms ease-in-out;
-              @include flex(center, center);
-              &:hover {
-                color: $pa_directory_sub_menu_border_bg_color_hover;
-              }
-              @include mq(small_tablet) {
-                height: 60px;
-                padding: 0;
-              }
-            }
+          }
+        }
+        a {
+          color: $color_dark_one;
+          text-decoration: none;
+          padding: 15px 0px;
+          border-bottom: 1px solid $color_light_sixteen;
+          transition: all 200ms ease-in-out;
+          @include mq(large_laptop) {
+            padding: 25px 0;
+          }
+          &:hover {
+            color: $color_bright_two;
           }
         }
       }
