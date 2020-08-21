@@ -1,3 +1,38 @@
+body.page-template-template-contact {
+  #footer_bottom {
+    margin-top: 0;
+    padding-top: 45px;
+  }
+  span#form_title {
+    color: $color_dark_one;
+  }
+  #form_wrapper {
+    padding: 50px 0px 100px;
+    .gform_wrapper {
+      margin-top: 47px;
+    }
+    ul {
+      li {
+        label {
+          color: $color_dark_one;
+        }
+        input,
+        textarea,
+        select {
+          background: $color_light_seventeen;
+          border: 2px solid $color_light_eighteen;
+        }
+      }
+    }
+    span#required {
+      color: $color_dark_one;
+    }
+  }
+  #form_descrip {
+    color: $color_dark_one;
+  }
+}
+
 .contact_page_wrapper {
 }
 
@@ -31,6 +66,7 @@
     }
   }
   span.contact_subtitle {
+    margin-bottom: 10px;
     @include type(
       (
         size: 18px,
