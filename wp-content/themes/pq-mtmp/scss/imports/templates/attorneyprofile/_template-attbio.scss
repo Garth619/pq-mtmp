@@ -133,3 +133,30 @@ span#bio_position {
     }
   }
 }
+
+.placeholder {
+  position: relative;
+}
+
+.placeholder_inner {
+  background: $color_light_two;
+  padding: 0 20px;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include flex(center, center);
+  &:after {
+    color: $color_dark_one;
+    @include contentdisplay(block, "Profile Coming Soon");
+    @include type(
+      (
+        size: 17px,
+        height: 19px,
+        spacing: 1.7px,
+        weight: 700,
+        align: center,
+        transform: uppercase,
+        family: $primaryfont,
+      )
+    );
+  }
+}

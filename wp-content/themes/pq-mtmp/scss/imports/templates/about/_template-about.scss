@@ -104,7 +104,7 @@ span.about_title {
     @include flex(space-between, null, null, wrap);
   }
   @include mq(large_laptop) {
-    max-width: 1085px;
+    max-width: 1125px;
   }
   @include mq(small_monitor) {
     margin-top: 84px;

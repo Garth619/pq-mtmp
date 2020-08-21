@@ -12,7 +12,7 @@ get_header(); ?>
 	
 		<div id='about_top_wrapper'>
 
-		<span class='about_title firm_title'>About Our Firm</span><!-- about_title -->
+		<span class='about_title firm_title'><?php the_field( 'about_firm_subtitle' ); ?></span><!-- about_title -->
 
 		<div class='about_description content'>
 		
@@ -44,103 +44,59 @@ get_header(); ?>
 		
 		</div><!-- about_top_wrapper -->
 
-		<div id='meet_attorneys'>
+		<?php $meet_attorneys = get_field( 'meet_attorneys' ); ?>
 		
-			<span class='about_title meet_title'>Meet Our Attorneys</span><!-- about_title -->
+		<?php if ( $meet_attorneys ): ?>
+			<div id='meet_attorneys'>
+		
+		<span class='about_title meet_title'><?php the_field( 'meet_the_attorneys_subtitle' ); ?></span><!-- about_title -->
 
-			<div id='meet_attorneys_inner'>
+		<div id='meet_attorneys_inner'>
+			<?php foreach ( $meet_attorneys as $post ):  ?>
+			<?php setup_postdata ( $post ); ?>
+			<div class='single_att'>
+				
+				<a href="<?php the_permalink();?>">
+				
+					<div class='single_attorney_profile'>
+					
+						<div class='single_att_overlay'></div><!-- single_att_overlay -->
+
+						<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+
+						<?php if ( $attorney_profile ) : ?>
+		
+							<img class="att_image" src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
+
+							<?php else: ?>
+
+							<div class="placeholder">
+
+								<div class='placeholder_inner'></div><!-- placeholder_inner -->
+
+									<img class="att_image" src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' alt="Placeholder Profile Image"/>
+
+							</div><!-- placeholder -->
+
+						<?php endif;?>
+					
+					</div><!-- single_attorney_profile -->
+
+					<span class='single_att_name'><?php the_title();?></span><!-- single_att_name -->
+
+					<span class='single_att_position'><?php the_field( 'position' ); ?></span><!-- single_att_position -->
+
+					<span class='button_two'>Learn More</span><!-- button_two -->
+					
+				</a>
 			
-				<div class='single_att'>
-				
-					<a href="">
-					
-						<div class='single_attorney_profile'>
-						
-							<div class='single_att_overlay'></div><!-- single_att_overlay -->
-
-							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
-						
-						</div><!-- single_attorney_profile -->
-
-						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
-
-						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
-
-						<span class='button_two'>Learn More</span><!-- button_two -->
-						
-					</a>
-				
-				</div><!-- single_att -->
-
-				<div class='single_att'>
-				
-					<a href="">
-					
-						<div class='single_attorney_profile'>
-						
-							<div class='single_att_overlay'></div><!-- single_att_overlay -->
-
-							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
-						
-						</div><!-- single_attorney_profile -->
-
-						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
-
-						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
-
-						<span class='button_two'>Learn More</span><!-- button_two -->
-						
-					</a>
-				
-				</div><!-- single_att -->
-
-				<div class='single_att'>
-				
-					<a href="">
-					
-						<div class='single_attorney_profile'>
-						
-							<div class='single_att_overlay'></div><!-- single_att_overlay -->
-
-							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
-						
-						</div><!-- single_attorney_profile -->
-
-						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
-
-						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
-
-						<span class='button_two'>Learn More</span><!-- button_two -->
-						
-					</a>
-				
-				</div><!-- single_att -->
-
-				<div class='single_att'>
-				
-					<a href="">
-					
-						<div class='single_attorney_profile'>
-						
-							<div class='single_att_overlay'></div><!-- single_att_overlay -->
-
-							<img src='<?php bloginfo('template_directory');?>/images/attorney-estey.jpg' alt=''/>
-						
-						</div><!-- single_attorney_profile -->
-
-						<span class='single_att_name'>Steve Estey</span><!-- single_att_name -->
-
-						<span class='single_att_position'>FOuNDING PARTNER</span><!-- single_att_position -->
-
-						<span class='button_two'>Learn More</span><!-- button_two -->
-						
-					</a>
-				
-				</div><!-- single_att -->
-
+			</div><!-- single_att -->
+			<?php endforeach; ?>
+			<?php wp_reset_postdata(); ?>
 			</div><!-- meet_attorneys_inner -->
 		
 		</div><!-- meet_attorneys -->
+		<?php endif; ?>
 	
 	</div><!-- page_wrapper -->
 	

@@ -452,6 +452,8 @@ function my_acf_init() {
 	}
 }
 
+
+
 /* Adds Default Images to ACF Image Field
 -------------------------------------------------------------- */
 
