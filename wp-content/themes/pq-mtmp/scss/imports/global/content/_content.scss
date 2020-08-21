@@ -68,12 +68,17 @@ body {
       margin-bottom: 35px;
     }
   }
-  > a {
-    font-weight: 700;
-    color: $color_dark_one;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      color: $color_bright_two;
+  p,
+  li {
+    > a {
+      font-weight: 700;
+      color: $color_dark_one;
+      text-decoration: underline;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $color_bright_two;
+        text-decoration: none;
+      }
     }
   }
   strong {
@@ -125,6 +130,15 @@ body {
       font-weight: 700;
       color: $color_bright_two;
       @include abs(0, null, null, 0);
+    }
+  }
+  > ul,
+  ol {
+    &.single_line_item {
+      margin-bottom: 27px;
+      li {
+        margin-bottom: 7px;
+      }
     }
   }
   p {

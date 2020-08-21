@@ -59,6 +59,8 @@ body.page-template-default {
 
 #page_wrapper {
   padding: 0px 20px 40px;
+  position: relative;
+  z-index: 1;
   @include mq(small_tablet) {
     padding: 0px 55px 55px;
   }
