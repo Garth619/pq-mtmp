@@ -4,39 +4,24 @@
 <?php get_template_part('page-templates/includes/att_bio_template_parts/template','profile_image'); ?>
 		
 	<div class="sidebar_box sidebar_bio">
-					
+
+	<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
+		
+		<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
 		<div class='sidebar_bio_list'>
-				
-			<h3>Education</h3>
-
+			<h3><?php the_sub_field( 'title' ); ?></h3>
 			<ul>
-				<li>B.S. Criminal Justice, San Diego State University, 1989</li>
-				<li>J.D. California Western School of Law, 1992</li>
+			<?php if ( have_rows( 'list_items' ) ) : ?>
+			<?php while ( have_rows( 'list_items' ) ) : the_row(); ?>
+				<li><?php the_sub_field( 'list_item' ); ?></li>
+			<?php endwhile; ?>
+		<?php endif; ?>
 			</ul>
-
 		</div><!-- sidebar_bio_list -->
 
-		<div class='sidebar_bio_list'>
-				
-			<h3>Education</h3>
-
-			<ul>
-				<li>B.S. Criminal Justice, San Diego State University, 1989</li>
-				<li>J.D. California Western School of Law, 1992</li>
-			</ul>
-
-		</div><!-- sidebar_bio_list -->
-
-		<div class='sidebar_bio_list'>
-				
-			<h3>Education</h3>
-
-			<ul>
-				<li>B.S. Criminal Justice, San Diego State University, 1989</li>
-				<li>J.D. California Western School of Law, 1992</li>
-			</ul>
-
-		</div><!-- sidebar_bio_list -->
+		<?php endwhile; ?>
+			
+	<?php endif; ?>
 			
 	</div><!-- sidebar_box -->
 			

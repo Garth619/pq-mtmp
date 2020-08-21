@@ -420,18 +420,23 @@ span#sidebar_form_subtitle {
 
 .sidebar_bio_wrapper {
   @include mq(small_laptop) {
-    margin-top: -315px;
+    margin-top: -290px;
+  }
+  @include mq(small_monitor) {
+    margin-top: -344px;
   }
   .att_image_wrapper {
     display: none;
     @include mq(small_laptop) {
-      background: $color_dark_one;
       max-width: 100%;
-      padding: 65px;
+      padding: 45px;
       margin-bottom: 37px;
       @include flex(center, center);
       img {
       }
+    }
+    @include mq(small_monitor) {
+      padding: 64px;
     }
   }
 }
@@ -440,7 +445,7 @@ span#sidebar_form_subtitle {
   background: $color_light_two;
   padding: 30px 30px;
   @include mq(large_laptop) {
-    padding: 60px 45px 119px;
+    padding: 60px 45px 69px;
   }
   @include mq(small_monitor) {
     padding: 60px 60px 119px;
@@ -451,6 +456,9 @@ span#sidebar_form_subtitle {
   margin-bottom: 50px;
   // max-width: 500px;
   // @include margin_lr;
+  @include mq(large_laptop) {
+    margin-bottom: 60px;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -467,7 +475,8 @@ span#sidebar_form_subtitle {
       )
     );
     @include mq(large_laptop) {
-      margin-bottom: 38px;
+      margin-bottom: 29px;
+      @include quick_type(30px, 33px, null);
     }
   }
   ul {
@@ -484,6 +493,10 @@ span#sidebar_form_subtitle {
           family: $primaryfont,
         )
       );
+      @include mq(large_laptop) {
+        padding: 12px 25px;
+        @include quick_type(18px, 25px, null);
+      }
       &:last-of-type {
         border: none;
         padding-bottom: 0;
@@ -494,6 +507,9 @@ span#sidebar_form_subtitle {
         @include abs(18px, null, null, 0);
         @include box(6px);
         @include contentdisplay();
+        @include mq(large_laptop) {
+          top: 23px;
+        }
       }
     }
   }
