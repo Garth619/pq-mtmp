@@ -396,7 +396,7 @@ span#footer_phone {
   }
 }
 
-a#get_directions {
+a.get_directions {
   display: inline-block;
   margin-top: 38px;
   border: 2px solid $color_light_one;
@@ -414,6 +414,7 @@ a#get_directions {
   );
   &:hover {
     border: 2px solid $color_bright_two;
+    color: $color_bright_two;
   }
 }
 

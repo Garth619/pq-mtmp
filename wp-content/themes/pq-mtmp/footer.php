@@ -64,7 +64,7 @@
 
     <span id='footer_phone'>Phone <span>(619) 295-0035</span></span><!-- footer_phone -->
 
-    <a id='get_directions' href='' target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
+    <a class='get_directions' href='' target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
   
   </div><!-- footer_col_two -->
 
