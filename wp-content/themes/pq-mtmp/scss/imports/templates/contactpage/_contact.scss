@@ -1,15 +1,35 @@
 body.page-template-template-contact {
+  #internal_banner {
+    height: 210px;
+  }
   #footer_bottom {
     margin-top: 0;
     padding-top: 45px;
+    @include mq(small_tablet) {
+      padding-top: 0;
+    }
   }
   span#form_title {
     color: $color_dark_one;
+    @include mq(small_laptop) {
+      text-align: left;
+    }
   }
   #form_wrapper {
-    padding: 50px 0px 100px;
+    padding: 40px 0px 100px;
+    border-top: 2px solid $color_light_fifteen;
+    @include mq(small_tablet) {
+      box-shadow: none;
+      padding: 60px 0px 100px;
+      max-width: 1000px;
+    }
+    @include mq(small_laptop) {
+    }
     .gform_wrapper {
       margin-top: 47px;
+      @include mq(small_laptop) {
+        margin-top: 57px;
+      }
     }
     ul {
       li {
@@ -21,6 +41,12 @@ body.page-template-template-contact {
         select {
           background: $color_light_seventeen;
           border: 2px solid $color_light_eighteen;
+          padding: 20px 15px;
+        }
+        &.custom_select {
+          &:after {
+            top: 66px;
+          }
         }
       }
     }
@@ -30,16 +56,43 @@ body.page-template-template-contact {
   }
   #form_descrip {
     color: $color_dark_one;
+    @include mq(small_laptop) {
+      text-align: left;
+    }
   }
 }
 
 .contact_page_wrapper {
 }
 
+#contact_col_wrapper {
+  padding-bottom: 40px;
+  @include mq(small_tablet) {
+    max-width: 690px;
+    padding-bottom: 60px;
+    @include margin_lr;
+    @include flex(center);
+  }
+  @include mq(small_laptop) {
+    max-width: 670px;
+    padding-bottom: 91px;
+    @include flex(space-between);
+  }
+}
+
 .contact_col {
   text-align: center;
+  @include mq(small_tablet) {
+    margin: 0 70px;
+  }
+  @include mq(small_laptop) {
+    margin: 0;
+  }
   &:last-of-type {
     margin-top: 50px;
+    @include mq(small_tablet) {
+      margin-top: 0;
+    }
   }
   span {
     display: block;
@@ -56,6 +109,9 @@ body.page-template-template-contact {
         transform: uppercase,
       )
     );
+    @include mq(small_laptop) {
+      @include quick_type(18px, 20px, 3.6px);
+    }
     &:after {
       background: $color_dark_one;
       margin-top: 15px;
@@ -63,6 +119,9 @@ body.page-template-template-contact {
       @include margin_lr;
       @include box(67px, 2px);
       @include contentdisplay();
+      @include mq(small_tablet) {
+        margin-bottom: 27px;
+      }
     }
   }
   span.contact_subtitle {
@@ -87,6 +146,7 @@ body.page-template-template-contact {
         family: $primaryfont,
       )
     );
+    @include quick_type(22px, 24px, null);
   }
   a.get_directions {
     margin-top: 15px;
