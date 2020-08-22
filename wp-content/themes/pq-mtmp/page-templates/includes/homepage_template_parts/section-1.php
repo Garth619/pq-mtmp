@@ -20,7 +20,7 @@
 
     <div>
 
-      <span id='sec_one_logo_title'>Featured On</span><!-- sec_one_logo_title -->
+      <span id='sec_one_logo_title'><?php the_field( 'section_one_featured_on_title' ); ?></span><!-- sec_one_logo_title -->
   
     </div>
 
@@ -58,15 +58,81 @@
 
   <picture>
 
-    <source media='(min-width: 1695px)' srcset='<?php bloginfo('template_directory');?>/images/hero-hd1920.jpg'>
+    <?php $section_one_background_desktop_webp = get_field( 'section_one_background_desktop_webp' ); ?>
+    
+    <?php if ( $section_one_background_desktop_webp ) { ?>
+	
+      <source media='(min-width: 1695px)' srcset='<?php echo $section_one_background_desktop_webp['url']; ?>'>
 
-    <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory');?>/images/hero-1400.jpg'>
+    <?php } ?>
 
-    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory');?>/images/hero-1200.jpg'>
+    <?php $section_one_background_desktop = get_field( 'section_one_background_desktop' ); ?>
+  
+    <?php if ( $section_one_background_desktop ) { ?>
+      
+      <source media='(min-width: 1695px)' srcset='<?php echo $section_one_background_desktop['url']; ?>'>
+    
+    <?php } ?>
 
-    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/hero-tablet.jpg'>
+    <?php $section_one_background_large_laptop_Webp = get_field( 'section_one_background_large_laptop_Webp' ); ?>
+  
+    <?php if ( $section_one_background_large_laptop_Webp ) { ?>
+  
+      <source media='(min-width: 1380px)' srcset='<?php echo $section_one_background_large_laptop_Webp['url']; ?>' type="image/webp">
+    
+    <?php } ?>
+    
+    <?php $section_one_background_large_laptop = get_field( 'section_one_background_large_laptop' ); ?>
+    
+    <?php if ( $section_one_background_large_laptop ) { ?>
+      
+      <source media='(min-width: 1380px)' srcset='<?php echo $section_one_background_large_laptop['url']; ?>'>
+    
+      <?php } ?>
+    
+    <?php $section_one_background_tablet_webp = get_field( 'section_one_background_tablet_webp' ); ?>
+    
+    <?php if ( $section_one_background_tablet_webp ) { ?>
+      
+      <source media='(min-width: 1170px)' srcset='<?php echo $section_one_background_tablet_webp['url']; ?>' type="image/webp">
+    
+      <?php } ?>
 
-    <img id='hero' src="<?php bloginfo('template_directory');?>/images/hero-mobile.jpg" alt="" /><!-- hero -->
+    <?php $section_one_background_small_laptop = get_field( 'section_one_background_small_laptop' ); ?>
+      
+      <?php if ( $section_one_background_small_laptop ) { ?>
+
+        <source media='(min-width: 1170px)' srcset='<?php echo $section_one_background_small_laptop['url']; ?>'>
+    
+    <?php } ?>      
+    
+    <?php $section_one_background_tablet_webp = get_field( 'section_one_background_tablet_webp' ); ?>
+
+    <?php if ( $section_one_background_tablet_webp ) { ?>
+      
+      <source media='(min-width: 768px)' srcset='<?php echo $section_one_background_tablet_webp['url']; ?>' type="image/webp">
+    
+    <?php } ?>
+
+    <?php $section_one_background_tablet = get_field( 'section_one_background_tablet' ); ?>
+
+      <?php if ( $section_one_background_tablet ) { ?>
+
+        <source media='(min-width: 768px)' srcset='<?php echo $section_one_background_tablet['url']; ?>'>
+
+    <?php } ?>
+
+    <?php $section_one_background_mobile_webp = get_field( 'section_one_background_mobile_webp' ); ?>
+
+    <?php if ( $section_one_background_mobile_webp ) { ?>
+      
+      <source srcset='<?php echo $section_one_background_mobile_webp['url']; ?>' type="image/webp">
+    
+    <?php } ?>
+    
+    <?php $section_one_background_mobile = get_field( 'section_one_background_mobile' ); ?>
+
+    <img id="hero" src="<?php echo $section_one_background_mobile['url']; ?>" alt="<?php echo $section_one_background_mobile['alt']; ?>" /><!-- hero -->
     
   </picture>
 
