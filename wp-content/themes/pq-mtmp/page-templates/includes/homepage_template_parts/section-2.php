@@ -5,96 +5,58 @@
 		<div id='sec_two_top'>
 		
 			<div id='sec_two_left_slider'>
-			
-				<div class='sec_two_slide'>
+
+			<?php if ( have_rows( 'section_two_testimonials' ) ) : ?>
 				
-					<div class='sec_two_slide_profile_wrapper'>
+				<?php while ( have_rows( 'section_two_testimonials' ) ) : the_row(); ?>
+		
+					<div class='sec_two_slide'>
 					
-						<div class='sec_two_profile'>
+						<div class='sec_two_slide_profile_wrapper'>
 						
-							<img src='<?php bloginfo('template_directory');?>/images/client-photo.jpg' alt=''/><!-- name -->
-						
-						</div><!-- sec_two_profile -->
+							<div class='sec_two_profile'>
 
-						<div class='sec_two_profile_info'>
-						
-							<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+								<picture>
 
-							<span class='sec_two_profile_two'>Kerry - San Diego, CA</span><!-- sec_two_profile_two -->
-						
-						</div><!-- sec_two_profile_info -->
-					
-					</div><!-- sec_two_slide_profile_wrapper -->
+									<?php $profile_webp = get_sub_field( 'profile_webp' ); ?>
 
-					<div class='sec_two_slide_descrip'>
+									<?php if ( $profile_webp ) { ?>
+										
+										<source srcset='<?php echo $profile_webp['url']; ?>' type='image/webp'>
+									
+									<?php } ?>
+								
+									<?php $profile = get_sub_field( 'profile' ); ?>
+								
+									<img src='<?php echo $profile['url']; ?>' alt="<?php echo $profile['alt']; ?>" />
+								
+								</picture>
 						
-							<span>“... they have gone above and beyond to make things as painless as humanly possible.”</span>
-						
-						</div><!-- sec_two_slide_descrip -->
+							</div><!-- sec_two_profile -->
 
-						<span class='sec_two_slide_type'>DRUG SIDE eFFECTS</span><!-- sec_two_slide_type -->
+							<div class='sec_two_profile_info'>
+							
+								<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+
+								<span class='sec_two_profile_two'><?php the_sub_field( 'name' ); ?></span><!-- sec_two_profile_two -->
+							
+							</div><!-- sec_two_profile_info -->
+						
+						</div><!-- sec_two_slide_profile_wrapper -->
+
+						<div class='sec_two_slide_descrip'>
+							
+								<span><?php the_sub_field( 'description' ); ?></span>
+							
+							</div><!-- sec_two_slide_descrip -->
+
+							<span class='sec_two_slide_type'><?php the_sub_field( 'type' ); ?></span><!-- sec_two_slide_type -->
 				
-				</div><!-- sec_two_slide -->
+					</div><!-- sec_two_slide -->
 
-				<div class='sec_two_slide'>
-				
-					<div class='sec_two_slide_profile_wrapper'>
-					
-						<div class='sec_two_profile'>
-						
-							<img src='<?php bloginfo('template_directory');?>/images/client-photo.jpg' alt=''/><!-- name -->
-						
-						</div><!-- sec_two_profile -->
+				<?php endwhile; ?>
 
-						<div class='sec_two_profile_info'>
-						
-							<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
-
-							<span class='sec_two_profile_two'>Person - San Diego, CA</span><!-- sec_two_profile_two -->
-						
-						</div><!-- sec_two_profile_info -->
-					
-					</div><!-- sec_two_slide_profile_wrapper -->
-
-					<div class='sec_two_slide_descrip'>
-						
- 							<span>“... they have gone above and beyond to make they have gone above and beyond to make  things as painless as humanly possible.”</span>
-						
-						</div><!-- sec_two_slide_descrip -->
-
-						<span class='sec_two_slide_type'>DRUG SIDE eFFECTS</span><!-- sec_two_slide_type -->
-				
-				</div><!-- sec_two_slide -->
-
-				<div class='sec_two_slide'>
-				
-					<div class='sec_two_slide_profile_wrapper'>
-					
-						<div class='sec_two_profile'>
-						
-							<img src='<?php bloginfo('template_directory');?>/images/client-photo.jpg' alt=''/><!-- name -->
-						
-						</div><!-- sec_two_profile -->
-
-						<div class='sec_two_profile_info'>
-						
-							<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
-
-							<span class='sec_two_profile_two'>Person - San Diego, CA</span><!-- sec_two_profile_two -->
-						
-						</div><!-- sec_two_profile_info -->
-					
-					</div><!-- sec_two_slide_profile_wrapper -->
-
-					<div class='sec_two_slide_descrip'>
-						
-							<span>“... they have gone above and beyond to make things as painless as humanly possible.”</span>
-						
-						</div><!-- sec_two_slide_descrip -->
-
-						<span class='sec_two_slide_type'>DRUG SIDE eFFECTS</span><!-- sec_two_slide_type -->
-				
-				</div><!-- sec_two_slide -->
+			<?php endif; ?>
 			
 			</div><!-- sec_two_left_slider -->
 
@@ -116,171 +78,77 @@
 
 				<div class='sec_two_featured_arrow_left sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
 			
-				<div id='sec_two_featured_slider'>
+					<div id='sec_two_featured_slider'>
+
+						<?php if ( have_rows( 'section_two_post_slider' ) ) : ?>
+						
+							<?php while ( have_rows( 'section_two_post_slider' ) ) : the_row(); ?>
+
+								<?php $post_object = get_sub_field( 'sec_two_post_page' ); ?>
+							
+									<?php if ( $post_object ): ?>
+									
+										<?php $post = $post_object; ?>
+										
+										<?php setup_postdata( $post ); ?> 
+						
+										<div class='sec_two_featured_slide'>
+
+											<a href="<?php the_permalink();?>">
+
+												<div class='sec_two_featured_image'>
+												
+													<picture>
+
+														<?php $image_webp = get_sub_field( 'image_webp' ); ?>
+								
+														<?php if ( $image_webp ) { ?>
+															
+															<source srcset='<?php echo $image_webp['url']; ?>' type='image/webp'>
+														
+														<?php } ?>
+
+														<?php $image = get_sub_field( 'image' ); ?>
+													
+														<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+													</picture>
+			
+												</div><!-- sec_two_featured_image -->
+
+												<div class='sec_two_featured_slide_content'>
+												
+													<span class='sec_two_featured_slide_title'><?php the_title();?></span><!-- class -->
+
+													<div class='sec_two_featured_slide_descrip'>
+													
+														<p><?php the_sub_field( 'description' ); ?></p>
+													
+													</div><!-- sec_two_featured_slide_descrip -->
+													
+													<div class='learn_more_wrapper'>
+													
+														<span class='button_two'>Learn More</span><!-- button_two -->
+													
+													</div><!-- learn_more_wrapper -->
+
+												</div><!-- sec_two_featured_slide_content -->
+
+											</a>
+
+										</div><!-- sec_two_featured_slide -->
+										
+										<?php wp_reset_postdata(); ?>
+									
+									<?php endif; ?>
+							
+							<?php endwhile; ?>
+
+						<?php endif; ?>
 				
-					<div class='sec_two_featured_slide'>
-
-						<a href="">
-					
-  						<div class='sec_two_featured_image'>
-  						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
-  						
-  						</div><!-- sec_two_featured_image -->
-  
-  						<div class='sec_two_featured_slide_content'>
-  						
-  							<span class='sec_two_featured_slide_title'>Zantac</span><!-- class -->
-  
-  							<div class='sec_two_featured_slide_descrip'>
-  							
-									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
-  							
-								</div><!-- sec_two_featured_slide_descrip -->
-								
-								<div class='learn_more_wrapper'>
-								
-									<span class='button_two'>Learn More</span><!-- button_two -->
-								
-								</div><!-- learn_more_wrapper -->
-
-  						</div><!-- sec_two_featured_slide_content -->
-
-					 </a>
-					
-					</div><!-- sec_two_featured_slide -->
-
-					<div class='sec_two_featured_slide'>
-
-						<a href="">
-					
-  						<div class='sec_two_featured_image'>
-  						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-2.jpg' alt=''/><!-- name -->
-  						
-  						</div><!-- sec_two_featured_image -->
-  
-  						<div class='sec_two_featured_slide_content'>
-  						
-  							<span class='sec_two_featured_slide_title'>Uloric</span><!-- class -->
-  
-  							<div class='sec_two_featured_slide_descrip'>
-  							
-									<p>The FDA has issued a Black Box Warning about gout medication, Ulroic (febuxostat) and cardiovascular death.</p>
-  							
-								</div><!-- sec_two_featured_slide_descrip -->
-								
-								<div class='learn_more_wrapper'>
-								
-									<span class='button_two'>Learn More</span><!-- button_two -->
-								
-								</div><!-- learn_more_wrapper -->
-
-  						</div><!-- sec_two_featured_slide_content -->
-
-					 </a>
-					
-					</div><!-- sec_two_featured_slide -->
-
-					<div class='sec_two_featured_slide'>
-
-						<a href="">
-					
-  						<div class='sec_two_featured_image'>
-  						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-3.jpg' alt=''/><!-- name -->
-  						
-  						</div><!-- sec_two_featured_image -->
-  
-  						<div class='sec_two_featured_slide_content'>
-  						
-  							<span class='sec_two_featured_slide_title'>Priolosec & Nexium</span><!-- class -->
-  
-  							<div class='sec_two_featured_slide_descrip'>
-  							
-									<p>Priolosec & Nexium, lawsuit claims the drugs cause serious side effects like storke, heart attack, dementia and kidney problems.</p>
-  							
-								</div><!-- sec_two_featured_slide_descrip -->
-								
-								<div class='learn_more_wrapper'>
-								
-									<span class='button_two'>Learn More</span><!-- button_two -->
-								
-								</div><!-- learn_more_wrapper -->
-
-  						</div><!-- sec_two_featured_slide_content -->
-
-					 </a>
-					
-					</div><!-- sec_two_featured_slide -->
-
-					<div class='sec_two_featured_slide'>
-
-						<a href="">
-					
-  						<div class='sec_two_featured_image'>
-  						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-4.jpg' alt=''/><!-- name -->
-  						
-  						</div><!-- sec_two_featured_image -->
-  
-  						<div class='sec_two_featured_slide_content'>
-  						
-  							<span class='sec_two_featured_slide_title'>Test</span><!-- class -->
-  
-  							<div class='sec_two_featured_slide_descrip'>
-  							
-									<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
-  							
-								</div><!-- sec_two_featured_slide_descrip -->
-								
-								<div class='learn_more_wrapper'>
-								
-									<span class='button_two'>Learn More</span><!-- button_two -->
-								
-								</div><!-- learn_more_wrapper -->
-
-  						</div><!-- sec_two_featured_slide_content -->
-
-					 </a>
-					
-					</div><!-- sec_two_featured_slide -->
-
-					<div class='sec_two_featured_slide'>
-
-						<a href="">
-					
-  						<div class='sec_two_featured_image'>
-  						
-  							<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg' alt=''/><!-- name -->
-  						
-  						</div><!-- sec_two_featured_image -->
-  
-  						<div class='sec_two_featured_slide_content'>
-  						
-  							<span class='sec_two_featured_slide_title'>Priolosec & Nexium</span><!-- class -->
-  
-  							<div class='sec_two_featured_slide_descrip'>
-  							
-								<p>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</p>
-  							
-								</div><!-- sec_two_featured_slide_descrip -->
-								
-								<div class='learn_more_wrapper'>
-								
-									<span class='button_two'>Learn More</span><!-- button_two -->
-								
-								</div><!-- learn_more_wrapper -->
-
-							</div><!-- sec_two_featured_slide_content -->
-
-					 </a>
-					
-					</div><!-- sec_two_featured_slide -->
+					</div><!-- sec_two_featured_slider -->
 				
-				</div><!-- sec_two_featured_slider -->
-				
-				<div class='sec_two_featured_arrow_right sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
+					<div class='sec_two_featured_arrow_right sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
 			
 			</div><!-- sec_two_featured_slider_wrapper -->
 		

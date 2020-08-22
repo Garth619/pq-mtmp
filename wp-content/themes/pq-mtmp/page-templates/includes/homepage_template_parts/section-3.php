@@ -6,29 +6,34 @@
 		
 			<div id='sec_three_left_inner'>
 			
-				<span id='sec_three_left_descrip'>We never charge a fee to handle a dangerous product case. <strong>You only pay us if we win your case!</strong></span><!-- sec_three_left_descrip -->
+				<span id='sec_three_left_descrip'><?php the_field( 'section_three_large_description' ); ?></strong></span><!-- sec_three_left_descrip -->
 
-				<a class='button free_consult_button' href='#consultation'><span>Request a Free Consultation</span></a><!-- button -->
+				<?php if(get_field('section_three_button_verbiage') && get_field('section_three_button_link')) { ?>
+
+					<a class='button free_consult_button' href='<?php the_field( 'section_three_button_link' ); ?>'><span><?php the_field( 'section_three_button_verbiage' ); ?></span></a><!-- button -->
+
+				<?php } ?>
 
 			</div><!-- sec_three_inner -->
 
-			<img id='eb_graphic' src='<?php bloginfo('template_directory');?>/images/eb-graphic.svg' alt=''/><!-- eb_graphic -->
+			<?php $section_three_logo = get_field( 'section_three_logo' ); ?>
+
+			<?php if ( $section_three_logo ) { ?>
+			
+					<img id="eb_graphic" src="<?php echo $section_three_logo['url']; ?>" alt="<?php echo $section_three_logo['alt']; ?>" />
+			
+			<?php } ?>
+
 		
 		</div><!-- sec_three_left -->
 
 		<div id='sec_three_right' class="content">
 		
-			<h1 id="sec_three_header" class='page_header'>Dangerous Products Lawyers</h1><!-- page_header -->
+			<h1 id="sec_three_header" class='page_header'><?php the_field( 'section_three_title' ); ?></h1><!-- page_header -->
 
 			<div id='sec_three_content'>
 			
-   			<p>Dangerousproducts.org is a consumer focused site dedicated to providing a helpful information on dangerous products to help keep people safe. Dangerous products go on the market on a regular basis. Our goal is to keep you informed so you can keep your family safe from harm, as well as to provide experect advice.</p>
-   			
-   			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null aiciatis unde omnis.</p>
-   			
-   			<h2>Call today for a free consultation</h2>
-   			
-   			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				<?php the_field( 'section_three_content' ); ?>
 
 			</div><!-- sec_three_content -->
 		
