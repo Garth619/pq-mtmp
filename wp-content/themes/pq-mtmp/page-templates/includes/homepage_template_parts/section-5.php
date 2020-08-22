@@ -2,193 +2,68 @@
 
 	<div id='sec_five_inner'>
 	
-		<span id='sec_five_header'>Most Dangerous Products on the Market</span><!-- sec_five_header -->
+		<span id='sec_five_header'><?php the_field( 'section_five_title' ); ?></span><!-- sec_five_header -->
 
-		<div id='sec_five_post_image_wrapper'>
-		
-			<div class='sec_five_post'>
+		<div id='sec_five_post_wrapper'>
 
-				<a href="">
+			<?php if ( have_rows( 'section_five_posts_pages' ) ) : ?>
+				<?php while ( have_rows( 'section_five_posts_pages' ) ) : the_row(); ?>
 			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-1.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>Zantac</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>The FDA has warned that heartburn medication Zantac may be contaminated with NDMA an industrial chemical known to be carcinogenic.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
-
-				</a>
 			
-			</div><!-- sec_five_post -->
+					<?php $post_object = get_sub_field( 'post_page' ); ?>
+					
+					<?php if ( $post_object ): ?>
+						
+						<?php $post = $post_object; ?>
+						<?php setup_postdata( $post ); ?> 
+							
 
-			<div class='sec_five_post'>
+							<div class='sec_five_post'>
 
-				<a href="">
-			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-2.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>Uloric</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>The FDA has issued a Black Box Warning about gout medication, Ulroic (febuxostat) and cardiovascular death.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
+								<a href="<?php the_permalink();?>">
 
-				</a>
-			
-			</div><!-- sec_five_post -->
+									<div class='sec_five_post_image_wrapper'>
+									
+										<?php $post_image = get_sub_field( 'post_image' ); ?>
+					
+										<?php if ( $post_image ) { ?>
+											
+											<img src="<?php echo $post_image['url']; ?>" alt="<?php echo $post_image['alt']; ?>" />
+					
+										<?php } ?>
 
-			<div class='sec_five_post'>
+										<span class='post_cat_title'><?php the_sub_field( 'category' ); ?></span><!-- post_cat_title -->
+									
+									</div><!-- sec_five_post_image_wrapper -->
 
-				<a href="">
-			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-3.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>Drugs</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>Priolosec & Nexium</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>Priolosec & Nexium, lawsuit claims the drugs cause serious side effects like storke, heart attack, dementia and kidney problems.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
+									<div class='sec_five_post_content'>
+									
+										<span class='sec_five_post_title'><?php the_title();?></span><!-- sec_five_post_title -->
 
-				</a>
-			
-			</div><!-- sec_five_post -->
+										<span class='sec_five_post_descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec_five_post_descrip -->
 
-			<div class='sec_five_post'>
+										<div class='sec_five_learn_more_wrapper'>
+										
+											<span class='button_three'>Learn More</span><!-- button_three -->
+										
+										</div><!-- sec_five_learn_more_wrapper -->
+									
+									</div><!-- sec_five_post_content -->
 
-				<a href="">
-			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-4.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>PRODUCT LIABILITY</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>Talcum Powder</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>If you or a loved one experienced ovarian cancer after years of using talc-based powders, you could have a case against Johnson & Johnson.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
+								</a>
 
-				</a>
-			
-			</div><!-- sec_five_post -->
+							</div><!-- sec_five_post -->
 
-			<div class='sec_five_post'>
 
-				<a href="">
-			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-5.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>PRODUCT LIABILITY</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>3M Earplugs</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>3M is facing numerous lawsuits over claims that the defective design of its military earplugs caused hearing loss or damage.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
-
-				</a>
-			
-			</div><!-- sec_five_post -->
-
-			<div class='sec_five_post'>
-
-				<a href="">
-			
-  				<div class='sec_five_post_image_wrapper'>
-  				
-  					<img src='<?php bloginfo('template_directory');?>/images/lawuit-photo-6.jpg'/><!-- name -->
-  
-  					<span class='post_cat_title'>MEDICAL DEVICES</span><!-- post_cat_title -->
-  				
-  				</div><!-- sec_five_post_image_wrapper -->
-  
-  				<div class='sec_five_post_content'>
-  				
-  					<span class='sec_five_post_title'>Hernia Mesh</span><!-- sec_five_post_title -->
-  
-  					<span class='sec_five_post_descrip'>Lawsuits stem from device complications like infection, pain, bowel obstruction, organ or tissue perforation and adhesion.</span><!-- sec_five_post_descrip -->
-  
-  					<div class='sec_five_learn_more_wrapper'>
-  					
-  						<span class='button_three'>Learn More</span><!-- button_three -->
-  					
-  					</div><!-- sec_five_learn_more_wrapper -->
-  				
-  				</div><!-- sec_five_post_content -->
-
-				</a>
-			
-			</div><!-- sec_five_post -->
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				
+				<?php endwhile; ?>
+			<?php endif; ?>
 		
 		</div><!-- sec_five_post_wrapper -->
 
-		<a id='sec_five_button' class="button" href=''><span>View All Dangerous Products</span></a><!-- class -->
+		<a id='sec_five_button' class="button" href='<?php the_field( 'section_five_view_all_page_link' ); ?>'><span><?php the_field( 'section_five_button_verbiage' ); ?></span></a><!-- class -->
 	
 	</div><!-- sec_five_inner -->
 
