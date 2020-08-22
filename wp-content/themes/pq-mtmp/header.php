@@ -96,7 +96,13 @@
 	
 		<a id='logo' href='<?php bloginfo('url');?>'>
 		
-				<img src='<?php bloginfo('template_directory');?>/images/eb-logo.svg' /><!-- name -->
+		<?php $logo = get_field( 'logo','option'); ?>
+		
+		<?php if ( $logo ) { ?>
+		
+			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+		
+		<?php } ?>
 		
 		</a><!-- phone -->
 	
@@ -106,9 +112,9 @@
 	
 	<div id='cta_phone_wrapper'>
 	
-		<span id='cta_title'>Call 24/7 for a free consultation</span>
+		<span id='cta_title'><?php the_field( 'free_consultation_call_to_action','option'); ?></span>
 		
-		<a id='phone' href='tel:+18885433210'>(888) 543-3210</a><!-- phone -->
+		<a id='phone' href='tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('header_phone', 'option')); ?>'><?php the_field( 'header_phone','option'); ?></a><!-- phone -->
 		
 		</span><!-- cta_title -->
 	

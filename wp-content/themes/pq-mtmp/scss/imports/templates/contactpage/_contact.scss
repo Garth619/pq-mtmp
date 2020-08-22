@@ -1,6 +1,9 @@
-body.page-template-template-contact {
+body.page-template-template-contact,
+body.error404 {
   #internal_banner {
-    height: 210px;
+    @include mq(small_laptop) {
+      height: 210px;
+    }
   }
   #footer_bottom {
     margin-top: 0;

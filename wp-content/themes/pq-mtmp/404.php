@@ -1,27 +1,41 @@
 <?php get_header(); ?>
 
 <div id="internal_main">
+
+<div id='internal_banner'>
 	
-	<div class="page_container one_col">
+		<div id='internal_banner_content'>
 
-		<div id='not_found_wrapper' class="internal_wrapper">
+			<h1 class="internal_title banner_title"><?php the_field( 'not_found_title','option'); ?></h1><!-- banner_title -->
+				
+		</div><!-- internal_banner_content -->
+
+		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
 		
-			<h1 id='internal_header'><?php the_field( 'not_found_title','option'); ?></h1><!-- internal_header -->
+		<img id='banner_hero' src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
 
-			<span class='double_line not_found_header'></span><!-- double_line -->
+	</div><!-- internal_banner -->
 
-			<span id='not_found_subtitle'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- not_found_subtitle -->
+	<div id='page_wrapper' class="not_found_page_wrapper one_col">
 
+	<div id='not_found_wrapper'>
+	
+		
+	
 			<div id='not_found_content' class="content">
-			
+				
 				<?php the_field( 'not_found_content','option'); ?>
-			
+				
 			</div><!-- not_found_content -->
-
-		</div><!-- not_found_wrapper -->
-		
-	</div><!-- page_container -->
 	
+		</div><!-- not_found_wrapper -->
+
+		<?php get_template_part('page-templates/includes/main_form/template','main_form');?>
+
+	</div><!-- page_wrapper -->
+
 </div><!-- internal_main -->
+
+		
 			
 <?php get_footer(); ?>

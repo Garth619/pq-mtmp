@@ -4,15 +4,15 @@
   
     <div id='sec_one_top'>
     
-      <span id='sec_one_title'>Legal help for people injured by dangerous and defective products</span><!-- sec_one_title -->
+      <span id='sec_one_title'><?php the_field( 'section_one_title' ); ?></span><!-- sec_one_title -->
 
       <div id='sec_one_content'>
       
-        <p>Providing consumers with information on high-risk medical products, dangerous prescription medications and consumer products known to cause serious injuries.</p>
+        <?php the_field( 'section_one_content' ); ?>
 
       </div><!-- sec_one_content -->
 
-      <a class='button free_consult_button' href='#consultation'><span>Request a Free Consultation</span></a><!-- button -->
+      <a class='button free_consult_button' href='#consultation'><span><?php the_field( 'section_one_button_verbiage' ); ?></span></a><!-- button -->
     
     </div><!-- sec_one_top -->
 
@@ -22,57 +22,43 @@
 
       <span id='sec_one_logo_title'>Featured On</span><!-- sec_one_logo_title -->
   
-</div>
+    </div>
 
-      <div id='sec_one_slider'>
+    <?php if ( have_rows( 'section_logos' ) ) : ?>
       
-        <div class='sec_one_slide'>
+      <div id='sec_one_slider'>
         
-          <div class='sec_one_slide_inner'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/news-logo-today.svg' alt=''/><!-- name -->
-          
-          </div><!-- sec_one_slide_inner -->
+        <?php while ( have_rows( 'section_logos' ) ) : the_row(); ?>
         
-        </div><!-- sec_one_slide -->
-
-        <div class='sec_one_slide'>
-        
-          <div class='sec_one_slide_inner'>
+          <div class='sec_one_slide'>
+            
+            <div class='sec_one_slide_inner'>
+            
+            <?php $logo = get_sub_field( 'logo' ); ?>
+            
+              <?php if ( $logo ) { ?>
+              
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+            
+              <?php } ?>
+            
+            </div><!-- sec_one_slide_inner -->
           
-            <img src='<?php bloginfo('template_directory');?>/images/news-logo-cnn.svg' alt=''/><!-- name -->
-          
-          </div><!-- sec_one_slide_inner -->
-        
-        </div><!-- sec_one_slide -->
-
-        <div class='sec_one_slide'>
-        
-          <div class='sec_one_slide_inner'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/news-logo-fox.svg' alt=''/><!-- name -->
-          
-          </div><!-- sec_one_slide_inner -->
-        
-        </div><!-- sec_one_slide -->
-
-        <div class='sec_one_slide'>
-        
-          <div class='sec_one_slide_inner'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/news-logo-cbs.svg' alt=''/><!-- name -->
-          
-          </div><!-- sec_one_slide_inner -->
-        
-        </div><!-- sec_one_slide -->
+          </div><!-- sec_one_slide -->
+      
+        <?php endwhile; ?>
       
       </div><!-- sec_one_slider -->
-    
+
+    <?php endif; ?>
+      
     </div><!-- sec_one_bottom -->
   
   </div><!-- sec_one_inner -->
 
   <picture>
+
+    <source media='(min-width: 1695px)' srcset='<?php bloginfo('template_directory');?>/images/hero-hd1920.jpg'>
 
     <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory');?>/images/hero-1400.jpg'>
 
