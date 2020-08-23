@@ -3,9 +3,9 @@
 
 	<div id='sidebar_form'>
 
-		<span id='sidebar_form_title'>How can we help you?</span><!-- sidebar_form_title -->
+		<span id='sidebar_form_title'><?php the_field( 'sidebar_form_title','option'); ?></span><!-- sidebar_form_title -->
 
-		<span id='sidebar_form_subtitle'>Request your <strong>free consultation</strong> today and an attorney will get back to you shortly.</span><!-- sidebar_form_title -->
+		<span id='sidebar_form_subtitle'><?php the_field( 'sidebar_subtitle','option'); ?></span><!-- sidebar_form_title -->
 	
 		<?php gravity_form(4, false, false, false, '', true, 1233); ?>
 

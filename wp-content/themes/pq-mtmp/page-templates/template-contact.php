@@ -14,21 +14,21 @@
 				
 					<div class='contact_col'>
 				
-						<span class='contact_title'>Office Location</span><!-- contact_title -->
+						<span class='contact_title'><?php the_field( 'contact_title' ); ?></span><!-- contact_title -->
 
-						<span class='contact_address contact_content'>2869 India St</br> San Diego, CA 92103</span><!-- contact_address -->
+						<span class='contact_address contact_content'><?php the_field( 'contact_address' ); ?></span><!-- contact_address -->
 
-						<a href="" class="get_directions" target="_blank" rel="noopener">Get Directions</a>
+						<a href="<?php the_field( 'contact_button_link' ); ?>" class="get_directions" target="_blank" rel="noopener"><?php the_field( 'contact_button_verbiage' ); ?></a>
 				
 					</div><!-- contact_col -->
 
 					<div class='contact_col'>
 				
-						<span class='contact_title'>Call Today</span><!-- contact_title -->
+						<span class='contact_title'><?php the_field( 'contact_title_two' ); ?></span><!-- contact_title -->
 
-						<span class='contact_subtitle'>Free Consultations</span><!-- contact_title -->
+						<span class='contact_subtitle'><?php the_field( 'contact_subtitle' ); ?></span><!-- contact_title -->
 
-						<a href="tel:+16192950035" class='contact_address contact_content'>(619) 295-0035</a><!-- contact_address -->
+						<a href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('contact_phone')); ?>" class='contact_address contact_content'><?php the_field( 'contact_phone' ); ?></a><!-- contact_address -->
 				
 					</div><!-- contact_col -->
 

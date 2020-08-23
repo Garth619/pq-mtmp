@@ -11,46 +11,68 @@
   <div id='footer_col_one' class="footer_col">
   
     <a id='footer_logo' href='<?php bloginfo('url');?>'>
-  
-      <img idclass='name' src='<?php bloginfo('template_directory');?>/images/eb-logo.svg' alt=''/><!-- name -->
+
+      <?php $footer_logo = get_field( 'footer_logo','option'); ?>
     
+      <?php if ( $footer_logo ) { ?>
+	
+        <img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" />
+
+      <?php } ?>
+  
     </a><!-- footer_logo -->
 
-    <span id='footer_cta'>Call 24/7 for a free consultation</span><!-- footer_cta -->
+    <span id='footer_cta'><?php the_field( 'footer_free_consultation','option'); ?></span><!-- footer_cta -->
 
-    <div id='social_media'>
-    
-      <a class='sm' href='' target="_blank" rel="noopener">
+    <?php if ( have_rows( 'social_media','option') ) : ?>
+      <div id='social_media'>
+	    <?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
 
-        <?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
+        <?php if(get_sub_field('icon') == "Instagram") { ?>
 
-      </a><!-- sm -->
+          <a class='sm' href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
 
-      <a class='sm' href='' target="_blank" rel="noopener">
+            <?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
 
-        <?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
+          </a><!-- sm -->
 
-      </a><!-- sm -->
+        <?php } ?>
 
-      <a class='sm' href='' target="_blank" rel="noopener">
+        <?php if(get_sub_field('icon') == "Facebook") { ?>
 
-        <?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
+          <a class='sm' href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
 
-      </a><!-- sm -->
-    
-    </div><!-- social_media -->
+            <?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
+
+          </a><!-- sm -->
+
+        <?php } ?>
+
+        <?php if(get_sub_field('icon') == "Twitter") { ?>
+
+          <a class='sm' href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
+
+            <?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
+
+          </a><!-- sm -->
+
+        <?php } ?>
+
+	    <?php endwhile; ?>
+      </div><!-- social_media -->
+    <?php endif; ?>
   
   </div><!-- footer_col_one -->
 
   <div id='footer_col_two' class="footer_col">
   
-    <span id='location_title'>Office Location</span><!-- location_title -->
+    <span id='location_title'><?php the_field( 'footer_location_title','option'); ?></span><!-- location_title -->
 
-    <span id='address'>2869 India St<br/> San Diego, CA 92103</span><!-- address -->
+    <span id='address'><?php the_field( 'address','option'); ?></span><!-- address -->
 
-    <span id='footer_phone'>Phone <span>(619) 295-0035</span></span><!-- footer_phone -->
+    <a id='footer_phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>">Phone <span><?php the_field( 'footer_phone','option'); ?></span></a><!-- footer_phone -->
 
-    <a class='get_directions' href='' target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
+    <a class='get_directions' href='<?php the_field( 'get_directions_link','option'); ?>' target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage','option'); ?></a><!-- get_directions -->
   
   </div><!-- footer_col_two -->
 
@@ -61,14 +83,18 @@
   <div id='copyright_inner'>
   
     <ul>
-      <li>Copyright &copy; <?php echo date('Y'); ?> Estey Bomberger</li>
-      <li><a href="">Policies & Disclaimer</a></li>
-      <li><a href="">Privacy Policy</li>
+      <li>Copyright &copy; <?php echo date('Y'); ?> <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+      <?php if(get_field('disclaimer','option') && get_field('disclaimer_title','option')) { ?>
+        <li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></li>
+      <?php } ?>
+      <?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) { ?>
+      <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
+      <?php } ?>
     </ul>
 
-    <a id='ilawyer' href=''>
+    <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
 
-      <img src='<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg' alt=''/>
+      <img src='<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg' alt='ilawyer logo'/>
 
     </a><!-- ilawyer -->
   

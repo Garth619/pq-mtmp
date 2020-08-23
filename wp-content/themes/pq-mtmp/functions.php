@@ -51,13 +51,13 @@ function admin_scripts( ) {
 
     // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor see /scss/imports/components/acf-blocks/admin/admin.scss file for reference
 
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/admin.css', '', 5, 'all' ); 
+    //wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/admin.css', '', 5, 'all' ); 
 
     // Scripts
 
     // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor
 
-    wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+    //wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
 
   }
