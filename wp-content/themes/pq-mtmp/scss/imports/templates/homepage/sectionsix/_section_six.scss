@@ -98,19 +98,30 @@ span#sec_six_title {
     flex-basis: 40%;
   }
   &:hover {
+    .sec_six_page_title_wrapper {
+      span.sec_six_page_title {
+        color: $color_bright_one;
+      }
+    }
     .button_four {
       background: $color_dark_one;
       color: $color_light_one;
     }
   }
   a {
-    color: $color_dark_one;
     cursor: pointer;
     text-decoration: none;
   }
 }
 
 .sec_six_meta {
+  a {
+    color: $color_bright_two;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color_bright_one;
+    }
+  }
   span {
     display: inline;
     @include type(
@@ -163,7 +174,7 @@ span#sec_six_title {
   max-width: 450px;
   padding: 10px;
   @include margin_lr;
-  @include flex();
+
   @include mq(small_tablet) {
     max-width: 100%;
     padding: 0 20px;
@@ -171,12 +182,15 @@ span#sec_six_title {
   @include mq(small_laptop) {
     padding: 0;
   }
+  a {
+    @include flex();
+  }
   .sec_six_image {
     flex-basis: 84px;
     flex-shrink: 0;
     img {
-      @include box(84px);
       @include image();
+      @include box(84px);
     }
   }
 
@@ -184,11 +198,13 @@ span#sec_six_title {
     position: relative;
     top: -5px;
     padding-left: 17px;
+    transition: all 200ms ease-in-out;
     @include type(
       (
         size: 22px,
         height: 30px,
         align: left,
+        color: $color_dark_one,
         family: $primaryfont,
         weight: 700,
       )
@@ -227,8 +243,12 @@ span.sec_six_divider {
   @include mq(small_laptop) {
     padding: 0;
   }
+  a {
+    color: $color_dark_one;
+  }
 }
 
 .sec_six_readmore {
   margin-top: 20px;
+  color: $color_light_one;
 }
