@@ -188,6 +188,7 @@ span#sec_six_title {
   .sec_six_image {
     flex-basis: 84px;
     flex-shrink: 0;
+    margin-right: 17px;
     img {
       @include image();
       @include box(84px);
@@ -196,8 +197,8 @@ span#sec_six_title {
 
   span.sec_six_page_title {
     position: relative;
-    top: -5px;
-    padding-left: 17px;
+    //top: -5px;
+    padding-bottom: 4px;
     transition: all 200ms ease-in-out;
     @include type(
       (
@@ -209,11 +210,13 @@ span#sec_six_title {
         weight: 700,
       )
     );
-    @include mq(small_tablet) {
-      top: 15px;
-    }
     @include mq(large_laptop) {
       max-width: 375px;
+    }
+    &.has_image {
+      @include mq(small_tablet) {
+        top: 12px;
+      }
     }
   }
 }
@@ -228,6 +231,9 @@ span.sec_six_divider {
   }
   @include mq(small_laptop) {
     margin: 25px 0 15px;
+  }
+  &.no_image {
+    margin-top: 15px;
   }
 }
 

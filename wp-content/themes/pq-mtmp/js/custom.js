@@ -253,7 +253,7 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  /* Case Results Coulumns
+  /* Case Results Columns
 --------------------------------------------------------------------------------------- */
 
   if ($("#case_results_wrapper").length > 0) {
