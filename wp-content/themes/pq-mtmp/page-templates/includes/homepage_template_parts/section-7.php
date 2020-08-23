@@ -3,18 +3,96 @@
 <div id='sec_seven_inner'>
 
   <div id='sec_seven_top'>
-  
-    <div id='sec_seven_video' class="video_module">
+
+  <?php if(get_field('wistia_or_youtube_sec_seven') == "Youtube" ) { ?>
+
+<div id="section_seven_video" class="video_module">
+
+  <a href="https://www.youtube.com/embed/<?php the_field( 'youtube_id_sec_seven' ); ?>" data-lity>
+
+    <div class='single_video_thumbnail'>
     
+    <div class='video_overlay'>
+
+      <span class='play_button'></span><!-- play_button -->
+
+    </div><!-- video_overlay -->
+
+    <?php if(get_field('section_seven_video_thumbnail_select') == "Leave Blank" ) { ?>
+
+      <img id="youtube_img" src="https://img.youtube.com/vi/<?php the_field( 'youtube_id_sec_seven' ); ?>/0.jpg"/>
+
+    <?php } ?>
+
+    <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
+
+      <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
+
+      <img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
+
+    <?php } ?>
+
+    
+
+    </div><!-- single_video_thumbnail -->
+
+    <span class='video_title'><?php the_field( 'video_title_video_center' ); ?></span><!-- video_title -->
+
+  </a>
+
+</div><!-- single_video -->
+
+<?php } ?>
+
+<?php if(get_field('wistia_or_youtube_sec_seven') == "Wistia" ) { ?>
+
+  <div id="section_seven_video" class="video_module">
+
+  <a>
+
+    <div class='single_video_thumbnail'>
+
+      <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
+
+        <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_sec_seven' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
+
+      <?php } ?>
+
+      <?php if(get_field('section_seven_video_thumbnail_select') == "Leave Blank" ) { ?>
+
+        <div class="mywistia_thumbnail">
+
+          <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_sec_seven' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywistia -->
+
+        </div><!-- mywistia_thumbnail -->
+
+      <?php } ?>
+
       <div class='video_overlay'>
-      
+
         <span class='play_button'></span><!-- play_button -->
-      
+
       </div><!-- video_overlay -->
 
-      <img src='<?php bloginfo('template_directory');?>/images/video-photo.jpg' /><!-- name -->
+    <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
+
+      <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
+
+        <img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
+
+      <?php } ?>
+
+      </div><!-- single_video_thumbnail -->
+
+  </a>
+  
+
+</div><!-- single_video -->
+
+
+<?php }?>
+  
     
-    </div><!-- sec_seven_video -->
   
   </div><!-- sec_seven_top -->
 
@@ -22,15 +100,19 @@
 
     <div id='sec_seven_bottom_inner'>
     
-      <span id='sec_seven_title'>Meet the Attorneys</span><!-- sec_seven_title -->
+      <span id='sec_seven_title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec_seven_title -->
   
       <div id='sec_seven_content'>
       
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <?php the_field( 'section_seven_content' ); ?>
       
       </div><!-- sec_seven_content -->
+
+      <?php if(get_field('section_seven_button_verbiage') && get_field('section_seven_button_page_link')) { ?>
   
-      <a id='sec_seven_learn_more' class='button_five' href=''>Learn More</a><!-- button_five -->
+        <a id='sec_seven_learn_more' class='button_five' href='<?php the_field( 'section_seven_button_page_link' ); ?>'><?php the_field( 'section_seven_button_verbiage' ); ?></a><!-- button_five -->
+
+      <?php } ?>
   
       </div><!-- sec_seven_bottom_inner -->
 

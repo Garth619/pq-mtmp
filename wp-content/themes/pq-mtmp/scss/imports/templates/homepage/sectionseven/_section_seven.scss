@@ -33,7 +33,7 @@
   }
 }
 
-#sec_seven_video {
+#section_seven_video {
   &.video_module {
     position: relative;
     margin-bottom: 30px;
@@ -53,10 +53,51 @@
         }
       }
     }
-    .video_overlay {
-      @include flex(center, center);
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      span.play_button {
+        &:after {
+          border-left-color: $color_bright_one;
+        }
+      }
+      .single_video_thumbnail {
+        .video_overlay {
+          background: $color_light_rgba_four;
+        }
+      }
+    }
+    .single_video_thumbnail {
+      position: relative;
+      .video_overlay {
+        pointer-events: none;
+        background: transparent;
+        transition: all 300ms ease-in-out;
+        @include flex(center, center);
+        @include box(100%);
+        @include abs(0, null, null, 0, 1);
+      }
+    }
+    img#youtube_img {
       @include box(100%);
-      @include abs(0, null, null, 0);
+    }
+    .mywistia_thumbnail {
+      position: relative;
+      @include box(100%, 290px);
+      @include mq(small_laptop) {
+        @include box(100%, 310px);
+      }
+      @include mq(large_laptop) {
+        @include box(100%, 400px);
+      }
+      @include mq(small_monitor) {
+        @include box(100%, 471px);
+      }
+    }
+    .mywistia {
+      @include box(100%);
+      @include abs(0, null, null, 0, 1);
     }
     img {
       @include image();
