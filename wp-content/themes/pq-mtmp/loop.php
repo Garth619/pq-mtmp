@@ -39,10 +39,6 @@
 		
 		<?php endif;?>
 
-
-		
-		
-		
 		<div class="blog_content content">
 			
 			<?php echo wp_trim_words( get_the_content(), 54, '...' );?>

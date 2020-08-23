@@ -44,7 +44,7 @@
 
 										<div class='sec_five_learn_more_wrapper'>
 										
-											<span class='button_three'>Learn More</span><!-- button_three -->
+											<span class='button_three'><?php the_sub_field( 'button_verbiage' ); ?></span><!-- button_three -->
 										
 										</div><!-- sec_five_learn_more_wrapper -->
 									

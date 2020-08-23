@@ -72,7 +72,7 @@
 
 		<div id='sec_two_bottom'>
 		
-			<span id='sec_two_featured_title'>FEATURED LAWSUITS</span><!-- sec_two_featured_title -->
+			<span id='sec_two_featured_title'><?php the_field( 'section_two_featured_lawsuit_title' ); ?></span><!-- sec_two_featured_title -->
 
 			<div id='sec_two_featured_slider_wrapper'>
 
@@ -128,7 +128,7 @@
 													
 													<div class='learn_more_wrapper'>
 													
-														<span class='button_two'>Learn More</span><!-- button_two -->
+														<span class='button_two'><?php the_sub_field( 'button_verbiage' ); ?></span><!-- button_two -->
 													
 													</div><!-- learn_more_wrapper -->
 
