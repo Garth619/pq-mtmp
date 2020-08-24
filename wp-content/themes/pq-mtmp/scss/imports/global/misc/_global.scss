@@ -8,7 +8,6 @@ body.header_fixed {
 }
 
 #internal_main {
-  //margin-top: 141px;
   @include mq(small_tablet) {
     margin-top: 121px;
   }
@@ -53,6 +52,21 @@ body.page-template-default {
     }
     @include mq(small_monitor) {
       padding-top: 66px;
+    }
+    &.no_banner {
+      padding: 40px 20px 0;
+      @include mq(small_tablet) {
+        padding: 40px 55px 55px;
+      }
+      @include mq(small_laptop) {
+        padding: 70px 55px 115px;
+      }
+      @include mq(small_monitor) {
+        padding: 90px 55px 115px;
+      }
+    }
+    &.one_col {
+      display: block;
     }
   }
 }
