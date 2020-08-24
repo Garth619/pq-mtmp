@@ -3,11 +3,11 @@
   max-width: 540px;
   @include margin_lr;
   @include mq(small_tablet) {
-    padding: 84px 0px 90px;
+    padding: 84px 0px 72px;
     max-width: 535px;
   }
   @include mq(small_laptop) {
-    padding: 170px 64px 154px;
+    padding: 170px 64px 114px;
     max-width: 100%;
     @include flex(space-between);
   }
@@ -139,6 +139,9 @@
   text-align: center;
   margin-top: 75px;
   position: relative;
+  @include mq(small_tablet) {
+    margin-top: 88px;
+  }
   @include mq(small_laptop) {
     text-align: left;
     margin-top: 0;
@@ -177,6 +180,9 @@ span#sec_seven_title {
     background: $color_bright_one;
     @include box(100%, 3px);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      margin-top: 30px;
+    }
     @include mq(small_laptop) {
       margin-top: 25px;
     }
@@ -213,7 +219,7 @@ span#sec_seven_title {
 #sec_seven_logo {
   width: 100%;
   @include flex(center, null);
-  @include abs(0, null, null, 0);
+  @include abs(-35px, null, null, 0);
   img {
   }
   @include mq(small_laptop) {

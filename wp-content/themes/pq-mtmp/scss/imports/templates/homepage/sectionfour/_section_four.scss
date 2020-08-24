@@ -71,6 +71,12 @@ span#sec_four_title {
   .slick-slide {
     padding: 20px 0 0 0;
     margin: 0 20px;
+    @include mq(small_laptop) {
+      margin: 0 30px;
+    }
+    @include mq(large_laptop) {
+      margin: 0 20px;
+    }
     @include mq(small_monitor) {
       margin: 0 64px;
     }
@@ -78,6 +84,12 @@ span#sec_four_title {
   .slick-list {
     padding: 0px 0 20px 0;
     margin: 0 -20px;
+    @include mq(small_laptop) {
+      margin: 0 -30px;
+    }
+    @include mq(large_laptop) {
+      margin: 0 -20px;
+    }
     @include mq(small_monitor) {
       margin: 0 -64px;
     }
@@ -146,7 +158,7 @@ span#sec_four_title {
   span {
     display: block;
     &.sec_four_slide_title {
-      margin-top: 50px;
+      margin-top: 46px;
       @include type(
         (
           size: 45px,
@@ -156,6 +168,9 @@ span#sec_four_title {
           transform: uppercase,
         )
       );
+      @include mq(large_laptop) {
+        @include quick_type(48px, null, null);
+      }
       @include mq(small_monitor) {
         font-size: 48px;
         margin-top: 42px;

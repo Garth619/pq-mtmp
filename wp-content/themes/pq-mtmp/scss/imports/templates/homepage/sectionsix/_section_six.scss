@@ -40,6 +40,7 @@ span#sec_six_title {
   @include margin_lr;
   @include mq(small_tablet) {
     max-width: 485px;
+    margin-top: 63px;
   }
   @include mq(small_laptop) {
     max-width: 1020px;

@@ -5,7 +5,7 @@
   padding: 60px 0;
   text-align: center;
   @include mq(small_tablet) {
-    padding: 60px 0 75px;
+    padding: 66px 0 89px;
     max-width: 900px;
     @include margin_lr;
   }
@@ -14,11 +14,11 @@
     max-width: 100%;
   }
   @include mq(large_laptop) {
-    padding: 110px 0 115px;
+    padding: 200px 0 115px;
     max-width: 1308px;
   }
   @include mq(small_monitor) {
-    padding: 110px 0 135px;
+    padding: 125px 0 135px;
   }
 }
 
@@ -58,7 +58,10 @@ span#sec_five_header {
   }
   @include mq(small_laptop) {
     padding: 0 35px;
-    margin-top: 89px;
+    margin-top: 70px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 90px;
   }
   &:after {
     @include mq(small_laptop) {

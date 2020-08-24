@@ -53,6 +53,7 @@ body.header_fixed {
 
 span#sec_one_title {
   display: block;
+  padding: 0 20px;
   @include type(
     (
       size: 33px,
@@ -65,6 +66,7 @@ span#sec_one_title {
   );
   @include mq(small_tablet) {
     max-width: 593px;
+    padding: 0;
     @include margin_lr;
     @include quick_type(56px, 60px, null);
   }
@@ -80,7 +82,7 @@ span#sec_one_title {
     @include box(100%, 1px);
     @include contentdisplay();
     @include mq(small_tablet) {
-      margin: 33px 0 23px;
+      margin: 28px 0 23px;
     }
     @include mq(large_laptop) {
       margin: 24px 0 22px;
@@ -107,11 +109,11 @@ span#sec_one_title {
   @include mq(small_laptop) {
     max-width: 100%;
     padding: 0 0px 26px;
-    @include quick_type(22px, 30px, null);
   }
   @include mq(large_laptop) {
     max-width: 695px;
     margin: 0;
+    @include quick_type(22px, 30px, null);
   }
   p {
     margin-bottom: 15px;
@@ -138,8 +140,14 @@ a.free_consult_button {
   }
   @include mq(small_laptop) {
     display: block;
-    width: 530px;
+    width: 560px;
     @include abs(null, 0, 50px, null);
+  }
+  @include mq(large_laptop) {
+    width: 600px;
+  }
+  @include mq(small_monitor) {
+    width: 540px;
   }
 }
 
