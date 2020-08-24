@@ -26,7 +26,8 @@ body.error404 {
       padding: 60px 0px 100px;
       max-width: 1000px;
     }
-    @include mq(small_laptop) {
+    @include mq(large_laptop) {
+      padding: 60px 0px 120px;
     }
     .gform_wrapper {
       margin-top: 47px;

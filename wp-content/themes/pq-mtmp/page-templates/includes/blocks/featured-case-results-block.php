@@ -26,7 +26,7 @@ $cr_title = get_field('featured_case_results_title') ?: 'Featured Case Results';
 		
 		  <div class='featured_case_results_block_slide'>
 
-				<a href=''>
+				<a href='<?php the_field( 'featured_case_results_links' ); ?>'>
 				
  					<span class='featured_case_results_block_slide_title'><?php the_sub_field( 'amount' ); ?></span><!-- featured_case_results_block_slide_title -->
 				
@@ -66,7 +66,7 @@ $cr_title = get_field('featured_case_results_title') ?: 'Featured Case Results';
 
 			 <div class='featured_case_results_block_slide'>
 
-  				<a href=''>
+  				<a>
   				
    					<span class='featured_case_results_block_slide_title'>Amount</span><!-- featured_case_results_block_slide_title -->
   				
@@ -78,7 +78,19 @@ $cr_title = get_field('featured_case_results_title') ?: 'Featured Case Results';
 
 			 <div class='featured_case_results_block_slide'>
 
-  				<a href=''>
+  				<a>
+  				
+   					<span class='featured_case_results_block_slide_title'>Amount</span><!-- featured_case_results_block_slide_title -->
+  				
+   					<span class='featured_case_results_block_slide_descrip'>This is a description</span><!-- featured_case_results_block_slide_descrip -->
+  
+  				</a>
+								
+	 		</div><!-- featured_case_results_block_slide -->
+
+			 <div class='featured_case_results_block_slide'>
+
+  				<a>
   				
    					<span class='featured_case_results_block_slide_title'>Amount</span><!-- featured_case_results_block_slide_title -->
   				

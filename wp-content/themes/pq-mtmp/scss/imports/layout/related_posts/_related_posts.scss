@@ -44,11 +44,7 @@ span#related_content_title {
 #related_posts_wrapper {
   margin: 40px 0 0 0;
   @include mq(small_laptop) {
-    @include flex();
-    gap: 40px;
-  }
-  @include mq(small_monitor) {
-    gap: 90px;
+    @include flex(space-between);
   }
 }
 
@@ -56,6 +52,10 @@ span#related_content_title {
   margin-bottom: 30px;
   @include mq(small_laptop) {
     margin-bottom: 0;
+    flex-basis: 31%;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 29%;
   }
   &:last-of-type {
     margin-bottom: 0;

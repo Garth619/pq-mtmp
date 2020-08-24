@@ -20,13 +20,18 @@
 		
 		</div><!-- internal_banner_content -->
 
+		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
 		<?php $attorney_banner_image = get_field( 'attorney_banner_image' ); ?>
 
-    <?php if ( $attorney_banner_image ) { ?>
+    <?php if ( $attorney_banner_image ) : ?>
 	  
       <img id="banner_hero" src="<?php echo $attorney_banner_image['url']; ?>" alt="<?php echo $attorney_banner_image['alt']; ?>" />
     
-    <?php } ?>
+		<?php else:?>
+
+			<img id='banner_hero' src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
+
+		<?php endif;?>
 		
 	</div><!-- internal_banner -->
 

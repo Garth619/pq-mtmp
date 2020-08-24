@@ -59,9 +59,7 @@ get_header(); ?>
 
 							<div class="single_video video_module">
 
-								<a>
-
-									<div class='single_video_thumbnail'>
+								<div class='single_video_thumbnail'>
 
 										<?php if(get_sub_field('video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
 
@@ -96,9 +94,6 @@ get_header(); ?>
 										</div><!-- single_video_thumbnail -->
 
 									<span class='video_title'><?php the_sub_field( 'video_title_video_center' ); ?></span><!-- video_title -->
-
-								</a>
-								
 
 							</div><!-- single_video -->
 

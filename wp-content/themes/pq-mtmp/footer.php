@@ -84,8 +84,9 @@
   
     <ul>
       <li>Copyright &copy; <?php echo date('Y'); ?> <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+
       <?php if(get_field('disclaimer','option') && get_field('disclaimer_title','option')) { ?>
-        <li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></li>
+        <li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></a></li>
       <?php } ?>
       <?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) { ?>
       <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>

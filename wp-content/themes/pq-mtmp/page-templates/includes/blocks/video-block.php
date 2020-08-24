@@ -20,7 +20,7 @@
 
 						<?php if(get_field('video_thumbnail_option') == "Leave Blank" && get_field('wistia_or_youtube_block') == "Wistia") { ?>
 							
-							<a>
+							
 
   							<div class="mywistia_thumbnail">
   
@@ -34,7 +34,7 @@
 
 						<?php if(get_field('video_thumbnail_option') == "Add Image" && get_field('wistia_or_youtube_block') == "Wistia") { ?>
 							
-							<a>
+							
 
 							<div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_block' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
 
@@ -71,8 +71,9 @@
    						</picture>
 						
 						<?php } ?>
-
-					</a>
+						<?php if(get_field('wistia_or_youtube_block') == "Youtube") { ?>
+						</a>
+					<?php } ?>
 
 				</div><!-- page_video_block -->
 

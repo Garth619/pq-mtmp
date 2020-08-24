@@ -48,7 +48,7 @@
 
   <div id="section_seven_video" class="video_module">
 
-  <a>
+  
 
     <div class='single_video_thumbnail'>
 
@@ -84,15 +84,10 @@
 
       </div><!-- single_video_thumbnail -->
 
-  </a>
-  
-
-</div><!-- single_video -->
+  </div><!-- single_video -->
 
 
 <?php }?>
-  
-    
   
   </div><!-- sec_seven_top -->
 
@@ -118,7 +113,13 @@
 
     <div id='sec_seven_logo'>
     
-      <img src='<?php bloginfo('template_directory');?>/images/eb-graphic.svg' /><!-- name -->
+    <?php $section_seven_logo = get_field( 'section_seven_logo' ); ?>
+    
+    <?php if ( $section_seven_logo ) { ?>
+	    
+      <img src="<?php echo $section_seven_logo['url']; ?>" alt="<?php echo $section_seven_logo['alt']; ?>" />
+    
+    <?php } ?>
     
     </div><!-- sec_seven_logo -->
   

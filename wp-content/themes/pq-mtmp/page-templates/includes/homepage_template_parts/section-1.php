@@ -62,7 +62,7 @@
     
     <?php if ( $section_one_background_desktop_webp ) { ?>
 	
-      <source media='(min-width: 1695px)' srcset='<?php echo $section_one_background_desktop_webp['url']; ?>'>
+      <source media='(min-width: 1695px)' srcset='<?php echo $section_one_background_desktop_webp['url']; ?>' type="image/webp">
 
     <?php } ?>
 

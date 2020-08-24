@@ -170,7 +170,9 @@ nav {
     li {
       &:last-of-type {
         a {
-          border: none;
+          @include mq(small_laptop) {
+            border: none;
+          }
         }
       }
     }
