@@ -60,7 +60,7 @@
         width: 100%;
         border-radius: 5px;
         border: none;
-        padding: 20px 15px;
+        padding: 13px 15px;
         @include type(
           (
             size: 18px,
@@ -68,10 +68,16 @@
             color: $color_light_five,
           )
         );
+        @include mq(large_laptop) {
+          padding: 20px 15px;
+        }
       }
       select {
-        padding: 20px 50px 20px 15px;
+        padding: 13px 50px 10px 15px;
         -webkit-appearance: none;
+        @include mq(large_laptop) {
+          padding: 20px 50px 20px 15px;
+        }
       }
       textarea {
         height: 158px;
@@ -79,9 +85,12 @@
       &.custom_select {
         position: relative;
         &:after {
-          @include abs(55px, 17px, null, null);
+          @include abs(45px, 17px, null, null);
           @include contentdisplay();
           @include tri(down, 8px, 8px, $color_dark_one);
+          @include mq(large_laptop) {
+            top: 55px;
+          }
         }
       }
     }
@@ -91,7 +100,7 @@
     position: relative;
     margin-top: 41px;
     z-index: 1;
-    @include mq(small_laptop) {
+    @include mq(large_laptop) {
       margin-top: 61px;
     }
     &:hover {
@@ -129,6 +138,8 @@
         )
       );
       @include mq(small_laptop) {
+      }
+      @include mq(large_laptop) {
         font-size: 20px;
         padding: 24px 32px;
       }
@@ -161,6 +172,9 @@
         transform: lowercase,
       )
     );
+    @include mq(small_laptop) {
+      margin-top: -115px;
+    }
     @include mq(small_monitor) {
       padding: 0px 30px;
     }
@@ -405,12 +419,17 @@ span#sidebar_form_subtitle {
           font-weight: 400;
           line-height: 20px;
           position: relative;
+          font-size: 18px;
+          line-height: 25px;
           &:before {
             background: $color_bright_two;
             border-radius: 50%;
             @include abs(21px, null, null, 0);
             @include box(6px);
             @include contentdisplay();
+            @include mq(large_laptop) {
+              @include abs(25px, null, null, 0);
+            }
           }
         }
       }

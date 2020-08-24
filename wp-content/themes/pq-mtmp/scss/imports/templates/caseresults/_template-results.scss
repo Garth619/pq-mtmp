@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1360px;
   @include mq(small_monitor) {
-    margin: 0 auto -60px;
+    margin: 0 auto 0px;
   }
 }
 .single_case_result {

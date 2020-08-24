@@ -1,6 +1,16 @@
+body.error404 {
+  #internal_banner {
+    @include mq(small_tablet) {
+      padding: 40px 55px 50px;
+    }
+  }
+}
+
 #page_wrapper {
   &.not_found_page_wrapper {
-    padding-top: 45px;
+    @include mq(small_monitor) {
+      padding-top: 45px;
+    }
   }
 }
 

@@ -262,7 +262,7 @@ jQuery(document).ready(function ($) {
       columns: 3,
       margin: {
         x: 60,
-        y: 60,
+        y: 40,
       },
       breakAt: {
         1170: {
