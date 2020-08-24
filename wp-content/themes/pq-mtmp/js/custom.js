@@ -110,6 +110,10 @@ jQuery(document).ready(function ($) {
     true
   );
 
+  createWaypoint("section_three", "#section_three", "visible", 400, null, true);
+  createWaypoint("section_four", "#section_four", "visible", 400, null, true);
+  createWaypoint("section_seven", "#section_seven", "visible", 400, null, true);
+
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 

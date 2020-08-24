@@ -137,6 +137,7 @@ span#sec_four_title {
   box-shadow: 0px 1px 20px #000000;
   a {
     text-decoration: none;
+    display: block;
   }
   @include mq(small_tablet) {
     padding: 83px 20px 67px;
