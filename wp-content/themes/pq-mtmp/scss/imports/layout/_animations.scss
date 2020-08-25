@@ -156,4 +156,34 @@
       }
     }
   }
+
+  // internal banner
+
+  #internal_banner {
+    overflow: hidden;
+  }
+
+  img#banner_hero {
+    @include img_scale(1.2);
+  }
+  body.ready {
+    #banner_hero {
+      @include fire_return_scale(1);
+    }
+  }
+
+  // about title
+
+  span.about_title.firm_title {
+    &:after {
+      @include line_animation(center);
+    }
+  }
+  body.ready {
+    span.about_title.firm_title {
+      &:after {
+        @include fire_return_scale(1);
+      }
+    }
+  }
 }
