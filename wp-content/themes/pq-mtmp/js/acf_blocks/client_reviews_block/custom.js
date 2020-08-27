@@ -1,5 +1,6 @@
 (function ($) {
   var initializeCaseresultblock = function () {
+    // https://github.com/kenwheeler/slick/issues/694#issuecomment-264191934
     $(".client_reviews_block_slider").each(function () {
       var slickIndividual = $(this);
       slickIndividual.not(".slick-initialized").slick({

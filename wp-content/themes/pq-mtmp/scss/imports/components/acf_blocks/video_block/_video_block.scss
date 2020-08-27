@@ -3,6 +3,7 @@
   margin-bottom: 30px;
   max-width: 739px;
   overflow: hidden;
+  cursor: pointer;
   @include margin_lr;
   @include mq(small_tablet) {
     margin-bottom: 40px;
@@ -117,5 +118,11 @@
         @include tri(right, 10px, 10px, $color_bright_two);
       }
     }
+  }
+}
+
+body.wp-admin {
+  .video_block.wistia_no_thumbnail {
+    max-width: 358px;
   }
 }

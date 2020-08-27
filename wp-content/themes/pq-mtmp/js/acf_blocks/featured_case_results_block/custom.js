@@ -1,4 +1,5 @@
 (function ($) {
+  // https://github.com/kenwheeler/slick/issues/694#issuecomment-264191934
   var initializeCRBlock = function () {
     $(".featured_case_results_block_slider").each(function () {
       var slickIndividual = $(this);

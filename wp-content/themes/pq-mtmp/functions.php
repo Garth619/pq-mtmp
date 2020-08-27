@@ -7,7 +7,7 @@ function load_my_styles_scripts() {
     
     // Styles
     
-   	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
+   	// wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
     // Disables jquery then registers it again to go into footer
     
@@ -45,19 +45,23 @@ function load_my_styles_scripts() {
 /* Backend/Admin Styles and Scripts
 -------------------------------------------------------------- */
 
-function admin_scripts( ) {
 
+function admin_scripts($hook) {
+
+    if ( 'post.php' != $hook && 'post-new.php' != $hook )
+        return;
     // Styles
 
-    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor see /scss/imports/components/acf-blocks/admin/admin.scss file for reference
+    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor 
 
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/admin.css', '', 5, 'all' ); 
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/myadmin.css', '', 5, 'all' ); 
 
     // Scripts
 
     // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor
 
-    //wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+    wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+
     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
 
   }
@@ -129,16 +133,16 @@ add_action("gform_enqueue_scripts", "deregister_scripts");
 -------------------------------------------------------------- */
  
  
-// function internal_css_print() {
-//    echo '<style>';
+function internal_css_print() {
+   echo '<style>';
    
-//    include_once get_template_directory() . '/style.css';
+   include_once get_template_directory() . '/style.css';
   
-//    echo '</style>';
-// }
+   echo '</style>';
+}
 
 
-// add_action( 'wp_head', 'internal_css_print' );
+add_action( 'wp_head', 'internal_css_print' );
 
 
 /* Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed

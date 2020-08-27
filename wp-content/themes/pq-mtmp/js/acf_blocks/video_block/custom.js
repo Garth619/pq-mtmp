@@ -30,9 +30,9 @@
         console.log("wistia is already defined");
       }
     });
-    $(".page_video_block a").click(function (e) {
-      e.preventDefault();
-    });
+    // $(".page_video_block a").click(function (e) {
+    //   e.preventDefault();
+    // });
   };
 
   // Initialize dynamic block preview (editor).

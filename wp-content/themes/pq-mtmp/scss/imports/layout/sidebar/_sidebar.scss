@@ -61,6 +61,7 @@
         border-radius: 5px;
         border: none;
         padding: 13px 15px;
+        background: $color_light_one;
         @include type(
           (
             size: 18px,
@@ -174,6 +175,9 @@
     );
     @include mq(small_laptop) {
       margin-top: -115px;
+    }
+    @include mq(large_laptop) {
+      margin-top: -143px;
     }
     @include mq(small_monitor) {
       padding: 0px 30px;
