@@ -19,8 +19,7 @@
     box-shadow: 0px 3px 6px #00000029;
   }
   &.wistia_no_thumbnail {
-    max-width: 540px;
-    @include margin_lr;
+    max-width: 388px;
     .mywistia_thumbnail {
       position: relative;
       @include box(100%, 300px);
@@ -70,6 +69,11 @@
     width: 100%;
   }
   span.play_button {
+    display: block;
+    border-radius: 50%;
+    background: $color_light_rgba;
+    position: relative;
+    @include flex(center, center);
     @include box(64px);
     @include mq(small_tablet) {
       @include box(106px);
@@ -81,6 +85,9 @@
       @include box(64px);
     }
     &:before {
+      background: $color_dark_one;
+      border-radius: 50%;
+      @include contentdisplay();
       @include box(51px);
       @include mq(small_tablet) {
         @include box(84px);
@@ -93,6 +100,8 @@
       }
     }
     &:after {
+      transition: all 200ms ease-in-out;
+      @include contentdisplay();
       @include abs(23px, null, null, 30px);
       @include tri(right, 8px, 10px, $color_bright_two);
       @include mq(small_tablet) {

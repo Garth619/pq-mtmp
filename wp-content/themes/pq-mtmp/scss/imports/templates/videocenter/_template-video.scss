@@ -1,5 +1,6 @@
 #page_wrapper.video_page_wrapper {
   max-width: 1515px;
+  @include margin_lr;
 }
 
 #video_center_wrapper {
@@ -27,7 +28,7 @@
   @include margin_lr;
   @include mq(small_tablet) {
     flex-basis: 46%;
-    margin: 0;
+    margin: 0 0 40px;
   }
   @include mq(small_laptop) {
     flex-basis: 30%;

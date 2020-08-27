@@ -95,7 +95,7 @@
 
     <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
 
-      <img src='<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg' alt='ilawyer logo'/>
+      <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg' alt='ilawyer logo'/>
 
     </a><!-- ilawyer -->
   

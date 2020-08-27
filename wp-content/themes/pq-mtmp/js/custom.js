@@ -186,7 +186,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 1695,
+        breakpoint: 1790,
         settings: {
           fade: false,
           slidesToShow: 3,
@@ -406,6 +406,13 @@ jQuery(document).ready(function ($) {
   $('<span class="double_line"></span>').insertAfter(
     "ul.pa_directory_top_menu > li > a"
   );
+
+  /* Disable Sidebar
+--------------------------------------------------------------------------------------- */
+
+  if (!$("#sidebar_wrapper").length > 0) {
+    $("#page_content").addClass("no_sidebar");
+  }
 
   /* Sidebar Current Class for Blog Sidebars
 --------------------------------------------------------------------------------------- */

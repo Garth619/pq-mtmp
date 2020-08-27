@@ -14,9 +14,6 @@ body.error404 {
   }
   span#form_title {
     color: $color_dark_one;
-    @include mq(small_laptop) {
-      text-align: left;
-    }
   }
   #form_wrapper {
     padding: 40px 0px 100px;
@@ -60,9 +57,6 @@ body.error404 {
   }
   #form_descrip {
     color: $color_dark_one;
-    @include mq(small_laptop) {
-      text-align: left;
-    }
   }
 }
 

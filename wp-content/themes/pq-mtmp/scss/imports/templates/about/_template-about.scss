@@ -145,8 +145,9 @@ span.about_title {
       }
     }
     span.button_two {
-      border: 2px solid $color_bright_one;
-      color: $color_bright_one;
+      border: 2px solid $color_bright_two;
+      color: $color_light_one;
+      background: $color_bright_two;
     }
   }
   a {
@@ -192,7 +193,6 @@ span.about_title {
           (
             size: 30px,
             height: 30px,
-            spacing: 3px,
             color: $color_dark_one,
             family: $primaryfont,
           )

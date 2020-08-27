@@ -1,5 +1,5 @@
 (function ($) {
-  var initializeVideoblockadmin = function ($block) {
+  var initializeVideoblockadmin = function () {
     /* Wistia - Call function when script needs to be loaded either by hover or waypoints
      --------------------------------------------------------------------------------------- */
 
@@ -29,6 +29,9 @@
       } else {
         console.log("wistia is already defined");
       }
+    });
+    $(".page_video_block a").click(function (e) {
+      e.preventDefault();
     });
   };
 

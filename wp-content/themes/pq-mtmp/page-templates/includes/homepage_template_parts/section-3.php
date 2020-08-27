@@ -20,7 +20,7 @@
 
 			<?php if ( $section_three_logo ) { ?>
 			
-					<img id="eb_graphic" src="<?php echo $section_three_logo['url']; ?>" alt="<?php echo $section_three_logo['alt']; ?>" />
+					<img id="eb_graphic" class="lazyload" data-src="<?php echo $section_three_logo['url']; ?>" alt="<?php echo $section_three_logo['alt']; ?>" />
 			
 			<?php } ?>
 

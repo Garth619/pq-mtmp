@@ -277,8 +277,9 @@ span#sec_two_featured_title {
 .sec_two_featured_slide {
   &:hover {
     .button_two {
-      border: 2px solid $color_bright_one;
-      color: $color_bright_one;
+      border: 2px solid $color_bright_two;
+      color: $color_light_one;
+      background: $color_bright_two;
     }
     .sec_two_featured_image {
       img {

@@ -28,7 +28,7 @@
 					
 										<?php if ( $post_image ) { ?>
 											
-											<img src="<?php echo $post_image['url']; ?>" alt="<?php echo $post_image['alt']; ?>" />
+											<img class="lazyload" data-src="<?php echo $post_image['url']; ?>" alt="<?php echo $post_image['alt']; ?>" />
 					
 										<?php } ?>
 

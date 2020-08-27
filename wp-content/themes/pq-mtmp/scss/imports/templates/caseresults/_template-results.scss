@@ -59,12 +59,15 @@
     margin-top: 20px;
     @include type(
       (
-        size: 18px,
-        height: 25px,
+        size: 16px,
+        height: 23px,
         family: $primaryfont,
         color: $color_light_fourteen,
       )
     );
+    @include mq(small_laptop) {
+      @include quick_type(18px, 25px, null);
+    }
     @include mq(small_monitor) {
       margin-top: 28px;
     }

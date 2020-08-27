@@ -28,7 +28,7 @@
 
       <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
 
-      <img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
+      <img class="lazyload" data-src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
 
     <?php } ?>
 
@@ -78,7 +78,7 @@
 
       <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
 
-        <img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
+        <img class="lazyload" data-src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
 
       <?php } ?>
 
@@ -117,7 +117,7 @@
     
     <?php if ( $section_seven_logo ) { ?>
 	    
-      <img src="<?php echo $section_seven_logo['url']; ?>" alt="<?php echo $section_seven_logo['alt']; ?>" />
+      <img class="lazyload" data-src="<?php echo $section_seven_logo['url']; ?>" alt="<?php echo $section_seven_logo['alt']; ?>" />
     
     <?php } ?>
     

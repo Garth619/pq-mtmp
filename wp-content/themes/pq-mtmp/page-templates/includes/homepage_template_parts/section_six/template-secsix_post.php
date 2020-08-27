@@ -17,8 +17,18 @@
 									
 								<div class="sec_six_image">
 
-									<?php the_post_thumbnail( 'thumbnail' );?>
-							
+									<?php 
+									
+										$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+
+								 		$image_id = get_post_thumbnail_id();
+
+										$alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+									?>
+
+									<img class="lazyload" data-src='<?php echo $url;?>' alt='<?php echo $alt;?>'/>
+
 								</div><!-- sec_six_image -->
 
 							<?php } ?>

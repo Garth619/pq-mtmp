@@ -1,8 +1,8 @@
 (function ($) {
-  var initializeCaseresultblock = function ($block) {
-    $(".client_reviews_block_slider")
-      .not(".slick-initialized")
-      .slick({
+  var initializeCaseresultblock = function () {
+    $(".client_reviews_block_slider").each(function () {
+      var slickIndividual = $(this);
+      slickIndividual.not(".slick-initialized").slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -30,8 +30,12 @@
               adaptiveHeight: true,
               slidesToShow: 1,
               slidesToScroll: 1,
-              prevArrow: ".client_reviews_block_arrow_left",
-              nextArrow: ".client_reviews_block_arrow_right",
+              prevArrow: slickIndividual.prev(
+                ".client_reviews_block_arrow_left"
+              ),
+              nextArrow: slickIndividual.next(
+                ".client_reviews_block_arrow_right"
+              ),
             },
           },
           {
@@ -43,12 +47,18 @@
               adaptiveHeight: false,
               slidesToShow: 2,
               slidesToScroll: 2,
-              prevArrow: ".client_reviews_block_arrow_left",
-              nextArrow: ".client_reviews_block_arrow_right",
+              prevArrow: slickIndividual.prev(
+                ".client_reviews_block_arrow_left"
+              ),
+              nextArrow: slickIndividual.next(
+                ".client_reviews_block_arrow_right"
+              ),
             },
           },
         ],
       });
+    });
+
     function getSlickheight() {
       var stHeight = $(".client_reviews_block_slider .slick-track").height();
       if ($(window).width() < 768) {
@@ -74,17 +84,21 @@
     );
   };
 
-  var initializeCaseresultblockadmin = function ($block) {
-    $(".client_reviews_block_slider").not(".slick-initialized").slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      mobileFirst: true,
-      fade: true,
-      arrows: true,
-      dots: false,
-      prevArrow: ".client_reviews_block_arrow_left",
-      nextArrow: ".client_reviews_block_arrow_right",
+  var initializeCaseresultblockadmin = function () {
+    $(".client_reviews_block_slider").each(function () {
+      var slickIndividual = $(this);
+      slickIndividual.not(".slick-initialized").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        mobileFirst: true,
+        fade: true,
+        arrows: true,
+        dots: false,
+        prevArrow: slickIndividual.prev(".client_reviews_block_arrow_left"),
+        nextArrow: slickIndividual.next(".client_reviews_block_arrow_right"),
+      });
     });
   };
 

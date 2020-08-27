@@ -57,7 +57,7 @@ function admin_scripts( ) {
 
     // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor
 
-    wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
+    //wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
 
   }
