@@ -455,8 +455,6 @@ jQuery(document).ready(function ($) {
   $("#menu_wrapper").on("click", function (e) {
     $("#header_right").toggleClass("open");
     $("nav").toggleClass("open");
-
-    //$("nav").slideToggle(400);
   });
 
   function navDesktop() {
