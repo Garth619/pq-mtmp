@@ -10,9 +10,11 @@
 #sec_two_top {
   padding: 39px 32px 75px;
   background: $color_dark_one;
+  min-height: 347px;
   @include mq(small_tablet) {
     width: 50%;
     flex-shrink: 0;
+    min-height: 476px;
     @include flex(null, center);
   }
   @include mq(small_laptop) {
@@ -25,6 +27,10 @@
   @include mq(small_monitor) {
     width: 472px;
   }
+}
+
+#sec_two_top_inner {
+  width: 100%;
 }
 
 #sec_two_left_slider {
@@ -155,10 +161,12 @@ span.sec_two_slide_type {
 
 #sec_two_bottom {
   text-align: center;
-  background: $color_light_two;
   padding: 36px 25px 42px;
+  min-height: 400px;
+  background: $color_light_two;
   @include mq(small_tablet) {
     width: 50%;
+    min-height: 476px;
     padding: 36px 32px 28px;
   }
   @include mq(small_laptop) {
@@ -173,6 +181,9 @@ span.sec_two_slide_type {
     padding: 48px 40px 58px;
     width: calc(100% - 472px);
   }
+}
+
+#sec_two_bottom_inner {
 }
 
 span#sec_two_featured_title {

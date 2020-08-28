@@ -17,13 +17,13 @@ function load_my_styles_scripts() {
 		
     // Enqueue Script
 
-     wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/waypoints-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-underscore', get_template_directory_uri() . '/js/underscore-min.js', 'jquery', '', true );
-     wp_enqueue_script( 'jquery-lazysizes', get_template_directory_uri() . '/js/lazysizes-min.js', 'jquery', '', true );
-     
-     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+    if(!is_front_page()) {
+
+        wp_enqueue_script( 'jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+
+    }
+
+    // Macy.js
 
     if(is_front_page() || is_page_template('page-templates/template-caseresults.php') || is_page_template('page-templates/template-padirectory.php')) {
 

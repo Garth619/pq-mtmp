@@ -132,9 +132,12 @@ a.free_consult_button {
 
 #sec_one_bottom {
   margin-top: 28px;
+  transition: all 400ms ease-in-out;
+  min-height: 108px;
   @include mq(small_tablet) {
     max-width: 730px;
     margin-top: 47px;
+    min-height: 57px;
     @include margin_lr;
     @include flex(null, center);
   }
@@ -180,6 +183,7 @@ span#sec_one_logo_title {
 #sec_one_slider {
   margin: 35px auto 0;
   max-width: 475px;
+
   @include mq(small_tablet) {
     max-width: 100%;
     margin: 0;

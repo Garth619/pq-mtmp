@@ -16,7 +16,7 @@
     
     </div><!-- sec_one_top -->
 
-    <div id='sec_one_bottom'>
+    <div id='sec_one_bottom' class="preload_section">
 
     <div>
 
@@ -26,7 +26,7 @@
 
     <?php if ( have_rows( 'section_logos' ) ) : ?>
       
-      <div id='sec_one_slider'>
+      <div id='sec_one_slider' class="preload_slider">
         
         <?php while ( have_rows( 'section_logos' ) ) : the_row(); ?>
         

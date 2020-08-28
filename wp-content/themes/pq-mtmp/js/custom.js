@@ -1,6 +1,10 @@
-jQuery(document).ready(function ($) {
-  $("body").addClass("ready");
+// @codekit-prepend 'waypoints.js'
+// @codekit-prepend 'slick.js'
+// @codekit-prepend 'lity.js'
+// @codekit-prepend 'underscore.js'
+// @codekit-prepend 'lazysizes.js'
 
+jQuery(document).ready(function ($) {
   /* Wistia - Call function when script needs to be loaded either by hover or waypoints
      --------------------------------------------------------------------------------------- */
 
@@ -33,7 +37,7 @@ jQuery(document).ready(function ($) {
   });
 
   /* Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
-      --------------------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------------------- */
 
   $(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {
@@ -116,6 +120,10 @@ jQuery(document).ready(function ($) {
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
+
+  $(".preload_slider").on("init", function (event, slick) {
+    $(".preload_section").addClass("load_after");
+  });
 
   $("#sec_one_slider").slick({
     infinite: true,

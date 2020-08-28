@@ -74,14 +74,14 @@
       }
     }
   }
-  #sec_one_bottom {
-    @include transform_opacity(-25px);
-  }
-  body.ready {
-    #sec_one_bottom {
-      @include fire_transform_opacity(700ms);
-    }
-  }
+  // #sec_one_bottom {
+  //   @include transform_opacity(-25px);
+  // }
+  // body.ready {
+  //   #sec_one_bottom {
+  //     @include fire_transform_opacity(700ms);
+  //   }
+  // }
 
   // section three
 
