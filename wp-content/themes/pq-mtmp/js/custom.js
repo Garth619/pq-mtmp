@@ -1,13 +1,16 @@
 // @codekit-prepend 'waypoints.js'
 // @codekit-prepend 'slick.js'
 // @codekit-prepend 'lity.js'
+// @codekit-prepend 'macy.js'
 // @codekit-prepend 'underscore.js'
 // @codekit-prepend 'lazysizes.js'
 
 jQuery(document).ready(function ($) {
+  $("body").addClass("ready");
+
   /* Wistia - Call function when script needs to be loaded either by hover or waypoints
      --------------------------------------------------------------------------------------- */
-
+  $("body").addClass("ready");
   // loads wistia on click to improve initial page speed
   $(".wistia_embed").click(function () {
     //make sure to only load if Wistia is not already loaded

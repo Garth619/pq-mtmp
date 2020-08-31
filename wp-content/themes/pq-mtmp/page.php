@@ -43,7 +43,7 @@
 
 	</div><!-- page_wrapper -->
 
-	<?php get_template_part('page-templates/includes/template','related_product'); ?>
+	<?php get_template_part('page-templates/includes/template','related_post'); ?>
 
 </div><!-- internal_main -->
 		

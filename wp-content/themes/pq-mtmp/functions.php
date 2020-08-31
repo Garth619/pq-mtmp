@@ -18,18 +18,10 @@ function load_my_styles_scripts() {
     // Enqueue Script
 
     if(!is_front_page()) {
-
         wp_enqueue_script( 'jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
-
     }
 
-    // Macy.js
-
-    if(is_front_page() || is_page_template('page-templates/template-caseresults.php') || is_page_template('page-templates/template-padirectory.php')) {
-
-        wp_enqueue_script( 'jquery-macy', get_template_directory_uri() . '/js/macy.js', 'jquery', '', true );
     
-    }
 
      // wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/js/modernizr-webp.js', 'jquery', '', true );
 
@@ -67,8 +59,6 @@ function admin_scripts($hook) {
   }
 
   add_action('admin_enqueue_scripts', 'admin_scripts');
- 
- 
  
  /* Defer JS for Lighthouse
 -------------------------------------------------------------- */

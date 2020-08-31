@@ -104,7 +104,7 @@ span.related_posts_title {
 
 .related_post {
   padding-bottom: 30px;
-  cursor: pointer;
+
   border-bottom: 1px solid $color_light_thirteen;
   @include mq(large_laptop) {
     padding-bottom: 50px;
@@ -124,16 +124,18 @@ span.related_posts_title {
       margin-bottom: 0px;
     }
   }
-  &:hover {
-    span.related_post_read_more {
-      background: $color_dark_one;
-    }
-    span.related_post_title {
-      color: $color_bright_one;
-    }
-  }
+
   a {
     text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      span.related_post_read_more {
+        background: $color_dark_one;
+      }
+      span.related_post_title {
+        color: $color_bright_one;
+      }
+    }
   }
 }
 
@@ -170,7 +172,7 @@ span.related_posts_title {
         background: $color_dark_one;
         border-radius: 50%;
         vertical-align: top;
-        margin: 7px 8px 0 4px;
+        margin: 6px 8px 0 4px;
         @include box(5px);
         @include contentdisplay(inline-block);
       }
