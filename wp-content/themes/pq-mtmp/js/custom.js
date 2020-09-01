@@ -268,6 +268,43 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  /* Related Content
+--------------------------------------------------------------------------------------- */
+
+  if ($(".related_post_list").length > 0) {
+    var macyInstance = Macy({
+      container: ".related_post_list",
+      columns: 3,
+      margin: {
+        x: 60,
+        y: 40,
+      },
+      breakAt: {
+        1170: {
+          margin: {
+            x: 30,
+            y: 30,
+          },
+          columns: 3,
+        },
+        1066: {
+          margin: {
+            x: 30,
+            y: 30,
+          },
+          columns: 1,
+        },
+        767: {
+          margin: {
+            x: 0,
+            y: 30,
+          },
+          columns: 1,
+        },
+      },
+    });
+  }
+
   /* Case Results Columns
 --------------------------------------------------------------------------------------- */
 

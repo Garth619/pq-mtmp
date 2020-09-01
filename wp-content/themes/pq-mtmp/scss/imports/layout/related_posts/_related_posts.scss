@@ -48,36 +48,40 @@ span#related_content_title {
   }
 }
 
-.related_post_col {
-  margin-bottom: 30px;
-  @include mq(small_laptop) {
-    margin-bottom: 0;
-    flex-basis: 31%;
-  }
-  @include mq(small_monitor) {
-    flex-basis: 29%;
-  }
-  &:last-of-type {
-    margin-bottom: 0;
-    .related_post_list {
-      .related_post {
-        &:first-of-type {
-          padding: 0;
-          margin: 0;
-          border: 0;
-          @include mq(small_laptop) {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #dbdbdb;
-          }
-          @include mq(large_laptop) {
-            margin-bottom: 50px;
-            padding-bottom: 50px;
-          }
-        }
-      }
-    }
-  }
+// .related_post_col {
+//   margin-bottom: 30px;
+//   @include mq(small_laptop) {
+//     margin-bottom: 0;
+//     flex-basis: 31%;
+//   }
+//   @include mq(small_monitor) {
+//     flex-basis: 29%;
+//   }
+//   &:last-of-type {
+//     margin-bottom: 0;
+//     .related_post_list {
+//       .related_post {
+//         &:first-of-type {
+//           padding: 0;
+//           margin: 0;
+//           border: 0;
+//           @include mq(small_laptop) {
+//             margin-bottom: 30px;
+//             padding-bottom: 30px;
+//             border-bottom: 1px solid #dbdbdb;
+//           }
+//           @include mq(large_laptop) {
+//             margin-bottom: 50px;
+//             padding-bottom: 50px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.related_post_inner {
+  width: 100%;
 }
 
 span.related_posts_title {
@@ -100,34 +104,42 @@ span.related_posts_title {
 
 .related_post_list {
   margin: 28px 0 0 0;
+  @include mq(tablet) {
+    margin-bottom: -30px;
+  }
 }
 
 .related_post {
   padding-bottom: 30px;
-
   border-bottom: 1px solid $color_light_thirteen;
+  margin-bottom: 30px;
+  display: none;
+  @include mq(tablet) {
+    display: block;
+  }
   @include mq(large_laptop) {
     padding-bottom: 50px;
   }
-  &:first-of-type {
-    margin-bottom: 30px;
+  &:nth-of-type(-n + 5) {
+    display: block;
+  }
+  &:nth-of-type(5) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    @include mq(tablet) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $color_light_thirteen;
+    }
     @include mq(large_laptop) {
-      margin-bottom: 50px;
+      padding-bottom: 50px;
     }
   }
-  &:last-of-type {
-    display: none;
-    border: none;
-    @include mq(small_laptop) {
-      display: block;
-      padding-bottom: 0px;
-      margin-bottom: 0px;
-    }
-  }
-
   a {
     text-decoration: none;
     cursor: pointer;
+    color: $color_dark_one;
     &:hover {
       span.related_post_read_more {
         background: $color_dark_one;
