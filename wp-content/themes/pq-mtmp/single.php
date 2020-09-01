@@ -20,7 +20,7 @@
 				
 	</div><!-- page_wrapper -->	
 
-	<?php get_template_part('page-templates/includes/template','related_post'); ?>
+	<?php get_template_part('page-templates/includes/related_posts/template','related_post_blog'); ?>
 	
 </div><!-- internal_main -->
 

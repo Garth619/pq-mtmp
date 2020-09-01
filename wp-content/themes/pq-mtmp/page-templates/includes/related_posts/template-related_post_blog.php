@@ -14,27 +14,37 @@
 
 					<?php
 
-						//$page_taxonomy = get_query_var( 'taxonomy' );
-						//$page_term = get_query_var( 'term' );// doesnt work on pages
+						$related_posts_number = get_field( 'number_of_related_posts_to_show' );
 
-						//global $post;
-						//echo $post->ID;
+						if($related_posts_number) {
+							$pagenumber = $related_posts_number;
+						} else {
+							$pagenumber = 5;
+						}
 
-						//$queried_object = get_queried_object();
+						$post_terms = get_the_terms( $post->ID, 'category' );
+							if (!empty( $post_terms) ){
+								$myterms = array();
+								foreach($post_terms as $post_term) {
+									$myterm_slug[] = $post_term->slug;
+								}
+								$current_post_terms = array_merge($myterms, $myterm_slug);
+							}
+						
+						//$stickies = get_option( 'sticky_posts' );
 
-						// get page id
-						// get current id's tax
-						// get current taxs array of terms
-						// add inot the terms below 
+						// https://wordpress.stackexchange.com/questions/104127/display-all-sticky-post-before-regular-post
 
 						$the_query = new WP_Query( array(
-							'post_type' => 'page',
-							'posts_per_page' => 9,
+							'post_type' => 'post',
+							'posts_per_page' => $pagenumber,
+							//'post__in'  => $stickies,
+							//'ignore_sticky_posts' => 1,
 							'tax_query' => array(
 							array (
-									'taxonomy' => 'page_categories',
+									'taxonomy' => 'category',
 									'field' => 'slug',
-									'terms' => 'dangerous-drugs	',
+									'terms' => $current_post_terms,
 								)
 							),
 						));
@@ -48,21 +58,30 @@
 					
 										<span class='related_posts_date'><?php $pfx_date = get_the_date(); echo $pfx_date ?></span><!-- related_posts_date -->
 
-									
-										<?php $terms = get_the_terms( $post->ID, 'page_categories' ); 
-										
-										echo "<ul>";
+										<?php if(is_singular()) {
 
-										foreach($terms as $term) {
-											
-											echo "<li>" . $term->name . "</li>";
+											echo get_the_category_list();
+
+										} 
+
+										if(is_page()) {
+
+											$terms = get_the_terms( $post->ID, 'category' ); 
 										
+												echo "<ul>";
+
+												foreach($terms as $term) {
+
+													echo "<li>" . $term->name . "</li>";
+												
+												}
+										
+												echo "</ul>";
+											
 										}
 										
-										echo "</ul>";
-										
 										?>
-										
+
 									</div><!-- related_posts_meta -->
 
 									<a href="<?php the_permalink();?>">
@@ -80,7 +99,7 @@
 						<?php endwhile;
 						wp_reset_postdata(); ?>
 
-					</div><!-- related_post_list -->
+						</div><!-- related_post_list -->
 					
 					</div><!-- related_post_inner -->
 
