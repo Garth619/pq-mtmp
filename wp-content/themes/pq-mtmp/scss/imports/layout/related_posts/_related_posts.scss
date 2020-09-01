@@ -8,11 +8,12 @@
     padding: 53px 55px;
   }
   @include mq(large_laptop) {
-    padding: 53px 81px 116px;
+    padding: 53px 81px 80px;
   }
   #related_content_inner {
     @include mq(small_monitor) {
       max-width: 1575px;
+      padding: 53px 81px 100px;
       @include margin_lr;
     }
   }
