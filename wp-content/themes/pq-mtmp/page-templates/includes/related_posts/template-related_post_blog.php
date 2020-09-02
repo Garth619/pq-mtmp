@@ -14,12 +14,14 @@
 
 					<?php
 
+						global $post;
+
 						$related_posts_number = get_field( 'number_of_related_posts_to_show' );
 
 						if($related_posts_number) {
 							$pagenumber = $related_posts_number;
 						} else {
-							$pagenumber = 5;
+							$pagenumber = 10;
 						}
 
 						$post_terms = get_the_terms( $post->ID, 'category' );
@@ -38,7 +40,9 @@
 						$the_query = new WP_Query( array(
 							'post_type' => 'post',
 							'posts_per_page' => $pagenumber,
+							'post__not_in' => array($post->ID),
 							//'post__in'  => $stickies,
+							// https://www.billerickson.net/code/wp_query-arguments/ post__in and post__not_in and sticky look into it here
 							//'ignore_sticky_posts' => 1,
 							'tax_query' => array(
 							array (

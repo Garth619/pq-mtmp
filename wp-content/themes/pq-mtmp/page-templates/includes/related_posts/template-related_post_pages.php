@@ -13,29 +13,63 @@
 					<div class='related_post_list'>
 
             <?php 
+
+            global $post;
             
             $related_posts_number = get_field( 'number_of_related_posts_to_show' );
 
 						if($related_posts_number) {
 							$pagenumber = $related_posts_number;
 						} else {
-							$pagenumber = 5;
+							$pagenumber = 10;
 						}
             
-            if( 0 != $post->post_parent ) {
+            if( 0 != $post->post_parent ) { // child page
+              
+              // get chld ids
+
+              $childargs = array(
+                'child_of' => $post->post_parent
+              );
+
+              $pages = get_pages($childargs);
+              
+              foreach($pages as $child) {
+
+                $related_posts[] = $child->ID;
+              
+              }
+
+              // get parent id
+
+              $mypage_id = $post->post_parent;
+
+              // add parent id to child id array
+
+              array_push($related_posts, $mypage_id);
+
+              // get current page
+
+              $current_page = $post->ID;
+
+              // remove current page id from array. does not take "post__not_in" when using "post__in" at the same time, hence the workaround below
+              
+              $array_without_current = array_diff($related_posts, array($current_page));
+
+              // does not take "post__not_in" when using "post__in"
+
               $args = array(
-                'post_type'      => 'page',
+                'post_type' => 'page',
                 'posts_per_page' => $pagenumber,
-                'post_parent'    => $post->post_parent,
-                'post__not_in' => array( $post->ID ),
+                'post__in' => $array_without_current,
               );
             } 
 
-            if($post->post_parent == 0) {
+            if($post->post_parent == 0) { // parent page
               $args = array(
                 'post_type'      => 'page',
                 'posts_per_page' => $pagenumber,
-                'post__not_in' => array( $post->ID ),
+                'post_parent'    => $post->ID,
               );
             }
             
