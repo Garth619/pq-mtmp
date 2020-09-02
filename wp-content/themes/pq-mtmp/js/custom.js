@@ -383,52 +383,6 @@ jQuery(document).ready(function ($) {
 
   $("li").has("select").addClass("custom_select");
 
-  /* Case Results Page
---------------------------------------------------------------------------------------- */
-
-  // mimic select dropdown when you click the top the dropdown part slides down
-
-  $("#select_input").on("click", function (e) {
-    $(this).next("#select_dropdown").toggleClass("open");
-  });
-
-  // when you click on a list item you want, this gets the text() info then traverses to the top and replaces the text with the new text
-
-  $("#select_dropdown_inner ul li").on("click", function (e) {
-    // gets text
-
-    var caseresultstext = $(this).text();
-
-    // takes the text and climbs back up to the top and replaces the text with the new text, there is probably cleaner ways to do this haha
-
-    $(this)
-      .closest("#select_dropdown_inner")
-      .parent()
-      .prev("#select_input")
-      .find("span")
-      .replaceWith(
-        "<span id='select_input_title'>" + caseresultstext + "<span>"
-      );
-
-    // then the dropdown slides back up
-
-    $("#select_dropdown").removeClass("open");
-  });
-
-  // this mimics the way a select dropdown closes when you decide not to choose an option but just click outside of the select, the dropdown slides back up too
-
-  $(document).click(function (e) {
-    var container = $("#select_dropdown_wrapper");
-
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $("#select_dropdown").removeClass("open");
-    }
-  });
-
-  if ($(".tax-case_results_category").length) {
-    $("li.case_results_item").addClass("current-menu-item");
-  }
-
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
 
@@ -443,17 +397,6 @@ jQuery(document).ready(function ($) {
   $("span.go_back").on("click", function (e) {
     goBack();
   });
-
-  /* Red Double Line Styling Insert
---------------------------------------------------------------------------------------- */
-
-  $('<span class="double_line"></span>').insertAfter(".widget h3");
-
-  $('<span class="double_line blockquote"></span>').insertBefore("blockquote");
-
-  $('<span class="double_line"></span>').insertAfter(
-    "ul.pa_directory_top_menu > li > a"
-  );
 
   /* Disable Sidebar
 --------------------------------------------------------------------------------------- */
