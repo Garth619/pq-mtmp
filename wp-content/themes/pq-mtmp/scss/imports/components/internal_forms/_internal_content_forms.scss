@@ -1,9 +1,12 @@
 .content {
   .gform_wrapper {
+    width: 100%;
+    clear: both;
     padding-top: 45px;
     padding-bottom: 45px;
     ul {
       padding: 0;
+      list-style: none;
       li {
         padding: 0;
         margin-bottom: 20px;
@@ -39,13 +42,10 @@
             padding: 12px 15px;
             max-width: 425px;
             width: 100%;
-            background: $internal_form_bg_color;
-            border: 1px solid $internal_form_border_color;
             @include type(
               (
-                size: $internal_form_size,
+                size: 18px,
                 family: $primaryfont,
-                color: $internal_form_color,
               )
             );
           }
@@ -107,10 +107,10 @@
         z-index: -1;
       }
       &:before {
-        background: $internal_form_bg_color;
+        background: $color_grad_one;
       }
       &:after {
-        background: $internal_form_bg_color_hover;
+        background: $color_grad_two;
         opacity: 0;
         transition: all 200ms ease-in-out;
       }
@@ -123,33 +123,28 @@
         border: none;
         background: transparent;
         display: block;
+        box-shadow: none;
         cursor: pointer;
         @include type(
           (
-            size: $internal_form_submit_size,
-            spacing: $internal_form_submit_spacing,
-            height: null,
+            size: 17px,
             family: $primaryfont,
-            color: $internal_form_submit_color,
-            weight: $internal_form_submit_weight,
+            color: $color_light_one,
+            weight: 700,
             align: center,
-            transform: uppercase,
-            style: normal,
-            decoration: none,
           )
         );
       }
     }
     .gfield_description,
     .validation_message {
-      display: block;
-      margin-top: 7px;
-      text-align: left;
+      margin-top: 6px;
       @include type(
         (
-          size: $internal_form_error,
+          size: 15px,
           family: $primaryfont,
-          color: $internal_form_color,
+          color: $color_bright_two,
+          weight: 700,
         )
       );
     }
