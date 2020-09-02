@@ -48,8 +48,6 @@
 
   <div id="section_seven_video" class="video_module">
 
-  
-
     <div class='single_video_thumbnail'>
 
       <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
@@ -65,6 +63,8 @@
           <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_sec_seven' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywistia -->
 
         </div><!-- mywistia_thumbnail -->
+
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
       <?php } ?>
 
