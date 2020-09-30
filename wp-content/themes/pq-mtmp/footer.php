@@ -107,7 +107,7 @@
 
 <?php wp_footer();?>
 
-<?php get_field('footer_scripts','option');?>
+<?php the_field('footer_scripts','option');?>
 
 <?php if(is_front_page()) { ?>
 
