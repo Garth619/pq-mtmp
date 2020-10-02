@@ -1,4 +1,4 @@
-# Premium Quicklauch MTMP - Theme Documentation
+# Premium Quicklaunch MTMP - Theme Documentation
 
 ## SCSS Structure
 
@@ -118,6 +118,18 @@ If there is a big change on the mock up that isn't reflected in this build then 
 6. We look over and merge into MTMP
 
 [Fork and Branch](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+
+### Page Speed
+
+Page speed is an ongoing endeavor as Google constantly updates their strategies. This theme does it's best to keep up with envolving trends, but will most likely need updates as we progress.
+
+Overall some of the strategies (mostly on the homepage) involve:
+
+- Using picture tags at different browser window widths
+- Using Webp images in critical css areas
+- Lazy loading all images when scrolling
+- We are currently taking all of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)
+- Sometimes loading fonts locally actually gets us a better score than pulling from Google fonts
 
 ### Using CSS Source Mapping in Inspector
 

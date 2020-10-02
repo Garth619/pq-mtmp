@@ -144,6 +144,12 @@ function delayScript(src, timeout, attributes) {
 
 delayScript("<?php bloginfo('template_directory');?>/js/custom-min.js", 2000); 
 
+<?php if(get_field('live_chat','option')) { ?>
+
+delayScript("<?php the_field('live_chat','option');?>", 2000); 
+
+<?php } ?>
+
 </script>
 
 <?php } ?>
