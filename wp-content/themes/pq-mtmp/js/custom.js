@@ -124,6 +124,12 @@ jQuery(document).ready(function ($) {
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 
+  //  "preload_slider" is tied into the homepage "delayscript" function in the footer. The "delayscript" function loads in this file(custom-min.js) after two seconds. This allows only text and images to load for mobile users first and improves page speed.
+
+  // "preload_slider" is used so the sliders don't look broken before custom-min.js loads.  It takes any sliders in section one or two and fades them in with opacity once custom-min.js is loaded. They work the best if the slider parent divs have fixed heights at each device screen width. This allows the page speed Cumulative shift layout to pass page speed correctly in Lighthouse. It has an effect of just fading in without shifting the layout if you have fixed heights for sliders' parent divs.
+
+
+
   $(".preload_slider").on("init", function (event, slick) {
     $(".preload_section").addClass("load_after");
   });
