@@ -72,13 +72,13 @@
                 },
                 "choices": {
                     "custom": "<b>Custom<\/b> - Create based on your own styles",
-                    "ilawyer": "Default <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/ilawyerdefault.jpg\">",
-                    "canyon": "Canyon Sunset <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/canyonsunset.jpg\">",
-                    "electric": "Electric <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/electric.jpg\">",
-                    "graytemper": "Gray Tempered <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/graytempered.jpg\">",
-                    "irishgold": "Irish Gold <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/irishgold.jpg\">",
-                    "fine": "Everything's Fine <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/soundsfine.jpg\">",
-                    "sospicy": "So Spicy <img src=\"\/wp-content\/plugins\/1p21-alertbar\/images\/sospicy.jpg\">"
+                    "ilawyer": "Default <img src='https://www.1point21interactive.com/images/ilawyerdefault.jpg'>",
+                    "canyon": "Canyon Sunset <img src='https://www.1point21interactive.com/images/canyonsunset.jpg'>",
+                    "electric": "Electric <img src='https://www.1point21interactive.com/images/electric.jpg'>",
+                    "graytemper": "Gray Tempered <img src='https://www.1point21interactive.com/images/graytempered.jpg'>",
+                    "irishgold": "Irish Gold <img src='https://www.1point21interactive.com/images/irishgold.jpg'>",
+                    "fine": "Everything's Fine <img src='https://www.1point21interactive.com/images/soundsfine.jpg'>",
+                    "sospicy": "So Spicy <img src='https://www.1point21interactive.com/images/sospicy.jpg'>"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
