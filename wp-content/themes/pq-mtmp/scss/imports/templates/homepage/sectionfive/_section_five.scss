@@ -120,11 +120,15 @@ span#sec_five_header {
   }
   .sec_five_post_image_wrapper {
     overflow: hidden;
+    position: relative;
     img {
       width: 100%;
       transform: scale(1);
       transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       @include image();
+    }
+    img.sec_five_image {
+      @include abs(0, null, null, 0, 1);
     }
   }
 }
@@ -163,6 +167,7 @@ span.sec_five_post_title {
       height: 27px,
       family: $primaryfont,
       weight: 700,
+      transform: capitalize,
     )
   );
   @include mq(large_laptop) {

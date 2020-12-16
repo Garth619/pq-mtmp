@@ -142,7 +142,7 @@ function delayScript(src, timeout, attributes) {
   });
 }
 
-delayScript("<?php bloginfo('template_directory');?>/js/custom-min.js", 2000); 
+delayScript("<?php bloginfo('template_directory');?>/js/custom-min.js", 2000);
 
 <?php if(get_field('live_chat','option')) { ?>
 

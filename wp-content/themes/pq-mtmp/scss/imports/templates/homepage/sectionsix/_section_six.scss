@@ -4,8 +4,10 @@
 
 #sec_six_inner {
   padding: 52px 11px;
+  min-height: 704px;
   @include mq(small_tablet) {
     padding: 90px 11px 50px;
+    min-height: 645px;
   }
   @include mq(small_laptop) {
     padding: 90px 11px 20px;
@@ -210,6 +212,7 @@ span#sec_six_title {
         color: $color_dark_one,
         family: $primaryfont,
         weight: 700,
+        transform: capitalize,
       )
     );
     @include mq(large_laptop) {
@@ -219,6 +222,9 @@ span#sec_six_title {
       @include mq(small_tablet) {
         top: 12px;
       }
+    }
+    &.no_image {
+      text-align: center;
     }
   }
 }

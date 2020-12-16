@@ -1,167 +1,189 @@
 <section id='section_two'>
 
-	<div id='sec_two_inner'>
+  <div id='sec_two_inner'>
 
-		<div id='sec_two_top'>
+    <div id='sec_two_top'>
 
-			<div id='sec_two_top_inner'>
-			
-			<div id='sec_two_left_slider' class="preload_slider">
+      <div id='sec_two_top_inner'>
 
-			<?php if ( have_rows( 'section_two_testimonials' ) ) : ?>
-				
-				<?php while ( have_rows( 'section_two_testimonials' ) ) : the_row(); ?>
-		
-					<div class='sec_two_slide'>
-					
-						<div class='sec_two_slide_profile_wrapper'>
-						
-							<div class='sec_two_profile'>
+        <div id='sec_two_left_slider' class="preload_slider">
 
-								<picture>
+          <?php if (have_rows('section_two_testimonials')): ?>
 
-									<?php $profile_webp = get_sub_field( 'profile_webp' ); ?>
+          <?php while (have_rows('section_two_testimonials')): the_row();?>
 
-									<?php if ( $profile_webp ) { ?>
-										
-										<source srcset='<?php echo $profile_webp['url']; ?>' type='image/webp'>
-									
-									<?php } ?>
-								
-									<?php $profile = get_sub_field( 'profile' ); ?>
-								
-									<img src='<?php echo $profile['url']; ?>' alt="<?php echo $profile['alt']; ?>" />
-								
-								</picture>
-						
-							</div><!-- sec_two_profile -->
+          <div class='sec_two_slide'>
 
-							<div class='sec_two_profile_info'>
-							
-								<img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt=''/><!-- name -->
+            <div class='sec_two_slide_profile_wrapper'>
 
-								<span class='sec_two_profile_two'><?php the_sub_field( 'name' ); ?></span><!-- sec_two_profile_two -->
-							
-							</div><!-- sec_two_profile_info -->
-						
-						</div><!-- sec_two_slide_profile_wrapper -->
+              <div class='sec_two_profile'>
 
-						<div class='sec_two_slide_descrip'>
-							
-								<span><?php the_sub_field( 'description' ); ?></span>
-							
-							</div><!-- sec_two_slide_descrip -->
+                <picture>
 
-							<span class='sec_two_slide_type'><?php the_sub_field( 'type' ); ?></span><!-- sec_two_slide_type -->
-				
-					</div><!-- sec_two_slide -->
+                  <?php $profile_webp = get_sub_field('profile_webp');?>
 
-				<?php endwhile; ?>
+                  <?php if ($profile_webp) {?>
 
-			<?php endif; ?>
-			
-			</div><!-- sec_two_left_slider -->
+                  <source srcset='<?php echo $profile_webp['url']; ?>' type='image/webp'>
 
-			<div id='sec_two_top_arrows'>
-			
-				<div class='sec_two_arrow_left sec_two_arrow'></div><!-- sec_two_arrow -->
+                  <?php }?>
 
-				<div class='sec_two_arrow_right sec_two_arrow'></div><!-- sec_two_arrow -->
-			
-			</div><!-- sec_two_top_arrows -->
+                  <?php $profile = get_sub_field('profile');?>
 
-			</div><!-- sec_two_top_inner -->
-		
-		</div><!-- sec_two_top -->
+                  <img src='<?php echo $profile['url']; ?>' alt="<?php echo $profile['alt']; ?>" />
 
-		<div id='sec_two_bottom'>
-		
-			<div id='sec_two_bottom_inner' class="preload_section">
-			
-				<span id='sec_two_featured_title'><?php the_field( 'section_two_featured_lawsuit_title' ); ?></span><!-- sec_two_featured_title -->
+                </picture>
 
-					<div id='sec_two_featured_slider_wrapper'>
+              </div><!-- sec_two_profile -->
 
-						<div class='sec_two_featured_arrow_left sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
-					
-							<div id='sec_two_featured_slider' class="preload_slider">
+              <div class='sec_two_profile_info'>
 
-								<?php if ( have_rows( 'section_two_post_slider' ) ) : ?>
-								
-									<?php while ( have_rows( 'section_two_post_slider' ) ) : the_row(); ?>
+                <img src='<?php bloginfo('template_directory');?>/images/stars.svg' alt='' /><!-- name -->
 
-										<?php $post_object = get_sub_field( 'sec_two_post_page' ); ?>
-									
-											<?php if ( $post_object ): ?>
-											
-												<?php $post = $post_object; ?>
-												
-												<?php setup_postdata( $post ); ?> 
-								
-												<div class='sec_two_featured_slide'>
+                <span class='sec_two_profile_two'><?php the_sub_field('name');?></span><!-- sec_two_profile_two -->
 
-													<a href="<?php the_permalink();?>">
+              </div><!-- sec_two_profile_info -->
 
-														<div class='sec_two_featured_image'>
-														
-															<picture>
+            </div><!-- sec_two_slide_profile_wrapper -->
 
-																<?php $image_webp = get_sub_field( 'image_webp' ); ?>
-										
-																<?php if ( $image_webp ) { ?>
-																	
-																	<source srcset='<?php echo $image_webp['url']; ?>' type='image/webp'>
-																
-																<?php } ?>
+            <div class='sec_two_slide_descrip'>
 
-																<?php $image = get_sub_field( 'image' ); ?>
-															
-																<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <span><?php the_sub_field('description');?></span>
 
-															</picture>
-					
-														</div><!-- sec_two_featured_image -->
+            </div><!-- sec_two_slide_descrip -->
 
-														<div class='sec_two_featured_slide_content'>
-														
-															<span class='sec_two_featured_slide_title'><?php the_title();?></span><!-- class -->
+            <span class='sec_two_slide_type'><?php the_sub_field('type');?></span><!-- sec_two_slide_type -->
 
-															<div class='sec_two_featured_slide_descrip'>
-															
-																<p><?php the_sub_field( 'description' ); ?></p>
-															
-															</div><!-- sec_two_featured_slide_descrip -->
-															
-															<div class='learn_more_wrapper'>
-															
-																<span class='button_two'><?php the_sub_field( 'button_verbiage' ); ?></span><!-- button_two -->
-															
-															</div><!-- learn_more_wrapper -->
+          </div><!-- sec_two_slide -->
 
-														</div><!-- sec_two_featured_slide_content -->
+          <?php endwhile;?>
 
-													</a>
+          <?php endif;?>
 
-												</div><!-- sec_two_featured_slide -->
-												
-												<?php wp_reset_postdata(); ?>
-											
-											<?php endif; ?>
-									
-									<?php endwhile; ?>
+        </div><!-- sec_two_left_slider -->
 
-								<?php endif; ?>
-						
-							</div><!-- sec_two_featured_slider -->
-						
-							<div class='sec_two_featured_arrow_right sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
-					
-					</div><!-- sec_two_featured_slider_wrapper -->
+        <div id='sec_two_top_arrows'>
 
-			</div><!-- sec_two_bottom_inner -->
-		
-		</div><!-- sec_two_bottom -->
-	
-	</div><!-- sec_two_inner -->
+          <div class='sec_two_arrow_left sec_two_arrow'></div><!-- sec_two_arrow -->
+
+          <div class='sec_two_arrow_right sec_two_arrow'></div><!-- sec_two_arrow -->
+
+        </div><!-- sec_two_top_arrows -->
+
+      </div><!-- sec_two_top_inner -->
+
+    </div><!-- sec_two_top -->
+
+    <div id='sec_two_bottom'>
+
+      <div id='sec_two_bottom_inner' class="preload_section">
+
+        <span id='sec_two_featured_title'><?php the_field('section_two_featured_lawsuit_title');?></span>
+        <!-- sec_two_featured_title -->
+
+        <div id='sec_two_featured_slider_wrapper'>
+
+          <div class='sec_two_featured_arrow_left sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
+
+          <div id='sec_two_featured_slider' class="preload_slider">
+
+            <?php if (have_rows('section_two_post_slider')): ?>
+
+            <?php while (have_rows('section_two_post_slider')): the_row();?>
+
+            <?php $post_object = get_sub_field('sec_two_post_page');?>
+
+            <?php if ($post_object): ?>
+
+            <?php $post = $post_object;?>
+
+            <?php setup_postdata($post);?>
+
+            <div class='sec_two_featured_slide'>
+
+              <a href="<?php the_permalink();?>">
+
+                <div class='sec_two_featured_image'>
+
+                  <picture>
+
+                    <?php $image_webp = get_sub_field('image_webp');?>
+
+                    <?php if ($image_webp) {?>
+
+                    <source srcset='<?php echo $image_webp['url']; ?>' type='image/webp'>
+
+                    <?php }?>
+
+                    <?php $image = get_sub_field('image');?>
+
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                  </picture>
+
+                </div><!-- sec_two_featured_image -->
+
+                <div class='sec_two_featured_slide_content'>
+
+                  <?php
+
+    if (get_sub_field('sec_two_post_title')) {
+
+        $text = get_sub_field('sec_two_post_title');
+        $text = ucwords(strtolower($text));
+
+        ?>
+
+                  <span class='sec_two_featured_slide_title'><?php echo $text; ?></span>
+                  <!-- class -->
+
+                  <?php } else {
+
+        $text = get_the_title();
+        $text = ucwords(strtolower($text));
+
+        ?>
+
+                  <span class='sec_two_featured_slide_title'><?php echo $text; ?></span><!-- class -->
+
+                  <?php }?>
+
+                  <div class='sec_two_featured_slide_descrip'>
+
+                    <p><?php the_sub_field('description');?></p>
+
+                  </div><!-- sec_two_featured_slide_descrip -->
+
+                  <div class='learn_more_wrapper'>
+
+                    <span class='button_two'><?php the_sub_field('button_verbiage');?></span><!-- button_two -->
+
+                  </div><!-- learn_more_wrapper -->
+
+                </div><!-- sec_two_featured_slide_content -->
+
+              </a>
+
+            </div><!-- sec_two_featured_slide -->
+
+            <?php wp_reset_postdata();?>
+
+            <?php endif;?>
+
+            <?php endwhile;?>
+
+            <?php endif;?>
+
+          </div><!-- sec_two_featured_slider -->
+
+          <div class='sec_two_featured_arrow_right sec_two_featured_arrow'></div><!-- sec_two_featured_arrow -->
+
+        </div><!-- sec_two_featured_slider_wrapper -->
+
+      </div><!-- sec_two_bottom_inner -->
+
+    </div><!-- sec_two_bottom -->
+
+  </div><!-- sec_two_inner -->
 
 </section><!-- section_two -->

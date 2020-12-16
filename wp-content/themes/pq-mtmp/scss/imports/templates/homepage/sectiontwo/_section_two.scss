@@ -342,6 +342,7 @@ span.sec_two_featured_slide_title {
       family: $primaryfont,
       color: $color_dark_one,
       weight: 700,
+      transform: capitalize,
     )
   );
   @include mq(small_laptop) {

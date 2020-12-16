@@ -39,20 +39,25 @@ span#sec_four_title {
 #sec_four_slider_wrapper {
   margin-top: 18px;
   max-width: 490px;
+  min-height: 566px;
   @include margin_lr;
   @include mq(small_tablet) {
     max-width: 900px;
+    min-height: 530px;
     margin-top: 35px;
   }
   @include mq(small_laptop) {
     max-width: 1108px;
+    min-height: 502px;
     @include flex(center, center);
   }
   @include mq(large_laptop) {
     max-width: 100%;
+    min-height: 475px;
   }
   @include mq(small_monitor) {
     margin-top: 41px;
+    min-height: 499px;
   }
 }
 
