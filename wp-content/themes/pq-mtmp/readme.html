@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1 id="premiumquicklauch10-themedocumentation">Premium Quicklauch 10 - Theme Documentation</h1>
+<h1 id="premiumquicklaunchmtmp-themedocumentation">Premium Quicklaunch MTMP - Theme Documentation</h1>
 
 <h2 id="scssstructure">SCSS Structure</h2>
 
@@ -13,11 +13,9 @@
 
 <ul>
 <li>style.scss</li>
-<li>scss
-
-<ul>
-<li>main.scss</li>
-<li>imports
+<li>scss</li>
+<li> main.scss</li>
+<li> imports
 
 <ul>
 <li>base</li>
@@ -27,7 +25,6 @@
 <li>templates</li>
 <li>utils</li>
 <li>vendors</li>
-</ul></li>
 </ul></li>
 </ul>
 
@@ -142,13 +139,32 @@ $secondaryfont: 'Martel', serif;
 <ol>
 <li>Fork the repo</li>
 <li>Work locally on the entire theme except for the new major layout options</li>
-<li>When its time to make new layout options, set up git remote and point back to this PQ10 repo</li>
+<li>When its time to make new layout options, set up git remote and point back to this PQ1 repo</li>
 <li>Create a “New Feature” Branch</li>
 <li>Create a pull request</li>
-<li>We look over and merge into PQ10</li>
+<li>We look over and merge into PQ1</li>
 </ol>
 
 <p><a href="https://help.github.com/en/github/getting-started-with-github/fork-a-repo">Fork and Branch</a></p>
+
+<h3 id="pagespeed">Page Speed</h3>
+
+<p>Page speed is an ongoing endeavor as Google constantly updates their strategies. This theme does it&#8217;s best to keep up with envolving trends, but will most likely need updates as we progress.</p>
+
+<p>Overall some of the strategies (mostly on the homepage) involve:</p>
+
+<ul>
+<li>Using picture tags at different browser window widths</li>
+<li>Using Webp images in critical css areas</li>
+<li>Lazy loading all images when scrolling</li>
+<li>We are currently taking most of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)</li>
+<li>Sometimes loading fonts locally actually gets us a better score than pulling from Google fonts</li>
+<li>Utilizing caching plugin such as Litespeeed or WP Super Cache</li>
+</ul>
+
+<p>GZIP Compression</p>
+
+<p>GZIP Code can be found [here] (https://gist.github.com/Garth619/e3ad7e60b0c6b84ddda5e9bc4804d227)</p>
 
 <h3 id="usingcsssourcemappingininspector">Using CSS Source Mapping in Inspector</h3>
 
@@ -158,20 +174,18 @@ $secondaryfont: 'Martel', serif;
 
 <p>Then go down a few lines and comment out:</p>
 
-<pre><code>function internal_css_print() {
-   echo '&lt;style&gt;';
-   
-   include_once get_template_directory() . '/style.css';
-  
-   echo '&lt;/style&gt;';
-}
-
-
-add_action( 'wp_head', 'internal_css_print' );
-
+<pre><code>add_action('wp_head', 'merge_include_css');
 </code></pre>
 
 <p>Future builds will integrate our typical way of handling these files for page speed</p>
+
+<h3 id="svgs">SVGS</h3>
+
+<p>Sometimes svgs won&#8217;t upload in the media library unless this is added to the top of the svg code:</p>
+
+<p><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</code></p>
+
+<p>Also if there are four similar sized svgs like on section two, make sure the designers give you svgs that are all on the same sized artboard. That way we don&#8217;t have to tweak different sized svgs to look the same heights.</p>
 
 <h2 id="feedback">Feedback</h2>
 
